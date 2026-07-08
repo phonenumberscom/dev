@@ -15,15 +15,6 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  header{background:#fff;border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;height:64px;gap:28px}
-  .brand{display:flex;align-items:center;gap:9px;font-weight:600;font-size:20px;letter-spacing:-.02em;color:var(--ink);white-space:nowrap;text-decoration:none}
-  .brand .lmk{width:23px;height:23px;flex:0 0 auto;color:var(--ac)}
-  .brand .c{font-size:14.5px;font-weight:600}
-  .nav-links{display:flex;gap:24px;flex:1;justify-content:center;font-size:14px;color:var(--ink-58)}
-  .nav-links a{color:inherit;text-decoration:none}
-  .nav-links a:hover{color:var(--ink)}
-  .nav-cta{font-size:14px;font-weight:600;color:var(--ac);text-decoration:none}
   .crumbs{font-size:12.5px;color:var(--ink-40);padding:18px 0 0}
   .crumbs a{color:inherit;text-decoration:none}
   .hero{padding:34px 0 46px;text-align:center}
@@ -54,8 +45,7 @@
   .cta-band{background:linear-gradient(135deg,#4F46E5,#6D28D9);border-radius:22px;padding:44px 30px;text-align:center;color:#fff}
   .cta-band h2{color:#fff;margin-bottom:8px}
   .cta-band p{color:rgba(255,255,255,.85);margin-bottom:22px;font-size:15px}
-  .btn{display:inline-block;background:#fff;color:var(--ac);font-weight:700;font-size:15px;padding:13px 28px;border-radius:12px;text-decoration:none}
-  footer{border-top:1px solid var(--line);padding:26px 0;margin-top:20px;font-size:13px;color:var(--ink-40);text-align:center}
+  .cbtn{display:inline-block;background:#fff;color:var(--ac);font-weight:700;font-size:15px;padding:13px 28px;border-radius:12px;text-decoration:none}
   @media(max-width:1000px){.fgrid{grid-template-columns:repeat(3,1fr)}.lgrid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:700px){.fgrid{grid-template-columns:1fr 1fr}.lgrid{grid-template-columns:1fr 1fr}.nav-links{display:none}}
 
@@ -75,14 +65,275 @@
   .hp-table td:last-child{font-variant-numeric:tabular-nums;color:var(--ink)}
   .hp-table tr:last-child td{border-bottom:none}
   @media(max-width:700px){.hp-grid{grid-template-columns:1fr;gap:28px}}
+
+/* ===== homepage chrome (harvested) ===== */
+:root{
+    --paper:#FFFFFF; --paper-2:#F5F6FD; --paper-3:#ECEEFB;
+    --ink:#10133A; --ink-72:rgba(16,19,58,.72); --ink-58:rgba(16,19,58,.56); --ink-40:rgba(16,19,58,.40);
+    --line:rgba(16,19,58,.10); --line-2:rgba(16,19,58,.16);
+    --ac:#4F46E5; --ac-d:#4038CC; --ac-12:rgba(79,70,229,.10); --ac-tint:#EEEDFC; --ac-soft:#F3F2FE;
+    --green:#16A34A; --green-bg:rgba(22,163,74,.10);
+    --sans:"Plus Jakarta Sans",-apple-system,system-ui,"Segoe UI",Roboto,Arial,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    --maxw:1180px;
+    --sh:0 2px 6px rgba(16,19,58,.05),0 14px 30px -16px rgba(16,19,58,.12);
+    --sh-lg:0 4px 10px rgba(16,19,58,.05),0 30px 60px -26px rgba(16,19,58,.20);
+    /* single-color: collapse the old palette */
+    --c1:var(--ac);--c2:var(--ac);--c3:var(--ac);--c4:var(--ac);--c5:var(--ac);--c6:var(--ac);
+    --grad:var(--ac); --grad-soft:var(--ac-tint);
+    --night:var(--paper-2); --wline:var(--line); --wline-2:var(--line-2);
+    --w-72:var(--ink-72); --w-58:var(--ink-58); --w-40:var(--ink-40);
+  }
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:40px}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.85);-webkit-backdrop-filter:saturate(160%) blur(16px);backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;height:72px;gap:26px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:600;font-size:20px;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.brand .lmk{width:23px;height:23px;flex:0 0 auto;color:var(--ac)}
+.brand .bw{font-weight:600}
+.brand .c{font-size:14.5px;font-weight:600}
+.brand .mk{width:32px;height:32px;border-radius:10px;background:var(--ac);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px -7px rgba(79,70,229,.7)}
+.brand .mk svg{width:18px;height:18px}
+nav.main{display:flex;gap:22px;margin:0 auto}
+/* center the nav links between logo and the right-side icons */
+  nav.main a{display:flex;flex-direction:column;line-height:1.15}
+nav.main a .t{font-size:14.5px;font-weight:600;color:var(--ink)}
+nav.main a .s{font-size:11px;color:var(--ink-40)}
+nav.main a:hover .t{color:var(--ac)}
+nav.main a.simple{flex-direction:row;align-items:center;gap:5px;font-size:14.5px;font-weight:600;color:var(--ink)}
+nav.main a.simple:hover{color:var(--ac)}
+nav.main .caret{width:8px;height:8px;opacity:.5}
+.nav-right{display:flex;align-items:center;gap:4px}
+.nav-ic{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;
+    border:1px solid transparent;background:transparent;color:var(--ink-58);cursor:pointer;position:relative;transition:.15s;text-decoration:none}
+.nav-loc-wrap{position:relative}
+.loc-menu{position:absolute;top:calc(100% + 9px);right:0;min-width:212px;background:#fff;border:1px solid var(--line);
+    border-radius:13px;box-shadow:0 22px 50px -18px rgba(16,19,58,.4);padding:6px;z-index:80}
+.loc-menu[hidden]{display:none}
+.loc-opt{display:flex;align-items:center;gap:10px;width:100%;padding:10px 12px;border:none;background:transparent;border-radius:9px;
+    cursor:pointer;font-family:var(--sans);font-size:14px;font-weight:500;color:var(--ink);text-align:left;transition:.13s}
+.loc-opt:hover{background:var(--paper-2)}
+.loc-opt.active{background:var(--ac-soft);color:var(--ac);font-weight:600}
+.loc-opt .flag{font-size:16px;line-height:1}
+.loc-opt .loc-cur{margin-left:auto;font-size:12px;color:var(--ink-40);font-weight:500}
+.nav-loc[aria-expanded="true"] .loc-caret{transform:rotate(180deg)}
+.nav-loc .loc-caret{transition:transform .18s ease}
+.nav-ic:hover{background:var(--paper-2);color:var(--ink);border-color:var(--line)}
+.nav-ic svg{width:21px;height:21px}
+.nav-cart .cart-badge{position:absolute;top:1px;right:1px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;
+    background:#E5484D;color:#fff;font-family:var(--sans);font-size:10.5px;font-weight:700;line-height:17px;text-align:center;
+    box-shadow:0 0 0 2px #fff}
+.nav-loc{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 10px;border-radius:10px;border:1px solid transparent;
+    background:transparent;cursor:pointer;font-family:var(--sans);font-size:14px;font-weight:600;color:var(--ink-72);transition:.15s}
+.nav-loc:hover{background:var(--paper-2);border-color:var(--line)}
+.nav-loc .flag{font-size:15px;line-height:1}
+.nav-loc .loc-caret{width:9px;height:9px;color:var(--ink-40)}
+.hero .wrap{position:relative;z-index:2}
+.wrap.narrow{max-width:820px}
+/* atom-style nav dropdowns / mega-menu */
+  nav.main .nav-item{position:relative;display:flex;align-items:center}
+.nav-dd{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(8px);background:#fff;border:1px solid var(--line-2);border-radius:18px;box-shadow:0 40px 90px -30px rgba(40,30,120,.45),0 0 0 1px rgba(16,19,58,.04);padding:18px 18px 16px;display:flex;gap:24px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,transform .18s,visibility .18s;z-index:90}
+.nav-dd::before{content:"";position:absolute;left:0;right:0;top:-22px;height:22px}
+nav.main .nav-item:hover > .nav-dd{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.nav-dd-wide{width:860px}
+.dd-feat{display:flex;flex-direction:column;gap:12px;align-self:center;width:348px;background:linear-gradient(165deg,var(--ac-soft),#fff 78%);border:1px solid var(--line);border-radius:14px;padding:10px}
+.dd-tile{display:flex;gap:13px;padding:13px 11px;border-radius:11px;text-decoration:none;transition:background .14s,box-shadow .14s,transform .14s}
+.dd-tile:hover{background:#fff;box-shadow:0 12px 26px -12px rgba(16,19,58,.32);transform:translateY(-1px)}
+nav.main .dd-tile{flex-direction:row;align-items:center}
+nav.main .dd-col a{display:block}
+.dd-tile .ti{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--ac-12);color:var(--ac)}
+.dd-tile .ti svg{width:23px;height:23px}
+.dd-feat .dd-tile:nth-child(1) .ti{background:color-mix(in srgb,var(--p2) 16%,#fff);color:var(--p2)}
+.dd-feat .dd-tile:nth-child(2) .ti{background:color-mix(in srgb,var(--p5) 16%,#fff);color:var(--p5)}
+.dd-feat .dd-tile:nth-child(3) .ti{background:color-mix(in srgb,var(--p3) 16%,#fff);color:var(--p3)}
+.dd-tx b{display:block;font-size:15px;font-weight:700;color:var(--ink);letter-spacing:-.01em;line-height:1.3;white-space:nowrap}
+.dd-tx span{display:block;font-size:13.5px;color:var(--ink-58);margin-top:4px;line-height:1.45}
+.dd-col{display:flex;flex-direction:column;gap:1px;min-width:178px;padding:4px 0}
+.dd-h{font-size:16px;font-weight:700;letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:2px 0 12px}
+.dd-h:not(:first-child){margin-top:16px}
+.dd-col a{font-size:15px;font-weight:500;color:var(--ink-72);text-decoration:none;padding:6px 11px;margin:0 -11px;border-radius:9px;transition:color .12s,background .12s}
+.dd-col a:hover{color:var(--ac);background:var(--ac-soft)}
+/* footer -> light */
+  footer{background:var(--paper-2);color:var(--ink-58);padding:70px 0 34px;font-size:13.5px;border-top:1px solid var(--line)}
+.fgrid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr 1fr;gap:34px}
+.fbrand .brand{margin-bottom:14px}
+.fbrand p{font-size:13px;line-height:1.6;color:var(--ink-58);max-width:240px}
+.socials{display:flex;gap:9px;margin-top:18px}
+.socials a{width:36px;height:36px;border-radius:11px;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--ink-58)}
+.socials a:hover{border-color:var(--ac);color:var(--ac)}
+.fcol h5{color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+.fcol a{display:block;padding:5px 0;color:var(--ink-58);font-size:13.5px}
+.fcol a:hover{color:var(--ac)}
+.fbot{border-top:1px solid var(--line);margin-top:48px;padding-top:24px;text-align:center;font-size:12.5px;color:var(--ink-40)}
+@media(max-width:1000px){.fgrid{grid-template-columns:1fr 1fr 1fr}
+nav.main,.util{display:none}}
+/* live mono status header on the graph */
+  .graph-status{position:absolute;top:14px;left:16px;right:16px;z-index:4;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--ink-40);pointer-events:none}
+.light,.tint,.market,.net,footer{background:transparent!important}
+/* keep gold premium card; keep graph green/amber semantics; footer gets a quiet separation */
+  footer{border-top:1px solid var(--line)!important}
+.light,.tint,.market,.net,footer{background:transparent!important}
+/* footer slightly deeper than base for grounding */
+  footer{background:#E2E4F3!important;border-top:1px solid rgba(16,19,58,.08)!important}
+/* nav stays crisp & solid over scrolled content (was .82 → content bled through the sticky bar) */
+  header.nav{background:rgba(244,245,251,.97)!important}
+/* ===== v29: remove divider lines in the header / hero (above + between stats, hero bottom) ===== */
+  .hero{border-bottom:none!important}
+.numsearch .wrap{position:relative;z-index:2;max-width:860px}
+.numsearch .ns-accent{color:#8E86F8}
+.ns-toggle{display:inline-flex;gap:4px;margin:30px auto 22px;padding:5px;border-radius:100px;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+.ns-tab{font-family:var(--sans);font-size:15px;font-weight:600;color:rgba(255,255,255,.72);
+    border:none;background:transparent;padding:9px 26px;border-radius:100px;cursor:pointer;transition:.16s}
+.ns-tab.active{background:var(--ac);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.5)}
+.ns-bar{display:flex;align-items:center;gap:8px;max-width:760px;margin:0 auto;
+    background:#fff;border-radius:100px;padding:9px 9px 9px 26px;box-shadow:0 24px 60px -18px rgba(8,6,40,.7)}
+.ns-bar input{flex:1;border:none;outline:none;font-family:var(--sans);font-size:16px;color:var(--ink);background:transparent}
+.ns-bar input::placeholder{color:var(--ink-40)}
+.ns-go{font-family:var(--sans);font-size:15.5px;font-weight:700;color:#fff;border:none;cursor:pointer;
+    background:linear-gradient(180deg,#5B52EC,#4338CA);border-radius:100px;padding:14px 34px;transition:.16s;white-space:nowrap}
+.ns-go:hover{filter:brightness(1.08)}
+.ns-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:26px}
+.ns-chip{display:flex;align-items:center;gap:9px;font-family:var(--sans);cursor:pointer;
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:100px;padding:11px 18px;transition:.16s}
+.ns-chip:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.26)}
+.ns-chip b{font-size:14px;font-weight:700;color:#fff;letter-spacing:-.01em}
+.ns-chip span{font-size:12.5px;color:rgba(255,255,255,.6)}
+.ns-chip-gold b{color:#F4D58A}
+.ns-chip-gold{border-color:rgba(244,213,138,.4);background:rgba(244,213,138,.08)}
+@media(max-width:720px){.ns-bar{flex-wrap:wrap;border-radius:24px;padding:14px}
+.ns-bar input{width:100%;padding:6px 4px}
+.ns-go{width:100%}}
+/* ===== v66: mobile patterns (atom-style) — hamburger nav, stacked search, centered hero, sticky search ===== */
+  /* hamburger button + slide-down menu */
+  .navtoggle{display:none;margin-left:auto;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;
+    border:1px solid var(--line);border-radius:11px;background:#fff;cursor:pointer;padding:0}
+.navtoggle .nt-bar{display:block;width:20px;height:2px;border-radius:2px;background:var(--ink);margin:0 auto;transition:.22s}
+.navtoggle.open .nt-bar:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.navtoggle.open .nt-bar:nth-child(2){opacity:0}
+.navtoggle.open .nt-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobilemenu{display:none;flex-direction:column;gap:2px;padding:10px 18px 18px;background:rgba(244,245,251,.98);border-bottom:1px solid var(--line)}
+.mobilemenu a{display:flex;flex-direction:column;padding:13px 6px;border-bottom:1px solid var(--line);text-decoration:none}
+.mobilemenu a b{font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.mobilemenu a span{font-size:12.5px;color:var(--ink-58);margin-top:1px}
+.mobilemenu .mm-cta{margin-top:14px;justify-content:center;text-align:center;border-bottom:none;color:#fff;padding:15px}
+.mobilemenu .mm-cta b{color:#fff}
+@media(max-width:1000px){.navtoggle{display:flex;order:-1;margin-left:0}
+/* hamburger on the left */
+    .nav-right{display:flex;margin-left:auto}
+header .brand .bw{display:none}
+/* One-key mark only in mobile header (v159 fix) */
+    .sec-head h2{font-size:clamp(24px,8.5vw,32px)}
+/* fit "PhoneNumbers.com" unbroken (v159 fix) */                                    /* collapse wordmark to the icon to fit the icons */
+    .nav .wrap{gap:14px}
+.mobilemenu:not([hidden]){display:flex}}
+/* ===== v68: kill horizontal overflow on mobile (was 519px > viewport → broke full-width & nav) =====
+     NOTE: do NOT put overflow-x:clip/hidden on html/body — it breaks the position:sticky nav on iOS.
+     The overflow is fixed at the source instead (footer/flywheel/card-grids below). ===== */
+  .wrap{max-width:min(1200px,100%)}
+@media(max-width:640px){/* footer was the main offender: 5/3-col grid didn't fit a phone */
+    .fgrid{grid-template-columns:1fr 1fr!important;gap:24px 18px!important}
+.fgrid>*{min-width:0}
+.fgrid>*:first-child{grid-column:1 / -1}
+/* brand block spans full width */
+    .fcol a{overflow-wrap:anywhere}}
+@media(max-width:560px){.fgrid{grid-template-columns:1fr 1fr!important}
+/* footer links stay 2-col (short) */
+    /* a touch tighter hero type on the smallest phones */
+    .hero .lead{font-size:16px!important}}
+/* ===== v75: search docks as a SECOND ROW BELOW the nav on scroll (atom-style) ===== */
+  /* search docks as a second row BELOW the nav on scroll — slides down (all widths: mobile + desktop) */
+  .nav-searchrow{display:block;max-height:0;overflow:hidden;opacity:0;padding:0;border-top:1px solid transparent;background:inherit;
+    transition:max-height .34s cubic-bezier(.2,.72,.2,1),opacity .28s ease,padding .34s ease,border-top-color .34s ease}
+.nav-searchrow .wrap{height:auto;display:block}
+/* override the nav's .wrap height:72px (caused the off/asymmetric spacing) */
+  .nav-searchrow .nav-search{transform:translateY(-8px);transition:transform .34s cubic-bezier(.2,.72,.2,1)}
+.nav-search{display:flex;align-items:center;gap:8px;width:100%;max-width:896px;height:40px;margin:0 auto;
+    background:#fff;border:1px solid var(--line-2);border-radius:11px;padding:0 5px 0 16px;
+    box-shadow:0 6px 16px -10px rgba(16,19,58,.28);transition:border-color .16s,box-shadow .16s}
+.nav-search:focus-within{border-color:color-mix(in srgb,var(--ac) 50%,transparent);box-shadow:0 20px 44px -18px rgba(79,70,229,.45)}
+.nav-search .ns-mag{display:inline-flex;color:var(--ac);flex-shrink:0}
+.nav-search .ns-mag svg{width:18px;height:18px}
+.nav-search input{flex:1;min-width:0;border:none;background:transparent;outline:none;font-family:var(--sans);font-size:14.5px;color:var(--ink)}
+.nav-search input::placeholder{color:var(--ink-40)}
+.nav-search .ns-btn{flex-shrink:0;height:30px;border:none;cursor:pointer;color:#fff;font-family:var(--sans);font-weight:700;font-size:13px;
+    background:linear-gradient(180deg,#5B52EC,#4338CA);border-radius:8px;padding:0 20px;transition:.15s}
+.nav-search .ns-btn:hover{filter:brightness(1.07)}
+/* match the hero search's focus ring on the scroll-docked nav search */
+  .nav-search:focus-within{border-color:color-mix(in srgb,var(--ac) 55%,transparent);box-shadow:0 8px 20px -10px rgba(79,70,229,.45)}
+header.nav.scrolled .nav-searchrow{max-height:88px;opacity:1;padding:12px 0;border-top-color:var(--line)}
+header.nav.scrolled .nav-searchrow .nav-search{transform:none}
+@media(max-width:1000px){.nav-search{height:48px;padding:0 6px 0 16px}
+.nav-search .ns-btn{height:40px;padding:0 22px;font-size:14px}
+.nav-search input{font-size:16px}}
+@media(max-width:640px){.wrap{padding-left:18px;padding-right:18px}}
+header.nav .wrap,footer .wrap{max-width:1180px}
 </style>
 </head>
 <body>
-<header><div class="wrap nav">
-  <a class="brand" href="home-platform-v156-demo.html"><svg class="lmk" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd-c"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd-c)"/></svg><span class="bw">PhoneNumbers<span class="c">.com</span></span></a>
-  <nav class="nav-links"><a href="home-platform-v156-demo.html">Home</a><a href="search-redesign-v222.html">Numbers</a><a href="#">Tools</a><a href="#">Resources</a></nav>
-  <a class="nav-cta" href="search-redesign-v222.html">Find a number →</a>
-</div></header>
+<header class="nav scrolled">
+  <div class="wrap">
+    <a class="brand" href="home-platform-v156-demo.html"><svg class="lmk" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd-hh"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd-hh)"/></svg><span class="bw">PhoneNumbers<span class="c">.com</span></span></a>
+    <nav class="main">
+        <div class="nav-item">
+          <a class="simple" href="search-redesign-v222.html">Marketplace</a>
+          <div class="nav-dd nav-dd-wide"><div class="dd-feat"><a class="dd-tile" href="#"><span class="ti"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h12l3 5-9 13L3 8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 8h18" stroke="currentColor" stroke-width="1.3"/></svg></span><span class="dd-tx"><b>Premium Number Marketplace</b><span>Curated premium numbers across every category.</span></span></a><a class="dd-tile" href="#"><span class="ti"><svg viewBox="0 0 24 24" fill="none"><path d="M5 6V4h14v2M12 4v16M9 20h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dd-tx"><b>Vanity &amp; Word Numbers</b><span>1-800 words and brandable patterns.</span></span></a><a class="dd-tile" href="#"><span class="ti"><svg viewBox="0 0 24 24" fill="none"><path d="M2 5h4l1.5 4-2 1.5a9 9 0 004.5 4.5L12 13l5 1.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 5h6m-3-3v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="dd-tx"><b>Toll-Free Marketplace</b><span>800, 888, 877, 866 &amp; more.</span></span></a></div><div class="dd-col"><div class="dd-h">Popular Collections</div><a href="#">Toll-Free</a><a href="#">Vanity Word</a><a href="#">Local — Major Cities</a><a href="#">Repeating</a><a href="#">Triple &amp; Quad</a><a href="#">Sequential Blocks</a><a href="#">Industry Numbers</a></div><div class="dd-col"><div class="dd-h">Acquire</div><a href="#">Buy Outright</a><a href="#">Payment Plans</a><a href="#">Sell a Number</a><div class="dd-h">Number Services</div><a href="#">Porting</a><a href="#">Instant Activation</a><a href="#">Bulk Acquisition</a></div></div>
+        </div>
+        <div class="nav-item">
+          <a class="simple" href="#">Intelligence</a>
+          <div class="nav-dd"><div class="dd-col"><div class="dd-h">Number Tools</div><a href="#">Phone Number Lookup</a><a href="#">Reverse Lookup</a><a href="#">Carrier Lookup</a><a href="#">Spam &amp; Risk Check</a><a href="#">CNAM Lookup</a><a href="#">Number Validator</a></div><div class="dd-col"><div class="dd-h">Platform</div><a href="#">The Number Graph</a><a href="#">Lookup API</a><a href="#">Bulk Lookup</a><a href="#">Reputation Monitor</a></div></div>
+        </div>
+        <div class="nav-item">
+          <a class="simple" href="#">Services</a>
+          <div class="nav-dd"><div class="dd-col"><div class="dd-h">Activate</div><a href="#">Business VoIP</a><a href="#">SIP Trunking</a><a href="#">Wireless Plans</a><a href="#">Virtual Numbers</a><a href="#">Call Forwarding</a><a href="#">Travel eSIMs</a></div></div>
+        </div>
+        <div class="nav-item">
+          <a class="simple" href="#">Developers</a>
+          <div class="nav-dd"><div class="dd-col"><div class="dd-h">Build</div><a href="#">Lookup API</a><a href="#">Validation API</a><a href="#">Carrier API</a><a href="#">Provisioning API</a><a href="#">Documentation</a><a href="#">Get an API Key</a></div></div>
+        </div>
+        <div class="nav-item">
+          <a class="simple" href="#">Resources</a>
+          <div class="nav-dd"><div class="dd-col"><div class="dd-h">Company</div><a href="#">About</a><a href="#">Blog</a><a href="#">Help Center</a><a href="#">Contact</a><a href="#">Partners</a></div></div>
+        </div>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-ic" href="#" aria-label="Search" title="Search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.7"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></a>
+      <a class="nav-ic" href="#/saved" aria-label="Saved" title="Saved"><svg viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.5A4 4 0 0119 10c0 5.5-7 10-7 10z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></a>
+      <a class="nav-ic" href="#/profile" aria-label="Account" title="Account"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 20a7.5 7.5 0 0115 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></a>
+      <a class="nav-ic nav-cart" href="#/checkout" aria-label="Cart" title="Cart"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/><path d="M2.5 3.5H5l2.4 12a1.5 1.5 0 001.5 1.2h8a1.5 1.5 0 001.5-1.2L21.5 7.5H6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="cart-badge">2</span></a>
+      <div class="nav-loc-wrap">
+        <button class="nav-loc" aria-haspopup="true" aria-expanded="false" aria-label="Region &amp; currency"><span class="flag">🇺🇸</span><span class="loc-code">US</span><svg class="loc-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="loc-menu" hidden role="menu">
+          <button class="loc-opt active" role="menuitem" data-code="US" data-flag="🇺🇸"><span class="flag">🇺🇸</span>United States<span class="loc-cur">USD&nbsp;$</span></button>
+          <button class="loc-opt" role="menuitem" data-code="CA" data-flag="🇨🇦"><span class="flag">🇨🇦</span>Canada<span class="loc-cur">CAD&nbsp;$</span></button>
+          <button class="loc-opt" role="menuitem" data-code="UK" data-flag="🇬🇧"><span class="flag">🇬🇧</span>United Kingdom<span class="loc-cur">GBP&nbsp;£</span></button>
+          <button class="loc-opt" role="menuitem" data-code="AU" data-flag="🇦🇺"><span class="flag">🇦🇺</span>Australia<span class="loc-cur">AUD&nbsp;$</span></button>
+        </div>
+      </div>
+    </div>
+    <button class="navtoggle" aria-label="Open menu" aria-expanded="false">
+      <span class="nt-bar"></span><span class="nt-bar"></span><span class="nt-bar"></span>
+    </button>
+  </div>
+  <!-- search docks as a SECOND ROW below the nav on scroll (atom-style) -->
+  <div class="nav-searchrow">
+    <div class="wrap">
+      <form class="nav-search" onsubmit="return false">
+        <span class="ns-mag"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <input type="text" placeholder="Look up any phone number…" aria-label="Look up a phone number">
+        <button type="button" class="ns-btn">Search</button>
+      </form>
+    </div>
+  </div>
+  <div class="mobilemenu" hidden>
+    <a href="#"><b>Own</b><span>Numbers</span></a>
+    <a href="#"><b>Understand</b><span>Intelligence</span></a>
+    <a href="#"><b>Activate</b><span>Services</span></a>
+    <a href="#"><b>Build</b><span>Developers</span></a>
+    <a href="#"><b>Resources</b><span>Guides &amp; docs</span></a>
+    <a class="btn btn-grad mm-cta" href="#">Get Started</a>
+  </div>
+</header>
 
 <div class="wrap crumbs"><a href="home-platform-v156-demo.html">Home</a> › Carriers</div>
 
@@ -272,10 +523,106 @@
   <div class="cta-band">
     <h2>Find your number first</h2>
     <p>50,000+ premium local, vanity &amp; toll-free numbers — yours to port anywhere.</p>
-    <a class="btn" href="search-redesign-v222.html">Browse premium numbers</a>
+    <a class="cbtn" href="search-redesign-v222.html">Browse premium numbers</a>
   </div>
 </div></section>
 
-<footer><div class="wrap">© 2026 PhoneNumbers.com · All rights reserved · Porting details are illustrative — confirm with your receiving carrier.</div></footer>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a class="brand" href="home-platform-v156-demo.html"><svg class="lmk" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd-hf"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd-hf)"/></svg><span class="bw">PhoneNumbers<span class="c">.com</span></span></a>
+        <p>The identity layer for global telecommunications — own, understand, and activate phone numbers at scale.</p>
+        <div class="socials">
+          <a href="#" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-6 7H2l8-9L2 2h7l4 6z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3.5A1.5 1.5 0 113.5 5 1.5 1.5 0 015 3.5zM3.7 8.5h2.6V21H3.7zM9 8.5h2.5v1.7h.1c.4-.7 1.4-1.5 2.9-1.5 3 0 3.6 2 3.6 4.6V21h-2.6v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21H9z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3.3-.4-4.8a2.5 2.5 0 00-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.4A2.5 2.5 0 002.4 7.2C2 8.7 2 12 2 12s0 3.3.4 4.8a2.5 2.5 0 001.8 1.8C5.7 19 12 19 12 19s6.3 0 7.8-.4a2.5 2.5 0 001.8-1.8C22 15.3 22 12 22 12zm-12 3V9l5 3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Platform</h5><a href="#">Number Intelligence</a><a href="#">The Number Graph</a><a href="#">Lookup API</a><a href="#">Validation API</a><a href="#">Provisioning API</a><a href="#">Documentation</a></div>
+      <div class="fcol"><h5>Marketplace</h5><a href="#">Browse Numbers</a><a href="#">Vanity Numbers</a><a href="#">Toll-Free Numbers</a><a href="#">Local Numbers</a><a href="#">Industry Numbers</a><a href="#">Number Porting</a></div>
+      <div class="fcol"><h5>Services</h5><a href="#">Business VoIP</a><a href="#">SIP Trunking</a><a href="#">Wireless Plans</a><a href="#">Virtual Numbers</a><a href="#">Call Forwarding</a><a href="#">Travel eSIMs</a></div>
+      <div class="fcol"><h5>Company</h5><a href="#">About Us</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Partners</a><a href="#">Contact Us</a></div>
+    </div>
+    <div class="fbot">© 2026 PhoneNumbers.com — EPhone Numbers LLC. The identity layer for global telecommunications.</div>
+  </div>
+</footer>
+<script>
+/* mobile nav: hamburger toggle */
+(function(){
+  var btn=document.querySelector('.navtoggle'), menu=document.querySelector('.mobilemenu');
+  if(!btn||!menu) return;
+  btn.addEventListener('click', function(){
+    var open=menu.hasAttribute('hidden');
+    if(open){ menu.removeAttribute('hidden'); } else { menu.setAttribute('hidden',''); }
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open?'true':'false');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ menu.setAttribute('hidden',''); btn.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
+  });
+})();
+/* condensed search docks as a row below the nav on scroll past hero (all viewports), routes into the hero Lookup */
+(function(){
+  var heroAction=document.querySelector('.heroaction'); if(!heroAction) return;
+  var nav=document.querySelector('header.nav');
+  var navSearch=document.querySelector('.nav-search');
+  function past(){ return heroAction.getBoundingClientRect().bottom < 4; }
+  function onScroll(){
+    if(nav) nav.classList.toggle('scrolled', past());
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* route any condensed search into the hero Lookup */
+  function route(val){
+    var lookTab=document.querySelector('.ha-tab[data-mode="lookup"]');
+    var heroInput=document.querySelector('.ha-mode[data-mode="lookup"] input');
+    var heroGo=document.querySelector('.ha-mode[data-mode="lookup"] .ha-go');
+    if(lookTab) lookTab.click();
+    if(heroInput) heroInput.value=val;
+    window.scrollTo({top:0, behavior:'smooth'});
+    setTimeout(function(){ if(heroGo) heroGo.click(); }, 450);
+  }
+  function wire(inputSel, btnSel, root){
+    var inp=root.querySelector(inputSel), btn=root.querySelector(btnSel);
+    if(btn) btn.addEventListener('click', function(){ route(inp.value); });
+    if(inp) inp.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); route(inp.value); } });
+  }
+  if(navSearch) wire('input', '.ns-btn', navSearch);
+})();
+</script>
+<script>
+/* nav region/currency dropdown (functional, like phonenumbers.com) */
+(function(){
+  var wrap=document.querySelector('.nav-loc-wrap'); if(!wrap) return;
+  var btn=wrap.querySelector('.nav-loc'), menu=wrap.querySelector('.loc-menu');
+  var flagEl=btn.querySelector('.flag'), codeEl=btn.querySelector('.loc-code');
+  function open(){ menu.hidden=false; btn.setAttribute('aria-expanded','true'); }
+  function close(){ menu.hidden=true; btn.setAttribute('aria-expanded','false'); }
+  btn.addEventListener('click', function(e){ e.stopPropagation(); menu.hidden ? open() : close(); });
+  menu.querySelectorAll('.loc-opt').forEach(function(o){
+    o.addEventListener('click', function(){
+      menu.querySelectorAll('.loc-opt').forEach(function(x){ x.classList.remove('active'); });
+      o.classList.add('active');
+      flagEl.textContent=o.dataset.flag;
+      codeEl.textContent=o.dataset.code;
+      close();
+    });
+  });
+  document.addEventListener('click', function(e){ if(!wrap.contains(e.target)) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script>
+<script>
+/* nav search routes to the marketplace search page */
+(function(){
+  var ns = document.querySelector('.nav-search'); if(!ns) return;
+  var inp = ns.querySelector('input'); var btn = ns.querySelector('.ns-btn');
+  function go(){ var v = inp && inp.value.trim(); location.href = v ? 'search-redesign-v222.html?q=' + encodeURIComponent(v) : 'search-redesign-v222.html'; }
+  if(btn) btn.addEventListener('click', go);
+  if(inp) inp.addEventListener('keydown', function(e){ if(e.key === 'Enter') go(); });
+})();
+</script>
 </body>
 </html>
