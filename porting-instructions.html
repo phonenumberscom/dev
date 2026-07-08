@@ -245,6 +245,7 @@ header.nav.scrolled .nav-searchrow .nav-search{transform:none}
 header.nav .wrap,footer .wrap{max-width:1180px}
 
 /* ===== page re-pins (must stay LAST — wins over harvested chrome) ===== */
+a{color:inherit;text-decoration:none}
 .wrap{max-width:1020px;padding-left:24px;padding-right:24px}
 header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:32px}
 .hero.wrap{padding:30px 24px 26px}
@@ -882,7 +883,7 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
   var nav = document.querySelector('header.nav');
   if(!nav) return;
   function upd(){
-    nav.classList.toggle('scrolled', window.scrollY > 130);
+    /* this page has its own sticky search — the nav search stays docked away */
     document.documentElement.style.setProperty('--hdr-h', nav.offsetHeight + 'px');
   }
   window.addEventListener('scroll', upd, {passive:true});
