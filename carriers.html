@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does it take to port a number?", "acceptedAnswer": {"@type": "Answer", "text": "Local numbers typically port in 1\u20133 business days. Toll-free numbers usually complete in 1\u20132 business days. Wireless-to-wireless transfers are often same-day."}}, {"@type": "Question", "name": "Will my number stay active during the transfer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your number keeps working on our network until the moment the new carrier activates it \u2014 there is no dead period."}}, {"@type": "Question", "name": "Can I port my number to a VoIP service like RingCentral or Google Voice?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every number we sell can be ported to any US or Canadian VoIP provider, or connected directly through call forwarding while you decide."}}, {"@type": "Question", "name": "Does it cost anything to port my number out?", "acceptedAnswer": {"@type": "Answer", "text": "We never charge a port-out fee. Your receiving carrier may have its own activation fees \u2014 check with them before starting the transfer."}}, {"@type": "Question", "name": "What if my carrier isn't listed here?", "acceptedAnswer": {"@type": "Answer", "text": "This list covers common carriers, but any US or Canadian wireless, VoIP, or landline carrier can receive your number. If you can name it, we can port to it."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does it take to port a number?", "acceptedAnswer": {"@type": "Answer", "text": "Local numbers typically port in 1\u20133 business days. Toll-free numbers usually complete in 1\u20132 business days. Wireless-to-wireless transfers are often same-day."}}, {"@type": "Question", "name": "Will my number stay active during the transfer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your number keeps working on our network until the moment the new carrier activates it \u2014 there is no dead period."}}, {"@type": "Question", "name": "Can I port my number to a VoIP service like RingCentral or Google Voice?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every number we sell can be ported to any US or Canadian VoIP provider, or connected directly through call forwarding while you decide."}}, {"@type": "Question", "name": "Does it cost anything to port my number out?", "acceptedAnswer": {"@type": "Answer", "text": "We never charge a port-out fee. Your receiving carrier may have its own activation fees \u2014 check with them before starting the transfer."}}, {"@type": "Question", "name": "What if my carrier isn't listed here?", "acceptedAnswer": {"@type": "Answer", "text": "This list covers common carriers, but any US or Canadian wireless, VoIP, or landline carrier can receive your number. If you can name it, we can port to it."}}, {"@type": "Question", "name": "Can I port a number I just bought?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Numbers are portable as soon as they're activated on our network \u2014 typically within minutes of purchase. There is no required holding period."}}, {"@type": "Question", "name": "What can make a port fail?", "acceptedAnswer": {"@type": "Answer", "text": "The usual causes are a mismatched account name, a wrong account number or transfer PIN, or an inactive line. Double-check those details from your dashboard before submitting the request to your new carrier."}}, {"@type": "Question", "name": "Do I lose my number if the port fails?", "acceptedAnswer": {"@type": "Answer", "text": "No. A failed port simply leaves the number where it is \u2014 active on our network. Fix the detail that caused the rejection and resubmit; nothing is lost."}}]}</script>
 <style>
   :root{--paper:#FFFFFF;--ink:#10133A;--ink-72:rgba(16,19,58,.72);--ink-58:rgba(16,19,58,.56);--ink-40:rgba(16,19,58,.40);--line:rgba(16,19,58,.10);--ac:#4F46E5;--ac-d:#4038CC;--ac-soft:#F3F2FE;--sans:"Plus Jakarta Sans",-apple-system,system-ui,sans-serif;--maxw:1180px}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -58,6 +58,23 @@
   footer{border-top:1px solid var(--line);padding:26px 0;margin-top:20px;font-size:13px;color:var(--ink-40);text-align:center}
   @media(max-width:1000px){.fgrid{grid-template-columns:repeat(3,1fr)}.lgrid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:700px){.fgrid{grid-template-columns:1fr 1fr}.lgrid{grid-template-columns:1fr 1fr}.nav-links{display:none}}
+
+  .hp-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;max-width:980px;margin:0 auto}
+  .hp-h{font-size:15px;font-weight:700;margin-bottom:14px}
+  .hp-steps{list-style:none;counter-reset:hp}
+  .hp-steps li{counter-increment:hp;position:relative;padding:0 0 16px 44px;font-size:14px;color:var(--ink-58);line-height:1.55}
+  .hp-steps li b{color:var(--ink);font-weight:600}
+  .hp-steps li::before{content:counter(hp);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:9px;background:#fff;border:1px solid var(--line);color:var(--ac);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+  .hp-check{list-style:none}
+  .hp-check li{position:relative;padding:0 0 12px 28px;font-size:14px;color:var(--ink-58);line-height:1.5}
+  .hp-check li b{color:var(--ink)}
+  .hp-check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--ac);font-weight:800}
+  .hp-table{width:100%;border-collapse:separate;border-spacing:0;font-size:13.5px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .hp-table th{text-align:left;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-40);font-weight:700;padding:10px 14px;border-bottom:1px solid var(--line)}
+  .hp-table td{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--ink-72)}
+  .hp-table td:last-child{font-variant-numeric:tabular-nums;color:var(--ink)}
+  .hp-table tr:last-child td{border-bottom:none}
+  @media(max-width:700px){.hp-grid{grid-template-columns:1fr;gap:28px}}
 </style>
 </head>
 <body>
@@ -178,6 +195,41 @@
 </div></section>
 
 <section class="tint"><div class="wrap">
+  <h2>How porting works</h2>
+  <div class="hp-grid">
+    <div class="hp-col">
+      <h3 class="hp-h">Five steps, no dead air</h3>
+      <ol class="hp-steps">
+        <li><b>Buy your number</b> — it activates on our licensed US carrier network within minutes.</li>
+        <li><b>Use it immediately</b> — forward calls, park it, or connect service while you decide where it lives.</li>
+        <li><b>Request the port from your new carrier</b> — give them the account number and transfer PIN from your dashboard.</li>
+        <li><b>Carriers validate and schedule</b> — the receiving carrier confirms the details with us automatically.</li>
+        <li><b>Your number goes live on the new carrier</b> — the switchover is seamless, with no gap in service.</li>
+      </ol>
+    </div>
+    <div class="hp-col">
+      <h3 class="hp-h">Before you port — checklist</h3>
+      <ul class="hp-check">
+        <li>Your account number (in your PhoneNumbers.com dashboard)</li>
+        <li>Your transfer PIN (generated in the dashboard)</li>
+        <li>Billing name matches exactly on both accounts</li>
+        <li>Keep the number active — <b>never cancel first;</b> porting moves the number, cancelling releases it</li>
+      </ul>
+      <h3 class="hp-h" style="margin-top:26px">Typical porting times</h3>
+      <table class="hp-table">
+        <thead><tr><th>Number type</th><th>Typical time</th></tr></thead>
+        <tbody>
+          <tr><td>Wireless to wireless</td><td>Same day – 1 business day</td></tr>
+          <tr><td>Toll-free</td><td>1 – 2 business days</td></tr>
+          <tr><td>Local (to VoIP or wireless)</td><td>1 – 3 business days</td></tr>
+          <tr><td>Landline &amp; cable voice</td><td>3 – 7 business days</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
   <h2>Porting FAQ</h2>
   <div class="faqwrap">
       <details class="cfaq" open>
@@ -199,6 +251,18 @@
       <details class="cfaq">
         <summary>What if my carrier isn't listed here?</summary>
         <p>This list covers common carriers, but any US or Canadian wireless, VoIP, or landline carrier can receive your number. If you can name it, we can port to it.</p>
+      </details>
+      <details class="cfaq">
+        <summary>Can I port a number I just bought?</summary>
+        <p>Yes. Numbers are portable as soon as they're activated on our network — typically within minutes of purchase. There is no required holding period.</p>
+      </details>
+      <details class="cfaq">
+        <summary>What can make a port fail?</summary>
+        <p>The usual causes are a mismatched account name, a wrong account number or transfer PIN, or an inactive line. Double-check those details from your dashboard before submitting the request to your new carrier.</p>
+      </details>
+      <details class="cfaq">
+        <summary>Do I lose my number if the port fails?</summary>
+        <p>No. A failed port simply leaves the number where it is — active on our network. Fix the detail that caused the rejection and resubmit; nothing is lost.</p>
       </details>
   </div>
 </div></section>
