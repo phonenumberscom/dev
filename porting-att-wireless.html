@@ -256,7 +256,7 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 </style>
 </head>
 <body>
-<header class="nav scrolled">
+<header class="nav">
   <div class="wrap">
     <a class="brand" href="home-platform-v156-demo.html"><svg class="lmk" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd-hh"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd-hh)"/></svg><span class="bw">PhoneNumbers<span class="c">.com</span></span></a>
     <nav class="main">
@@ -477,6 +477,20 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
   function go(){ var v = inp && inp.value.trim(); location.href = v ? 'search-redesign-v222.html?q=' + encodeURIComponent(v) : 'search-redesign-v222.html'; }
   if(btn) btn.addEventListener('click', go);
   if(inp) inp.addEventListener('keydown', function(e){ if(e.key === 'Enter') go(); });
+})();
+</script>
+<script>
+/* inner pages: reveal the nav search on scroll (homepage behavior) */
+(function(){
+  var nav = document.querySelector('header.nav');
+  if(!nav) return;
+  function upd(){
+    nav.classList.toggle('scrolled', window.scrollY > 130);
+    document.documentElement.style.setProperty('--hdr-h', nav.offsetHeight + 'px');
+  }
+  window.addEventListener('scroll', upd, {passive:true});
+  window.addEventListener('resize', upd, {passive:true});
+  upd();
 })();
 </script>
 </body>
