@@ -1557,6 +1557,21 @@
   @media(max-width:640px){
     .wrap{padding-left:18px;padding-right:18px}
   }
+
+/* v160: area codes + carrier compatibility */
+.ac-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.ac-card{display:flex;flex-direction:column;align-items:center;gap:3px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 10px 18px;text-decoration:none;box-shadow:0 2px 6px rgba(16,19,58,.04);transition:transform .18s,box-shadow .18s,border-color .18s}
+.ac-card:hover{transform:translateY(-3px);border-color:var(--ac);box-shadow:0 12px 28px -12px rgba(79,70,229,.35)}
+.ac-card b{font-size:27px;font-weight:700;letter-spacing:-.01em;color:var(--ink);font-variant-numeric:tabular-nums}
+.ac-card span{font-size:13px;color:var(--ink-72)}
+.ac-card em{font-style:normal;font-size:11px;color:var(--ink-40)}
+.ac-more{text-align:center;margin-top:26px}
+.ac-more a{font-size:14px;font-weight:600;color:var(--ac);text-decoration:none}
+.ac-more a:hover{text-decoration:underline}
+.cr-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.cr-tile{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 10px;font-size:16px;font-weight:700;letter-spacing:-.01em;color:var(--ink-58)}
+@media(max-width:1000px){.ac-grid,.cr-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.ac-grid,.cr-grid{grid-template-columns:repeat(2,1fr)}.areacodes .sec-head,.carriers .sec-head{margin-bottom:30px}}
 </style>
 </head>
 <body>
@@ -2070,6 +2085,46 @@
 </section>
 
 <!-- [#11] FAQ -->
+
+<!-- AREA CODES -->
+<section class="areacodes tint">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Area Codes</span>
+      <h2>Explore Area Codes</h2>
+      <p>Every major US market, stocked with local inventory — pick your city, own its code.</p>
+    </div>
+    <div class="ac-grid">
+      <a class="ac-card" href="search-redesign-v222.html?q=212"><b>212</b><span>New York</span><em>1,840 numbers</em></a>
+      <a class="ac-card" href="search-redesign-v222.html?q=305"><b>305</b><span>Miami</span><em>2,100 numbers</em></a>
+      <a class="ac-card" href="search-redesign-v222.html?q=310"><b>310</b><span>Los Angeles</span><em>1,560 numbers</em></a>
+      <a class="ac-card" href="search-redesign-v222.html?q=404"><b>404</b><span>Atlanta</span><em>980 numbers</em></a>
+      <a class="ac-card" href="search-redesign-v222.html?q=617"><b>617</b><span>Boston</span><em>720 numbers</em></a>
+      <a class="ac-card" href="search-redesign-v222.html?q=702"><b>702</b><span>Las Vegas</span><em>640 numbers</em></a>
+    </div>
+    <div class="ac-more"><a href="search-redesign-v222.html">Browse all area codes →</a></div>
+  </div>
+</section>
+
+<!-- CARRIER COMPATIBILITY -->
+<section class="carriers light">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Compatible With All Major US Carriers</span>
+      <h2>Carrier Compatibility</h2>
+      <p>Numbers port to any major carrier or VoIP provider — no lock-in, full portability guaranteed.</p>
+    </div>
+    <div class="cr-grid">
+      <div class="cr-tile">AT&amp;T</div>
+      <div class="cr-tile">T-Mobile</div>
+      <div class="cr-tile">Verizon</div>
+      <div class="cr-tile">Sprint</div>
+      <div class="cr-tile">NY Mobile</div>
+      <div class="cr-tile">Cox</div>
+    </div>
+  </div>
+</section>
+
 <section class="faq tint">
   <div class="wrap narrow">
     <div class="sec-head"><span class="eyebrow">FAQ</span><h2>Questions, answered</h2></div>
