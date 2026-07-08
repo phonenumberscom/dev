@@ -1466,7 +1466,9 @@
   @media(max-width:1000px){
     .navtoggle{display:flex;order:-1;margin-left:0}      /* hamburger on the left */
     .nav-right{display:flex;margin-left:auto}            /* keep cart/flag/account visible on the right */
-    .bn{display:none}                                    /* collapse wordmark to the icon to fit the icons */
+    .bn{display:none}
+    header .brand .bw{display:none}                      /* One-key mark only in mobile header (v159 fix) */
+    .sec-head h2{font-size:clamp(24px,8.5vw,32px)}       /* fit "PhoneNumbers.com" unbroken (v159 fix) */                                    /* collapse wordmark to the icon to fit the icons */
     .nav .wrap{gap:14px}
     .mobilemenu:not([hidden]){display:flex}
     /* center the hero on mobile (atom-style) */
