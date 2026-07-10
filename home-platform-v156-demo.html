@@ -1658,16 +1658,6 @@
         <div class="hsupport">Look up any number · own premium numbers · activate service — all powered by the <b>Number Graph</b>.</div>
         <!-- MULTI-MODE ACTION BAR — routes the 4 visitor intents -->
         <div class="heroaction">
-          <div class="ha-tabs" role="tablist">
-            <button class="ha-tab active" data-mode="market">Buy Numbers</button>
-            <button class="ha-tab" data-mode="lookup" data-href="lookup.html">Lookup</button>
-          </div>
-
-          <div class="ha-mode" data-mode="lookup" hidden>
-            <span class="ha-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-            <input type="text" placeholder="Enter any phone number…" aria-label="Look up a phone number">
-            <button class="ha-go">Analyze Number</button>
-          </div>
           <div class="ha-mode active ha-ai" data-mode="market">
             <span class="ha-ic ai-spark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l1.7 5.3 5.3 1.7-5.3 1.7L12 16.5l-1.7-5.3L5 9.5l5.3-1.7z"/><path d="M19.5 3l.6 1.9L22 5.5l-1.9.6L19.5 8l-.6-1.9L17 5.5l1.9-.6z"/></svg></span>
             <textarea rows="1" placeholder=" " aria-label="Describe your business or type a number"></textarea>
@@ -1675,7 +1665,6 @@
             <button class="ha-go ai-send" aria-label="Find numbers"><svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M6 11l6-6 6 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
 
-          <div class="ha-sub" data-mode="lookup" hidden>Carrier-verified in real time — not scraped lists or stale databases. <a href="#">See a sample report →</a></div>
           <div class="ha-sub" data-mode="market"><b>Premium</b>, vanity, toll-free &amp; local numbers across 200+ countries.</div>
           <div class="ha-launch" role="listbox" aria-label="Search options">
             <div class="lp-lab">Browse by type</div>
@@ -2607,13 +2596,11 @@
 
   /* route any condensed search into the hero Lookup */
   function route(val){
-    var lookTab=document.querySelector('.ha-tab[data-mode="lookup"]');
-    var heroInput=document.querySelector('.ha-mode[data-mode="lookup"] input');
-    var heroGo=document.querySelector('.ha-mode[data-mode="lookup"] .ha-go');
-    if(lookTab) lookTab.click();
-    if(heroInput) heroInput.value=val;
+    var ta=document.querySelector('.ha-mode[data-mode="market"] textarea');
+    var go=document.querySelector('.ha-mode[data-mode="market"] .ai-send');
+    if(ta){ ta.value=val; ta.dispatchEvent(new Event('input')); }
     window.scrollTo({top:0, behavior:'smooth'});
-    setTimeout(function(){ if(heroGo) heroGo.click(); }, 450);
+    setTimeout(function(){ if(go) go.click(); }, 450);
   }
   function wire(inputSel, btnSel, root){
     var inp=root.querySelector(inputSel), btn=root.querySelector(btnSel);
