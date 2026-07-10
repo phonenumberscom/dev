@@ -276,6 +276,11 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 .drow-body > .drow-foot{background:none;border:none;padding:2px 2px 0;grid-column:1/-1}
 @media(max-width:700px){.drow-body{padding:12px 12px 14px}}
 
+/* ===== v13: search clear button ===== */
+.dclear{flex:0 0 auto;width:24px;height:24px;border-radius:50%;border:none;background:rgba(16,19,58,.08);color:var(--ink-58);font-size:11px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.dclear:hover{background:rgba(79,70,229,.15);color:var(--ac)}
+.dclear[hidden]{display:none}
+
 /* ===== v9: full-caliber hero + rights band + mistakes + faq (new classes only) ===== */
 .kickpill{display:inline-flex;align-items:center;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ac);background:rgba(79,70,229,.08);border:1px solid rgba(79,70,229,.18);padding:5px 14px;border-radius:99px}
 .ph-hero{padding:40px 0 8px}
@@ -452,7 +457,7 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 </div>
 
 <div class="wrap controls">
-  <div class="dsearch"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg><input type="text" id="dq" placeholder="Search carriers…" aria-label="Search carriers"></div>
+  <div class="dsearch"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg><input type="text" id="dq" placeholder="Search carriers…" aria-label="Search carriers"><button class="dclear" type="button" aria-label="Clear search" hidden>&#10005;</button></div>
   <button class="fchip on" data-f="all">All</button>
   <button class="fchip" data-f="Wireless">Wireless</button>
   <button class="fchip" data-f="Prepaid & MVNO">Prepaid &amp; MVNO</button>
@@ -957,6 +962,7 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
   var rows = document.querySelectorAll('.drow');
   var count = document.getElementById('dcount');
   var empty = document.querySelector('.dempty');
+  var clr = document.querySelector('.dclear');
   var cat = 'all';
   function apply(){
     var term = q.value.trim().toLowerCase();
@@ -968,6 +974,7 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
     });
     count.textContent = n + ' of 41 carriers';
     if (empty) empty.hidden = n !== 0;
+    if (clr) clr.hidden = !q.value;
   }
   chips.forEach(function(c){
     c.addEventListener('click', function(){
@@ -978,6 +985,7 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
     });
   });
   q.addEventListener('input', apply);
+  if (clr) clr.addEventListener('click', function(){ q.value = ''; apply(); q.focus(); });
   apply();
   /* deep-link: ?q=verizon prefills the search, opens + centers the first match */
   var pq = new URLSearchParams(location.search).get('q');
