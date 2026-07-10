@@ -267,6 +267,57 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 .drow summary::after{content:"";flex:0 0 auto;width:8px;height:8px;border-right:2px solid var(--ink-40);border-bottom:2px solid var(--ink-40);transform:translateY(-2px) rotate(45deg);transition:transform .18s ease;margin-left:2px}
 .drow[open] summary::after{transform:translateY(2px) rotate(-135deg)}
 .drow-name .drow-src{white-space:nowrap}
+
+/* ===== v9: full-caliber hero + rights band + mistakes + faq (new classes only) ===== */
+.kickpill{display:inline-flex;align-items:center;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ac);background:rgba(79,70,229,.08);border:1px solid rgba(79,70,229,.18);padding:5px 14px;border-radius:99px}
+.ph-hero{padding:40px 0 8px}
+.ph-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.ph-copy h1{font-size:clamp(28px,3.4vw,42px);font-weight:700;letter-spacing:-.028em;line-height:1.08;margin:16px 0 14px;text-wrap:balance}
+.ph-copy h1 em{font-style:normal;color:var(--ac)}
+.ph-copy p{font-size:15.5px;color:var(--ink-58);line-height:1.65;max-width:540px}
+.ph-chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.ph-chips span{font-size:12.5px;font-weight:600;color:var(--ink-72);background:rgba(255,255,255,.66);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.85);border-radius:99px;padding:7px 14px;box-shadow:0 1px 4px rgba(16,19,58,.06)}
+.ptix{position:relative;background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:24px 26px 20px;box-shadow:0 24px 60px -22px rgba(38,28,110,.35);max-width:400px;justify-self:end;width:100%}
+.ptix-head{display:flex;justify-content:space-between;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-40);margin-bottom:16px}
+.ptix-list{list-style:none;margin:0;padding:0}
+.ptix-list li{display:flex;gap:13px;padding:0 0 14px}
+.ptix-list li i{flex:0 0 auto;width:22px;height:22px;border-radius:50%;margin-top:1px;background:#EDEBFB;border:2px solid var(--ac);position:relative}
+.ptix-list li i::after{content:"";position:absolute;left:3.5px;top:4.5px;width:10px;height:6px;border-left:2.5px solid var(--ac);border-bottom:2.5px solid var(--ac);transform:rotate(-45deg)}
+.ptix-list b{display:block;font-size:14px;font-weight:700}
+.ptix-list li span{font-size:12.5px;color:var(--ink-58);line-height:1.45;display:block;margin-top:1px}
+.ptix-warn{font-size:12.5px;line-height:1.5;color:#7A4D0B;background:rgba(255,190,80,.14);border:1px solid rgba(255,170,40,.35);border-radius:12px;padding:11px 14px}
+.ph-shead h2{font-size:26px;font-weight:700;letter-spacing:-.025em}
+.ph-shead p{margin-top:8px;font-size:14px;color:var(--ink-58);max-width:640px}
+.ph-dirhead{margin:34px auto 4px}
+.ph-rights{margin:44px auto 0}
+.rband{position:relative;overflow:hidden;border-radius:26px;padding:40px 46px 44px;color:#fff;background:radial-gradient(120% 150% at 50% -20%,#2B2480 0%,#1E1860 40%,#161147 75%,#100D33 100%);box-shadow:0 30px 70px -28px rgba(12,9,48,.55)}
+.rband-kick{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#BDB9FA}
+.rband h2{color:#fff;font-size:26px;font-weight:700;letter-spacing:-.02em;margin:10px 0 24px;max-width:600px;text-wrap:balance}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:18px 20px}
+.rcard b{display:block;font-size:14.5px;font-weight:700;margin-bottom:7px;color:#fff}
+.rcard p{font-size:13px;line-height:1.6;color:rgba(255,255,255,.72)}
+.ph-mist{margin:48px auto 0}
+.mlist{list-style:none;counter-reset:mk;margin:22px 0 0;padding:0}
+.mlist li{counter-increment:mk;display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.66);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line);border-left:4px solid var(--ac);border-radius:12px;padding:16px 20px;margin-bottom:10px;box-shadow:0 1px 3px rgba(10,15,30,.05)}
+.mlist li::before{content:counter(mk);flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:rgba(79,70,229,.1);color:var(--ac);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.mlist b{display:block;font-size:14.5px;font-weight:700}
+.mlist p{font-size:13.5px;color:var(--ink-58);line-height:1.55;margin-top:3px}
+.ph-faq{margin:48px auto 0}
+.ph-faq .ph-shead{margin-bottom:20px}
+.pfaq{background:rgba(255,255,255,.66);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px}
+.pfaq summary{font-size:15px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.pfaq summary::-webkit-details-marker{display:none}
+.pfaq summary::after{content:"+";font-size:20px;color:var(--ac);font-weight:400;flex:0 0 auto}
+.pfaq[open] summary::after{content:"\2013"}
+.pfaq p{margin-top:10px;font-size:14px;color:var(--ink-58);line-height:1.6}
+@media(max-width:860px){
+  .ph-grid{grid-template-columns:1fr;gap:28px}
+  .ptix{justify-self:start;max-width:440px}
+  .rband{padding:30px 24px 32px}
+  .rgrid{grid-template-columns:1fr}
+  .ph-hero{padding:28px 0 4px}
+}
 .dempty{background:rgba(255,255,255,.66);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.9);border-radius:14px;padding:30px 24px;text-align:center}
 .dempty b{font-size:15.5px;color:var(--ink)}
 .dempty p{font-size:13.5px;color:var(--ink-58);margin-top:6px}
@@ -284,6 +335,16 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
   .pstat span{font-size:11px;line-height:1.35}
 }
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do I need my old carrier's permission to port out?","acceptedAnswer":{"@type":"Answer","text":"No. Under FCC rules a carrier must honor any valid port request. You only need your account number, transfer PIN, and matching billing details."}},
+{"@type":"Question","name":"How long does a port take?","acceptedAnswer":{"@type":"Answer","text":"Simple wireless-to-wireless ports often complete the same day, with one business day as the FCC benchmark. VoIP ports typically take a few business days, and landline or cable ports can take one to four weeks."}},
+{"@type":"Question","name":"Will my phone stop working during the port?","acceptedAnswer":{"@type":"Answer","text":"No — your number stays live with the old carrier until the port completes, then service continues with the new one. Any overlap is typically minutes."}},
+{"@type":"Question","name":"Can I port with an unpaid balance or mid-contract?","acceptedAnswer":{"@type":"Answer","text":"Yes — the port itself can't be blocked for either reason. You still owe the remaining balance or early-termination fee afterward."}},
+{"@type":"Question","name":"What is a transfer PIN and where do I get one?","acceptedAnswer":{"@type":"Answer","text":"A short security code that proves you authorized the port. Each carrier issues its own — usually in the account app, online dashboard, or by a dial code."}},
+{"@type":"Question","name":"What happens if my port is rejected?","acceptedAnswer":{"@type":"Answer","text":"Nothing is lost — your number stays active with your current carrier. Fix the field that didn't match and resubmit."}}
+]}
+</script>
 </head>
 <body>
 <header class="nav">
@@ -352,20 +413,35 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 
 <div class="wrap crumbs"><a href="home-platform-v156-demo.html">Home</a> › <a href="carriers.html">Carriers</a> › Porting instructions</div>
 
-<section class="hero wrap">
-  <div class="hero-grid">
-    <div>
-      <span class="eyebrow">Porting Directory</span>
-      <h1>Carrier Porting Instructions</h1>
-      <p>Everything you need to move a number out of 41 US and Canadian carriers — where to find your account number, how to get the transfer PIN, expected timing, and the mistakes that get ports rejected.</p>
+<section class="ph-hero">
+  <div class="wrap ph-grid">
+    <div class="ph-copy">
+      <span class="kickpill">Porting directory &middot; 41 US &amp; Canadian carriers</span>
+      <h1>Port-out instructions for <em>every</em> major carrier</h1>
+      <p>Where to find your account number, how to get the transfer PIN, how long the port takes, and the mistakes that get requests rejected &mdash; documented carrier by carrier for wireless, prepaid, VoIP, and landline.</p>
+      <div class="ph-chips">
+        <span>&#10003; Account number &amp; PIN, per carrier</span>
+        <span>&#10003; FCC one-business-day simple ports</span>
+        <span>&#10003; Rejection risks, documented</span>
+      </div>
     </div>
-    <div class="pstats" role="presentation">
-      <div class="pstat"><b>41</b><span>carriers covered</span></div>
-      <div class="pstat"><b>&le;1 day</b><span>typical wireless port</span></div>
-      <div class="pstat"><b>0</b><span>downtime — your number stays live</span></div>
+    <div class="ptix" aria-hidden="true">
+      <div class="ptix-head"><span>Port-out checklist</span><b>Every carrier</b></div>
+      <ul class="ptix-list">
+        <li><i></i><div><b>Account number</b><span>On your bill or online account &mdash; usually not your phone number</span></div></li>
+        <li><i></i><div><b>Transfer PIN</b><span>Request it right before you port &mdash; most expire within days</span></div></li>
+        <li><i></i><div><b>Name &amp; billing ZIP</b><span>Must match your carrier&rsquo;s records exactly</span></div></li>
+        <li><i></i><div><b>Line stays active</b><span>Keep service on until the port completes</span></div></li>
+      </ul>
+      <div class="ptix-warn">Never cancel service first &mdash; a disconnected number can&rsquo;t be ported.</div>
     </div>
   </div>
 </section>
+
+<div class="wrap ph-shead ph-dirhead">
+  <h2>Find your carrier</h2>
+  <p>Search by name or filter by type &mdash; every row covers the account number, transfer PIN, port-out steps, timing, and rejection risks.</p>
+</div>
 
 <div class="wrap controls">
   <div class="dsearch"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg><input type="text" id="dq" placeholder="Search carriers…" aria-label="Search carriers"></div>
@@ -793,6 +869,45 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
     <p>Any US or Canadian carrier can still release your number — these are just the ones we&rsquo;ve documented so far. <a href="carriers.html">See how porting works &rarr;</a></p>
   </div>
 </div>
+
+<section class="ph-rights wrap">
+  <div class="rband">
+    <span class="rband-kick">Backed by FCC rules</span>
+    <h2>Porting is your right &mdash; no carrier can hold your number</h2>
+    <div class="rgrid">
+      <div class="rcard"><b>Carriers must release your number</b><p>FCC rules require carriers to honor any valid port-out request. An unpaid balance or an active contract can&rsquo;t be used to block the port &mdash; you settle those separately.</p></div>
+      <div class="rcard"><b>Simple wireless ports: one business day</b><p>That&rsquo;s the FCC benchmark for a simple wireless-to-wireless port. VoIP and landline ports run longer, but they&rsquo;re on a regulated clock too.</p></div>
+      <div class="rcard"><b>Your new carrier runs the port</b><p>You never ask your old carrier to port out. Hand your account number and PIN to the new carrier &mdash; they pull the number across while your line stays live.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ph-mist wrap">
+  <div class="ph-shead">
+    <h2>Why ports get rejected</h2>
+    <p>Five errors cause almost every rejection &mdash; and all five are avoidable.</p>
+  </div>
+  <ol class="mlist">
+    <li><div><b>Cancelling service before the port completes</b><p>A disconnected number goes back to the carrier&rsquo;s pool &mdash; it can&rsquo;t follow you. Cancel nothing until your new carrier confirms the port is done.</p></div></li>
+    <li><div><b>A wrong or expired transfer PIN</b><p>Most wireless transfer PINs expire within about a week. Request the PIN last, right before you submit the port &mdash; not weeks ahead.</p></div></li>
+    <li><div><b>Name or billing ZIP that doesn&rsquo;t match</b><p>The details you give the new carrier must match the losing carrier&rsquo;s records exactly &mdash; a maiden name, an old ZIP, or a business name on file will bounce the request.</p></div></li>
+    <li><div><b>Using the phone number as the account number</b><p>Nearly every carrier issues a separate account number &mdash; check the top of your bill or your online account. This is the single most common data error.</p></div></li>
+    <li><div><b>A port freeze or account lock left on</b><p>Security locks that stop fraudsters also stop your own port. Turn off any number lock or port freeze &mdash; or get the unlock passcode &mdash; before submitting.</p></div></li>
+  </ol>
+</section>
+
+<section class="ph-faq wrap">
+  <div class="ph-shead">
+    <h2>Porting questions, answered</h2>
+    <p>The rules are the same no matter which carrier you&rsquo;re leaving.</p>
+  </div>
+  <details class="pfaq"><summary>Do I need my old carrier&rsquo;s permission to port out?</summary><p>No. Under FCC rules a carrier must honor any valid port request &mdash; you don&rsquo;t need to call them, and you don&rsquo;t need their approval. You only need your account number, transfer PIN, and matching billing details.</p></details>
+  <details class="pfaq"><summary>How long does a port take?</summary><p>Simple wireless-to-wireless ports often complete the same day, with one business day as the FCC benchmark. VoIP ports typically take a few business days, and landline or cable ports can take one to four weeks.</p></details>
+  <details class="pfaq"><summary>Will my phone stop working during the port?</summary><p>No &mdash; your number stays live with the old carrier until the moment the port completes, then service continues with the new one. Any overlap is typically minutes, not days.</p></details>
+  <details class="pfaq"><summary>Can I port with an unpaid balance or mid-contract?</summary><p>Yes &mdash; the port itself can&rsquo;t be blocked for either reason. You still owe the remaining balance or early-termination fee afterward; porting doesn&rsquo;t erase it.</p></details>
+  <details class="pfaq"><summary>What is a transfer PIN and where do I get one?</summary><p>A short security code that proves you authorized the port. Each carrier issues its own &mdash; usually in the account app, online dashboard, or by a dial code like AT&amp;T&rsquo;s *PORT. Find your carrier above for the exact path.</p></details>
+  <details class="pfaq"><summary>What happens if my port is rejected?</summary><p>Nothing is lost &mdash; your number stays active with your current carrier. Fix the field that didn&rsquo;t match (PIN, account number, name, or ZIP) and resubmit. Almost every rejection traces back to one of the five mistakes above.</p></details>
+</section>
 
 <section class="d-cta">
   <div class="wrap">
