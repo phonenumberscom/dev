@@ -1658,11 +1658,10 @@
         <div class="hsupport">Look up any number · own premium numbers · activate service — all powered by the <b>Number Graph</b>.</div>
         <!-- MULTI-MODE ACTION BAR — routes the 4 visitor intents -->
         <div class="heroaction">
-          <div class="ha-mode active ha-ai" data-mode="market">
-            <span class="ha-ic ai-spark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l1.7 5.3 5.3 1.7-5.3 1.7L12 16.5l-1.7-5.3L5 9.5l5.3-1.7z"/><path d="M19.5 3l.6 1.9L22 5.5l-1.9.6L19.5 8l-.6-1.9L17 5.5l1.9-.6z"/></svg></span>
-            <textarea rows="1" placeholder=" " aria-label="Describe your business or type a number"></textarea>
-            <span class="ai-ph">Describe your business <span class="ai-em">— <span class="ai-typed"></span><span class="ai-caret">|</span></span></span>
-            <button class="ha-go ai-send" aria-label="Find numbers"><svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M6 11l6-6 6 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="ha-mode active" data-mode="market">
+            <span class="ha-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <input type="text" placeholder="Try an area code, word, or pattern" aria-label="Search phone numbers">
+            <button class="ha-go">Search</button>
           </div>
 
           <div class="ha-sub" data-mode="market"><b>Premium</b>, vanity, toll-free &amp; local numbers across 200+ countries.</div>
@@ -2773,7 +2772,7 @@
 /* recent searches (localStorage) */
 (function(){
   var KEY='pn_recent';
-  var ta=document.querySelector('.ha-ai textarea');
+  var ta=document.querySelector('.heroaction .ha-mode input');
   var row=document.querySelector('.lp-recent'), chips=row&&row.querySelector('.lp-chips');
   function get(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
   function save(a){try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
@@ -2781,7 +2780,7 @@
   function render(){ if(!row) return; var a=get(); if(!a.length){row.hidden=true;return;} row.hidden=false; chips.innerHTML='';
     a.forEach(function(q){var el=document.createElement('a');el.href='#';el.setAttribute('data-q',q);el.textContent=trunc(q);chips.appendChild(el);}); }
   function add(q){q=(q||'').trim();if(!q)return;var a=get().filter(function(x){return x.toLowerCase()!==q.toLowerCase()});a.unshift(q);save(a.slice(0,5));render();}
-  var send=document.querySelector('.ha-ai .ai-send'); if(send) send.addEventListener('click',function(){add(ta.value);});
+  var send=document.querySelector('.heroaction .ha-go'); if(send) send.addEventListener('click',function(){add(ta.value);});
   if(ta) ta.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();add(ta.value);}});
   document.addEventListener('click',function(e){var a=e.target.closest('.heroaction [data-q]'); if(a && !a.closest('.lp-recent')) add(a.getAttribute('data-q'));});
   var clr=document.querySelector('.lp-clear'); if(clr) clr.addEventListener('click',function(e){e.preventDefault();save([]);render();});
@@ -2806,7 +2805,7 @@
     }
   });
   var inp=document.querySelector('.hero input');
-  var send=document.querySelector('.hero .ai-send');
+  var send=document.querySelector('.hero .ha-go');
   function go(){ var v=inp&&inp.value.trim(); location.href = v ? S+'?q='+encodeURIComponent(v) : S; }
   if(send) send.addEventListener('click', go);
   if(inp) inp.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); go(); } });
