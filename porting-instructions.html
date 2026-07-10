@@ -971,6 +971,18 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
   });
   q.addEventListener('input', apply);
   apply();
+  /* deep-link: ?q=verizon prefills the search, opens + centers the first match */
+  var pq = new URLSearchParams(location.search).get('q');
+  if (pq) {
+    q.value = pq;
+    apply();
+    var first = null;
+    rows.forEach(function(r){ if (!first && r.style.display !== 'none') first = r; });
+    if (first) {
+      first.open = true;
+      setTimeout(function(){ first.scrollIntoView({block:'center'}); }, 80);
+    }
+  }
 })();
 </script>
 <script>
