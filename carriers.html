@@ -382,6 +382,28 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 .c-notes .sec-head,.c-dir .sec-head,.c-faq .sec-head{display:none}
 .c-dir .split-head{margin-bottom:20px}
 @media(max-width:700px){.split-head{flex-direction:column;align-items:flex-start;gap:6px}.nrow{flex-wrap:wrap;gap:10px}.nrow-logo{flex-basis:100%}.pt-num{font-size:22px}}
+
+/* v11: How Porting Works — horizontal journey */
+.howband{display:block}
+.split-head.hw{margin-bottom:34px}
+.split-head.hw h2{color:#fff}
+.hb-fcc{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#BDB9FA;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:99px;padding:7px 15px;white-space:nowrap}
+.hj{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;padding:0;margin:0 0 30px;position:relative}
+.hj::before{content:"";position:absolute;left:3%;right:3%;top:16px;height:2px;background:linear-gradient(90deg,rgba(142,134,248,.7),rgba(142,134,248,.15))}
+.hj li{position:relative;padding-top:0}
+.hj li i{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:33px;height:33px;border-radius:11px;font-style:normal;font-weight:700;font-size:13.5px;color:#fff;background:#100D33;border:2px solid #8E86F8;margin-bottom:14px;box-shadow:0 0 0 6px rgba(16,13,51,.9)}
+.hj li:last-child i{background:var(--ac);border-color:#A9A6F5}
+.hj li b{display:block;font-size:14.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:5px}
+.hj li span{font-size:12px;color:rgba(255,255,255,.55);line-height:1.5}
+.hj-meta{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hj-times{display:flex;align-items:center;flex-wrap:wrap;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:13px 18px}
+.hj-times em{font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#BDB9FA;margin-right:4px}
+.hj-times span{font-size:12px;color:rgba(255,255,255,.6);background:rgba(255,255,255,.06);border-radius:99px;padding:5px 11px;white-space:nowrap}
+.hj-times span b{color:#fff;font-weight:600}
+.hj-warn{font-size:12.5px;color:rgba(255,255,255,.72);line-height:1.55;background:rgba(255,190,80,.09);border:1px solid rgba(255,190,80,.26);border-radius:14px;padding:13px 18px}
+.hj-warn b{color:#FFD48A}
+@media(max-width:1000px){.hj{grid-template-columns:repeat(2,1fr);gap:20px 16px}.hj::before{display:none}.hj-meta{grid-template-columns:1fr}}
+@media(max-width:700px){.hj{grid-template-columns:1fr}.split-head.hw{flex-direction:column;align-items:flex-start;gap:10px}}
 </style>
 </head>
 <body>
@@ -529,37 +551,17 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 <section class="c-how">
   <div class="wrap">
     <div class="howband">
-      <div class="hb-left">
-        <span class="eyebrow on-dark">How Porting Works</span>
-        <h2>Five steps, no dead air</h2>
-        <ol class="hb-steps">
-          <li><b>Buy your number</b> — live on our network in minutes.</li>
-          <li><b>Use it immediately</b> — forward, park, or connect service.</li>
-          <li><b>Request the port from your new carrier</b> — account number + transfer PIN from your dashboard.</li>
-          <li><b>Carriers validate automatically</b> — nothing else to do.</li>
-          <li><b>Number goes live on the new carrier</b> — seamless switchover.</li>
-        </ol>
-        <div class="hb-warn"><b>Never cancel first.</b> Porting moves the number; cancelling releases it.</div>
-      </div>
-      <div class="hb-right">
-        <div class="hb-card">
-          <h3>Typical porting times</h3>
-          <table class="hb-table">
-            <tr><td>Wireless &rarr; wireless</td><td>Same day &ndash; 1 bd</td></tr>
-            <tr><td>Toll-free</td><td>1 &ndash; 2 bd</td></tr>
-            <tr><td>Local &rarr; VoIP / wireless</td><td>1 &ndash; 3 bd</td></tr>
-            <tr><td>Landline &amp; cable voice</td><td>3 &ndash; 7 bd</td></tr>
-          </table>
-        </div>
-        <div class="hb-card">
-          <h3>Before you port</h3>
-          <ul class="hb-check">
-            <li>Account number (dashboard)</li>
-            <li>Transfer PIN (dashboard)</li>
-            <li>Billing name matches exactly</li>
-            <li>Old line stays active until done</li>
-          </ul>
-        </div>
+      <div class="split-head hw"><div><span class="eyebrow on-dark">How Porting Works</span><h2>Five steps, no dead air</h2></div><span class="hb-fcc">FCC one-business-day simple ports</span></div>
+      <ol class="hj">
+        <li><i>1</i><b>Buy your number</b><span>Live on our network in minutes</span></li>
+        <li><i>2</i><b>Use it immediately</b><span>Forward, park, or connect service</span></li>
+        <li><i>3</i><b>Request the port</b><span>Account # + transfer PIN from your dashboard</span></li>
+        <li><i>4</i><b>Carriers validate</b><span>Automatic — nothing else to do</span></li>
+        <li><i>5</i><b>Live on the new carrier</b><span>Seamless switchover, zero downtime</span></li>
+      </ol>
+      <div class="hj-meta">
+        <div class="hj-times"><em>Typical times</em><span>Wireless <b>same day&ndash;1 bd</b></span><span>Toll-free <b>1&ndash;2 bd</b></span><span>Local <b>1&ndash;3 bd</b></span><span>Landline <b>3&ndash;7 bd</b></span></div>
+        <div class="hj-warn"><b>Never cancel first</b> &mdash; porting moves the number; cancelling releases it. Keep your account number, transfer PIN, and matching billing name ready.</div>
       </div>
     </div>
   </div>
