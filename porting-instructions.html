@@ -257,6 +257,32 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 .controls{top:var(--hdr-h,64px);background:rgba(232,234,247,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .dsearch{background:#fff}
 .fchip{background:#fff}
+
+/* ===== v8 additions (new classes only — appended after re-pins, no chrome overlap) ===== */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:center}
+.pstats{display:grid;gap:10px;justify-self:end}
+.pstat{display:flex;align-items:baseline;gap:10px;background:rgba(255,255,255,.66);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.9);border-left:4px solid var(--ac);border-radius:12px;padding:12px 18px;box-shadow:0 1px 3px rgba(10,15,30,.05);min-width:250px}
+.pstat b{font-size:21px;font-weight:800;color:var(--ink);letter-spacing:-.01em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pstat span{font-size:12.5px;color:var(--ink-58)}
+.drow summary::after{content:"";flex:0 0 auto;width:8px;height:8px;border-right:2px solid var(--ink-40);border-bottom:2px solid var(--ink-40);transform:translateY(-2px) rotate(45deg);transition:transform .18s ease;margin-left:2px}
+.drow[open] summary::after{transform:translateY(2px) rotate(-135deg)}
+.drow-name .drow-src{white-space:nowrap}
+.dempty{background:rgba(255,255,255,.66);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.9);border-radius:14px;padding:30px 24px;text-align:center}
+.dempty b{font-size:15.5px;color:var(--ink)}
+.dempty p{font-size:13.5px;color:var(--ink-58);margin-top:6px}
+.dempty a{color:var(--ac);font-weight:600;text-decoration:none}
+.d-cta{padding:38px 0 54px}
+.cta-band{background:radial-gradient(rgba(255,255,255,.14) 1.3px,transparent 1.4px),linear-gradient(135deg,#4F46E5,#6D28D9);background-size:22px 22px,auto;border-radius:22px;padding:44px 30px;text-align:center;color:#fff}
+.cta-band h2{color:#fff;margin-bottom:8px}
+.cta-band p{color:rgba(255,255,255,.85);margin-bottom:22px;font-size:15px}
+.cbtn{display:inline-block;background:#fff;color:var(--ac);font-weight:700;font-size:15px;padding:13px 28px;border-radius:12px;text-decoration:none}
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:18px}
+  .pstats{grid-template-columns:repeat(3,1fr);justify-self:stretch}
+  .pstat{min-width:0;flex-direction:column;align-items:flex-start;gap:2px;padding:11px 12px}
+  .pstat b{font-size:17px}
+  .pstat span{font-size:11px;line-height:1.35}
+}
 </style>
 </head>
 <body>
@@ -327,9 +353,18 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 <div class="wrap crumbs"><a href="home-platform-v156-demo.html">Home</a> › <a href="carriers.html">Carriers</a> › Porting instructions</div>
 
 <section class="hero wrap">
-  <span class="eyebrow">Porting Directory</span>
-  <h1>Carrier Porting Instructions</h1>
-  <p>Everything you need to move a number out of 41 US and Canadian carriers — where to find your account number, how to get the transfer PIN, expected timing, and the mistakes that get ports rejected.</p>
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">Porting Directory</span>
+      <h1>Carrier Porting Instructions</h1>
+      <p>Everything you need to move a number out of 41 US and Canadian carriers — where to find your account number, how to get the transfer PIN, expected timing, and the mistakes that get ports rejected.</p>
+    </div>
+    <div class="pstats" role="presentation">
+      <div class="pstat"><b>41</b><span>carriers covered</span></div>
+      <div class="pstat"><b>&le;1 day</b><span>typical wireless port</span></div>
+      <div class="pstat"><b>0</b><span>downtime — your number stays live</span></div>
+    </div>
+  </div>
 </section>
 
 <div class="wrap controls">
@@ -753,7 +788,21 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
         <div class="drow-foot"><a class="drow-src" href="https://workinggroup.numberportability.com/number-portability-best-practices" target="_blank" rel="noopener nofollow">Carrier guidance ↗</a></div>
       </div>
     </details>
+  <div class="dempty" hidden>
+    <b>No carriers match your search.</b>
+    <p>Any US or Canadian carrier can still release your number — these are just the ones we&rsquo;ve documented so far. <a href="carriers.html">See how porting works &rarr;</a></p>
+  </div>
 </div>
+
+<section class="d-cta">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Own a number worth keeping</h2>
+      <p>50,000+ premium local, vanity &amp; toll-free numbers — port them to any carrier in this directory.</p>
+      <a class="cbtn" href="search-redesign-v222.html">Browse premium numbers</a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
@@ -783,6 +832,7 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
   var chips = document.querySelectorAll('.fchip');
   var rows = document.querySelectorAll('.drow');
   var count = document.getElementById('dcount');
+  var empty = document.querySelector('.dempty');
   var cat = 'all';
   function apply(){
     var term = q.value.trim().toLowerCase();
@@ -793,6 +843,7 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
       if (ok) n++;
     });
     count.textContent = n + ' of 41 carriers';
+    if (empty) empty.hidden = n !== 0;
   }
   chips.forEach(function(c){
     c.addEventListener('click', function(){
