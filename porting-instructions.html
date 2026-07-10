@@ -268,6 +268,14 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 .drow[open] summary::after{transform:translateY(2px) rotate(-135deg)}
 .drow-name .drow-src{white-space:nowrap}
 
+/* ===== v12: expanded row — celled fields, no more text soup ===== */
+.drow-body{gap:10px;padding:14px 16px 16px;background:rgba(16,19,58,.025)}
+.drow-body > div{background:#fff;border:1px solid rgba(79,70,229,.14);border-radius:12px;padding:13px 16px 14px;margin:0}
+.drow-body > div:nth-of-type(3),.drow-body > div:nth-of-type(4){grid-column:1/-1}
+.drow-body h4{color:var(--ac);letter-spacing:.09em;margin-bottom:5px}
+.drow-body > .drow-foot{background:none;border:none;padding:2px 2px 0;grid-column:1/-1}
+@media(max-width:700px){.drow-body{padding:12px 12px 14px}}
+
 /* ===== v9: full-caliber hero + rights band + mistakes + faq (new classes only) ===== */
 .kickpill{display:inline-flex;align-items:center;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ac);background:rgba(79,70,229,.08);border:1px solid rgba(79,70,229,.18);padding:5px 14px;border-radius:99px}
 .ph-hero{padding:40px 0 8px}
