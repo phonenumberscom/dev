@@ -412,6 +412,24 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 .pk-label{flex:0 0 auto;position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;padding:0 20px 0 26px;font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#BDB9FA;background:#100D33;box-shadow:14px 0 18px #100D33}
 .pk-label i{width:7px;height:7px;border-radius:50%;background:#16A34A;box-shadow:0 0 0 0 rgba(22,163,74,.5);animation:ptp 2s infinite}
 @media(prefers-reduced-motion:reduce){.pk-label i{animation:none}}
+
+/* recent-ports ticker — EXACT homepage LIVE ACTIVITY component (shared spec) */
+.ticker{background:linear-gradient(90deg,#0D1030,#191D4E);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);margin-top:6px}
+.tk-wrap{display:flex;align-items:center;gap:22px;height:54px}
+.tk-label{flex-shrink:0;display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#fff}
+.tk-pulse{width:8px;height:8px;border-radius:50%;background:#34D399;animation:tk-pulse 1.8s infinite}
+@keyframes tk-pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.5)}70%{box-shadow:0 0 0 8px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+.tk-stream{flex:1;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 4%,#000 90%,transparent);mask:linear-gradient(90deg,transparent,#000 4%,#000 90%,transparent)}
+.tk-track{display:flex;width:max-content;animation:tk-marquee 44s linear infinite}
+@keyframes tk-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tk-item{display:flex;align-items:center;gap:9px;padding:0 24px;white-space:nowrap;font-size:13.5px;border-left:1px solid rgba(255,255,255,.09)}
+.tk-num{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-weight:600;color:#fff}
+.tk-act{color:rgba(255,255,255,.5)}
+.tk-act.sold{color:#34D399}
+.tk-act.hot{color:#FBBF24}
+.ticker:hover .tk-track{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.tk-track{animation:none}}
+@media(max-width:640px){.tk-label span:last-child{display:none}.tk-wrap{gap:14px;height:48px}.tk-item{font-size:12.5px;padding:0 18px}}
 </style>
 </head>
 <body>
@@ -508,7 +526,14 @@ header.nav .wrap,footer .wrap{max-width:1180px;padding-left:32px;padding-right:3
 </section>
 
 
-<div class="portker" aria-hidden="true"><span class="pk-label"><i></i>Recent ports</span><div class="pk-track"><span class="pk-item"><b>(305) •••-0101</b> &rarr; ported to RingCentral <em>&middot; 1 day</em></span><span class="pk-item"><b>(646) •••-2977</b> &rarr; ported to Zoom Phone <em>&middot; 2 days</em></span><span class="pk-item"><b>(212) •••-8814</b> &rarr; ported to Verizon <em>&middot; same day</em></span><span class="pk-item"><b>(415) •••-2210</b> &rarr; ported to Google Voice <em>&middot; 1 day</em></span><span class="pk-item"><b>(702) •••-4400</b> &rarr; ported to T-Mobile <em>&middot; same day</em></span><span class="pk-item"><b>(617) •••-7188</b> &rarr; ported to AT&T <em>&middot; 1 day</em></span><span class="pk-item"><b>(866) •••-9977</b> &rarr; ported to Nextiva <em>&middot; 2 days</em></span><span class="pk-item"><b>(310) •••-6161</b> &rarr; ported to Dialpad <em>&middot; 1 day</em></span><span class="pk-item"><b>(305) •••-0101</b> &rarr; ported to RingCentral <em>&middot; 1 day</em></span><span class="pk-item"><b>(646) •••-2977</b> &rarr; ported to Zoom Phone <em>&middot; 2 days</em></span><span class="pk-item"><b>(212) •••-8814</b> &rarr; ported to Verizon <em>&middot; same day</em></span><span class="pk-item"><b>(415) •••-2210</b> &rarr; ported to Google Voice <em>&middot; 1 day</em></span><span class="pk-item"><b>(702) •••-4400</b> &rarr; ported to T-Mobile <em>&middot; same day</em></span><span class="pk-item"><b>(617) •••-7188</b> &rarr; ported to AT&T <em>&middot; 1 day</em></span><span class="pk-item"><b>(866) •••-9977</b> &rarr; ported to Nextiva <em>&middot; 2 days</em></span><span class="pk-item"><b>(310) •••-6161</b> &rarr; ported to Dialpad <em>&middot; 1 day</em></span></div></div>
+<div class="ticker">
+  <div class="wrap tk-wrap">
+    <span class="tk-label"><span class="tk-pulse"></span><span>Recent ports</span></span>
+    <div class="tk-stream">
+      <div class="tk-track"><span class="tk-item"><span class="tk-num">(305) •••-0101</span><span class="tk-act ">ported to RingCentral &middot; 1 day</span></span><span class="tk-item"><span class="tk-num">(646) •••-2977</span><span class="tk-act ">ported to Zoom Phone &middot; 2 days</span></span><span class="tk-item"><span class="tk-num">(212) •••-8814</span><span class="tk-act sold">ported to Verizon &middot; same day</span></span><span class="tk-item"><span class="tk-num">(415) •••-2210</span><span class="tk-act ">ported to Google Voice &middot; 1 day</span></span><span class="tk-item"><span class="tk-num">(702) •••-4400</span><span class="tk-act sold">ported to T-Mobile &middot; same day</span></span><span class="tk-item"><span class="tk-num">(617) •••-7188</span><span class="tk-act ">ported to AT&T &middot; 1 day</span></span><span class="tk-item"><span class="tk-num">(866) •••-9977</span><span class="tk-act ">ported to Nextiva &middot; 2 days</span></span><span class="tk-item"><span class="tk-num">(310) •••-6161</span><span class="tk-act ">ported to Dialpad &middot; 1 day</span></span><span class="tk-item"><span class="tk-num">(305) •••-0101</span><span class="tk-act ">ported to RingCentral &middot; 1 day</span></span><span class="tk-item"><span class="tk-num">(646) •••-2977</span><span class="tk-act ">ported to Zoom Phone &middot; 2 days</span></span><span class="tk-item"><span class="tk-num">(212) •••-8814</span><span class="tk-act sold">ported to Verizon &middot; same day</span></span><span class="tk-item"><span class="tk-num">(415) •••-2210</span><span class="tk-act ">ported to Google Voice &middot; 1 day</span></span><span class="tk-item"><span class="tk-num">(702) •••-4400</span><span class="tk-act sold">ported to T-Mobile &middot; same day</span></span><span class="tk-item"><span class="tk-num">(617) •••-7188</span><span class="tk-act ">ported to AT&T &middot; 1 day</span></span><span class="tk-item"><span class="tk-num">(866) •••-9977</span><span class="tk-act ">ported to Nextiva &middot; 2 days</span></span><span class="tk-item"><span class="tk-num">(310) •••-6161</span><span class="tk-act ">ported to Dialpad &middot; 1 day</span></span></div>
+    </div>
+  </div>
+</div>
 
 <section class="c-notes">
   <div class="wrap">
