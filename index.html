@@ -1748,6 +1748,13 @@
   .faq-q:hover{transform:translateY(-3px);box-shadow:0 14px 32px -12px rgba(38,28,110,.2);border-color:rgba(79,70,229,.3)}
 }
 @media(prefers-reduced-motion:reduce){.faq-q{transition:none}.faq-q:hover{transform:none}}
+
+/* v212: FAQ hover = Popular Number Collections recipe (overrides v211) */
+@media(hover:hover){
+  .faq-q{transition:transform .2s,box-shadow .2s,border-color .2s;border:1px solid transparent}
+  .faq-q:hover{transform:translateY(-2px);box-shadow:var(--sh-lg);border-color:color-mix(in srgb,var(--ac) 50%,transparent)}
+}
+@media(prefers-reduced-motion:reduce){.faq-q:hover{transform:none}}
 </style>
 </head>
 <body>
