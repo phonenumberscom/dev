@@ -1764,6 +1764,9 @@
 
 /* v214: testimonial cards go solid (backdrop-filter distorts corners under transform) */
 .tst-card{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;border:1px solid var(--line);border-left:1px solid var(--line);box-shadow:0 1px 3px rgba(10,15,30,.05)}
+
+/* v215: give card shadows bleed room inside the scroller (kills the hard clip line) */
+.tst-grid{padding:14px 14px 34px;margin:-14px -14px -20px}
 </style>
 </head>
 <body>
