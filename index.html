@@ -1618,6 +1618,13 @@
 
 /* v189: gridline texture OFF all dark navy bands (owner) */
 .ppt-band::before,.trusted::before,.numsearch::before{background-image:none!important}
+
+/* v193: worked payment examples in the payplan band */
+.ppt-ex{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.ppt-ex span{font-size:12px;color:rgba(255,255,255,.75);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:99px;padding:6px 13px;white-space:nowrap}
+.ppt-ex b{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-weight:600;color:#fff;margin-right:5px}
+.ppt-ex em{font-style:normal;font-weight:700;color:#A7F3D0}
+@media(max-width:700px){.ppt-ex span:nth-child(3){display:none}}
 </style>
 </head>
 <body>
@@ -2018,6 +2025,11 @@
       <div class="ppt-copy">
         <h3>Own any premium number on a payment plan</h3>
         <p>0% interest · small down payment · plans from <b>$30/mo</b>. Activate today, pay over time.</p>
+        <div class="ppt-ex">
+          <span><b>(800) 555-CARE</b> $1,400 &rarr; <em>$116/mo &times; 12</em></span>
+          <span><b>(212) 200-0000</b> $18,500 &rarr; <em>$1,542/mo &times; 12</em></span>
+          <span><b>1-800-LAWYERS</b> $30,000 &rarr; <em>$2,500/mo &times; 12</em></span>
+        </div>
       </div>
       <a class="btn btn-light" href="#">See how it works <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
     </div>
