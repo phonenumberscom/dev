@@ -1591,11 +1591,12 @@
 /* v178: "Open all tools" → Coming soon (no tools index at launch) */
 .allsoon{opacity:.65;pointer-events:none;letter-spacing:.04em;text-transform:uppercase;font-size:12px!important;font-weight:700}
 
-/* v180: quiet maker's mark in the homepage navy panels */
-.tools-intro{position:relative}
-.band-key{position:absolute;top:20px;right:20px;width:32px;height:32px;color:#BDB9FA;opacity:.55;pointer-events:none}
-.devbanner .band-key{top:20px;right:24px}
-@media(max-width:700px){.band-key{width:22px;height:22px;top:16px;right:16px}}
+/* v182: GHOST KEY watermark in the homepage navy panels (large, faint, cropped by panel edge) */
+.tools-intro{position:relative;overflow:hidden;isolation:isolate}
+.devbanner{overflow:hidden;isolation:isolate}
+.band-key{position:absolute;right:-44px;bottom:-58px;width:250px;height:250px;color:#fff;opacity:.07;pointer-events:none;z-index:-1;transform:rotate(-8deg)}
+.devbanner .band-key{width:210px;height:210px;right:180px;bottom:-70px;transform:rotate(-8deg)}
+@media(max-width:700px){.band-key{width:170px;height:170px;right:-40px;bottom:-50px}.devbanner .band-key{right:-40px}}
 </style>
 </head>
 <body>
