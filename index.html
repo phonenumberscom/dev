@@ -1598,6 +1598,15 @@
 .band-key{position:absolute;right:-44px;bottom:-58px;width:250px;height:250px;color:#fff;opacity:.07;pointer-events:none;z-index:-1;transform:rotate(-8deg)}
 .devbanner .band-key{width:210px;height:210px;right:180px;bottom:-70px;transform:rotate(-8deg)}
 @media(max-width:700px){.band-key{width:170px;height:170px;right:-40px;bottom:-50px}.devbanner .band-key{right:-40px}}
+
+/* v186: marketplace value trio under the section head */
+.mkt-props{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1000px;margin:28px auto 34px}
+.mprop{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-align:left;box-shadow:0 1px 3px rgba(10,15,30,.05)}
+.mp-ic{display:flex;width:36px;height:36px;border-radius:10px;background:rgba(79,70,229,.09);color:var(--ac);align-items:center;justify-content:center;margin-bottom:10px}
+.mprop b{font-size:15px;font-weight:700;display:block;margin-bottom:4px;color:var(--ink)}
+.mprop p{font-size:13px;color:var(--ink-58);line-height:1.55;margin:0}
+.mprop em{font-style:normal;font-weight:600;color:#0E7A57}
+@media(max-width:860px){.mkt-props{grid-template-columns:1fr;gap:10px;margin:22px auto 26px}}
 </style>
 </head>
 <body>
@@ -1931,6 +1940,11 @@
       <span class="eyebrow on-dark">The Marketplace</span>
       <h2>Own The Right Number</h2>
       <p>If a phone number is identity, the right number is an asset you own. It shapes memorability, answer rates, customer trust, and marketing performance — premium communication identity across every category.</p>
+    </div>
+    <div class="mkt-props">
+      <div class="mprop"><span class="mp-ic"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><b>Live in minutes</b><p>Owned inventory activates the moment you buy &mdash; look for the <em>Get it now</em> chip.</p></div>
+      <div class="mprop"><span class="mp-ic"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.5 12l1.8 1.8L15 10.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Yours for good</b><p>You own the number outright &mdash; an asset, not a rental. Parking is free for 6 months.</p></div>
+      <div class="mprop"><span class="mp-ic"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M4 7h13M14 3l4 4-4 4M20 17H7M10 13l-4 4 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Portable anywhere</b><p>Move it to any US or Canadian carrier &mdash; no port-out fees, zero downtime.</p></div>
     </div>
     <div class="mkt-feature">
       <div class="mf-main">
