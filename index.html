@@ -1587,6 +1587,9 @@
 
 /* v177: tools deferred to post-launch — Try Now → Coming soon (muted, no action arrow) */
 .trow-go.soon{color:var(--ink-40);background:rgba(16,19,58,.06);border-radius:99px;padding:5px 12px;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+
+/* v178: "Open all tools" → Coming soon (no tools index at launch) */
+.allsoon{opacity:.65;pointer-events:none;letter-spacing:.04em;text-transform:uppercase;font-size:12px!important;font-weight:700}
 </style>
 </head>
 <body>
@@ -2003,7 +2006,7 @@
           <div class="ti-demo-foot"><span class="ti-pulse"></span>Live from the Number Graph</div>
         </div>
         <div class="ti-hint">Hover a tool to preview its result &rarr;</div>
-        <a class="btn btn-light" href="lookup.html" style="margin-top:26px">Open all tools <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+        <a class="allsoon btn btn-light" href="lookup.html" style="margin-top:26px">Coming soon</svg></a>
       </div>
       <div class="tools-list">
       <a class="trow" href="lookup.html" data-demo="lookup"><span class="trow-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.7"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><div class="trow-tx"><h3>Phone Number Lookup</h3><p>Full intelligence on any number</p></div><span class="trow-go soon">Coming soon</span></a>
