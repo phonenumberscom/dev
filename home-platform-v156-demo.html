@@ -1685,6 +1685,18 @@
 /* v199: ticket header matches production weight */
 .pt2-head.pt2-prod{align-items:baseline;margin-bottom:12px}
 .pt2-head.pt2-prod > span{font-size:16.5px;font-weight:800;letter-spacing:-.015em;text-transform:none;color:var(--ink)}
+
+/* v203: testimonial cards above FAQ (SAMPLE CONTENT — replace with real permissioned quotes before launch) */
+.testis{padding:54px 0 10px}
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1060px;margin:0 auto}
+.tst-card{background:rgba(255,255,255,.66);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.85);border-left:4px solid var(--ac);border-radius:14px;padding:20px 22px;box-shadow:0 1px 3px rgba(10,15,30,.05);display:flex;flex-direction:column}
+.tst-stars{color:#D9A514;font-size:13px;letter-spacing:2px}
+.tst-q{font-size:14.5px;color:var(--ink);line-height:1.6;margin:10px 0 16px;flex:1}
+.tst-who{display:flex;align-items:center;gap:11px}
+.tst-av{flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:rgba(79,70,229,.12);color:var(--ac);font-size:12.5px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.tst-who b{display:block;font-size:13.5px;font-weight:700;color:var(--ink)}
+.tst-who small{display:block;font-size:11.5px;color:var(--ink-58)}
+@media(max-width:860px){.tst-grid{grid-template-columns:1fr;gap:10px}.testis{padding:38px 0 4px}}
 </style>
 </head>
 <body>
@@ -2241,6 +2253,29 @@
   </div>
     <div class="ac-more"><a href="carriers.html">See the full list of carriers →</a></div>
   </section>
+
+<section class="testis tint">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What Owners Say</span>
+      <h2>Numbers that earn their keep</h2>
+    </div>
+    <div class="tst-grid">
+      <div class="tst-card"><span class="tst-stars" aria-hidden="true">★★★★★</span>
+        <p class="tst-q">&ldquo;The number paid for itself in the first month &mdash; people actually remember it, and they call.&rdquo;</p>
+        <div class="tst-who"><span class="tst-av">MT</span><div><b>Marcus T.</b><small>Injury attorney &middot; Phoenix, AZ</small></div></div>
+      </div>
+      <div class="tst-card"><span class="tst-stars" aria-hidden="true">★★★★★</span>
+        <p class="tst-q">&ldquo;Bought it on the 12-month plan and it was live taking calls the same afternoon.&rdquo;</p>
+        <div class="tst-who"><span class="tst-av">DR</span><div><b>Dana R.</b><small>Med spa owner &middot; Miami, FL</small></div></div>
+      </div>
+      <div class="tst-card"><span class="tst-stars" aria-hidden="true">★★★★★</span>
+        <p class="tst-q">&ldquo;Ported to our VoIP stack in two days &mdash; zero downtime, exactly as promised.&rdquo;</p>
+        <div class="tst-who"><span class="tst-av">AK</span><div><b>Alex K.</b><small>Operations lead &middot; national moving co.</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="faq tint">
   <div class="wrap narrow">
