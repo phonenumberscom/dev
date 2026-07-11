@@ -1590,6 +1590,12 @@
 
 /* v178: "Open all tools" → Coming soon (no tools index at launch) */
 .allsoon{opacity:.65;pointer-events:none;letter-spacing:.04em;text-transform:uppercase;font-size:12px!important;font-weight:700}
+
+/* v180: quiet maker's mark in the homepage navy panels */
+.tools-intro{position:relative}
+.band-key{position:absolute;top:22px;right:22px;width:26px;height:26px;color:#fff;opacity:.32;pointer-events:none}
+.devbanner .band-key{top:20px;right:24px}
+@media(max-width:700px){.band-key{width:22px;height:22px;top:16px;right:16px}}
 </style>
 </head>
 <body>
@@ -1996,7 +2002,7 @@
 <section class="tools tint">
   <div class="wrap">
     <div class="tools-split">
-      <div class="tools-intro">
+      <div class="tools-intro"><svg class="band-key" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd-bk1"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd-bk1)"/></svg>
         <span class="eyebrow">Number Tools</span>
         <h2>Tools for every number</h2>
         <p>Instant carrier, identity, reputation, and risk signals on any number — straight from the Number Graph.</p>
@@ -2025,7 +2031,7 @@
 <!-- [#7] DEVELOPER BANNER — slim dark banner (full API section retired; preserved in v108) -->
 <section class="devbanner-sec light">
   <div class="wrap">
-    <div class="devbanner">
+    <div class="devbanner"><svg class="band-key" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd-bk2"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd-bk2)"/></svg>
       <svg class="db-circuit" viewBox="0 0 260 170" fill="none" aria-hidden="true"><rect x="100" y="55" width="60" height="60" rx="9" stroke="currentColor" stroke-width="2"/><rect x="116" y="71" width="28" height="28" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M115 55V30M130 55V30M145 55V30M115 115v25M130 115v25M145 115v25M100 70H66M100 85H66M100 100H66M160 70h34M160 85h34M160 100h34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="115" cy="30" r="3.5" fill="currentColor"/><circle cx="130" cy="30" r="3.5" fill="currentColor"/><circle cx="145" cy="30" r="3.5" fill="currentColor"/><circle cx="115" cy="140" r="3.5" fill="currentColor"/><circle cx="130" cy="140" r="3.5" fill="currentColor"/><circle cx="145" cy="140" r="3.5" fill="currentColor"/><circle cx="66" cy="70" r="3.5" fill="currentColor"/><circle cx="66" cy="85" r="3.5" fill="currentColor"/><circle cx="66" cy="100" r="3.5" fill="currentColor"/><circle cx="194" cy="70" r="3.5" fill="currentColor"/><circle cx="194" cy="85" r="3.5" fill="currentColor"/><circle cx="194" cy="100" r="3.5" fill="currentColor"/></svg>
       <div class="db-copy">
         <span class="eyebrow">Developer Platform</span>
