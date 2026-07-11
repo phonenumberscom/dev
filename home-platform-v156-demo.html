@@ -1707,6 +1707,15 @@
 .tst-who b{font-size:15px}
 .tst-who small{font-size:12.5px}
 @media(max-width:860px){.tst-card{padding:24px 24px}}
+
+/* v205: testimonials scroll horizontally (snap + arrows + swipe) */
+.tst-navrow{display:flex;justify-content:flex-end;gap:8px;max-width:none;margin:-6px 0 14px}
+.tst-btn{width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid var(--line);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.15s;box-shadow:0 1px 3px rgba(10,15,30,.06)}
+.tst-btn:hover{border-color:var(--ac);color:var(--ac)}
+.tst-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:6px;scrollbar-width:none}
+.tst-grid::-webkit-scrollbar{display:none}
+.tst-card{flex:0 0 calc((100% - 36px)/3);scroll-snap-align:start}
+@media(max-width:860px){.tst-card{flex:0 0 86%}.tst-grid{grid-template-columns:none}}
 </style>
 </head>
 <body>
@@ -2270,6 +2279,10 @@
       <span class="eyebrow">What Owners Say</span>
       <h2>Numbers that earn their keep</h2>
     </div>
+    <div class="tst-navrow">
+      <button class="tst-btn" id="tstPrev" type="button" aria-label="Previous testimonials"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="tst-btn" id="tstNext" type="button" aria-label="Next testimonials"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
     <div class="tst-grid">
       <div class="tst-card"><span class="tst-stars" aria-hidden="true">★★★★★</span>
         <p class="tst-q">&ldquo;The number paid for itself in the first month &mdash; people actually remember it, and they call.&rdquo;</p>
@@ -2282,6 +2295,18 @@
       <div class="tst-card"><span class="tst-stars" aria-hidden="true">★★★★★</span>
         <p class="tst-q">&ldquo;Ported to our VoIP stack in two days &mdash; zero downtime, exactly as promised.&rdquo;</p>
         <div class="tst-who"><span class="tst-av">AK</span><div><b>Alex K.</b><small>Operations lead &middot; national moving co.</small></div></div>
+      </div>
+      <div class="tst-card"><span class="tst-stars" aria-hidden="true">★★★★★</span>
+        <p class="tst-q">&ldquo;Our 800 number made a three-person shop sound national. Call volume doubled in a quarter.&rdquo;</p>
+        <div class="tst-who"><span class="tst-av">JC</span><div><b>Jordan C.</b><small>Home services &middot; Dallas, TX</small></div></div>
+      </div>
+      <div class="tst-card"><span class="tst-stars" aria-hidden="true">★★★★★</span>
+        <p class="tst-q">&ldquo;Bought the number six months before we launched &mdash; it just sat parked, free, until we were ready.&rdquo;</p>
+        <div class="tst-who"><span class="tst-av">PS</span><div><b>Priya S.</b><small>Founder &middot; telehealth startup</small></div></div>
+      </div>
+      <div class="tst-card"><span class="tst-stars" aria-hidden="true">★★★★★</span>
+        <p class="tst-q">&ldquo;We buy memorable locals for every client campaign now. The search filters make it a ten-minute job.&rdquo;</p>
+        <div class="tst-who"><span class="tst-av">LM</span><div><b>Leo M.</b><small>Media buyer &middot; ad agency, NYC</small></div></div>
       </div>
     </div>
   </div>
@@ -2997,6 +3022,15 @@
     i=(i+1)%opts.length;
     opts[i].classList.add('sel');
   }, 3000);
+})();
+</script>
+<script>
+(function(){
+  var g=document.querySelector('.tst-grid'); if(!g) return;
+  function step(){var c=g.querySelector('.tst-card'); return c ? c.getBoundingClientRect().width+18 : 380;}
+  var p=document.getElementById('tstPrev'), n=document.getElementById('tstNext');
+  if(p) p.addEventListener('click', function(){ g.scrollBy({left:-step(),behavior:'smooth'}); });
+  if(n) n.addEventListener('click', function(){ g.scrollBy({left:step(),behavior:'smooth'}); });
 })();
 </script>
 </body>
