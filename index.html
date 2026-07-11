@@ -1732,6 +1732,15 @@
 .tst-who{gap:18px}
 .tst-who b{margin-bottom:8px}
 .tst-who small{line-height:1.5}
+
+/* v210: testimonial card hover — lift + glow (pointer devices only) */
+@media(hover:hover){
+  .tst-card{transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s,border-color .28s}
+  .tst-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px -14px rgba(38,28,110,.25);border-color:rgba(79,70,229,.35)}
+  .tst-av{transition:background .28s,transform .28s}
+  .tst-card:hover .tst-av{background:rgba(79,70,229,.22);transform:scale(1.06)}
+}
+@media(prefers-reduced-motion:reduce){.tst-card,.tst-av{transition:none}.tst-card:hover{transform:none}}
 </style>
 </head>
 <body>
