@@ -1761,6 +1761,9 @@
   .tst-card:hover{transform:translateY(-2px);box-shadow:var(--sh-lg);border-color:color-mix(in srgb,var(--ac) 50%,transparent)}
   .tst-card:hover .tst-av{background:rgba(79,70,229,.12);transform:none}
 }
+
+/* v214: testimonial cards go solid (backdrop-filter distorts corners under transform) */
+.tst-card{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;border:1px solid var(--line);border-left:1px solid var(--line);box-shadow:0 1px 3px rgba(10,15,30,.05)}
 </style>
 </head>
 <body>
