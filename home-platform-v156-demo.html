@@ -1741,6 +1741,13 @@
   .tst-card:hover .tst-av{background:rgba(79,70,229,.22);transform:scale(1.06)}
 }
 @media(prefers-reduced-motion:reduce){.tst-card,.tst-av{transition:none}.tst-card:hover{transform:none}}
+
+/* v211: FAQ rows get the same hover life */
+@media(hover:hover){
+  .faq-q{transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s,border-color .28s}
+  .faq-q:hover{transform:translateY(-3px);box-shadow:0 14px 32px -12px rgba(38,28,110,.2);border-color:rgba(79,70,229,.3)}
+}
+@media(prefers-reduced-motion:reduce){.faq-q{transition:none}.faq-q:hover{transform:none}}
 </style>
 </head>
 <body>
