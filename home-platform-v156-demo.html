@@ -1681,6 +1681,10 @@
 .po-opt.sel{background:#F3F1FE;border:1.5px solid var(--ac)}
 .po-radio{border-color:#C9CBD6}
 .po-opt.sel .po-radio{border-color:var(--ac);background:var(--ac);box-shadow:inset 0 0 0 3.5px #fff}
+
+/* v199: ticket header matches production weight */
+.pt2-head.pt2-prod{align-items:baseline;margin-bottom:12px}
+.pt2-head.pt2-prod > span{font-size:16.5px;font-weight:800;letter-spacing:-.015em;text-transform:none;color:var(--ink)}
 </style>
 </head>
 <body>
@@ -2088,7 +2092,7 @@
         <a class="btn btn-light" href="#">See how it works <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
       </div>
       <div class="payticket" aria-hidden="true">
-        <div class="pt2-head"><span>Payment options</span><b class="pt2-mono">(917) 800-1037</b></div>
+        <div class="pt2-head pt2-prod"><span>Payment options</span><b class="pt2-mono">(917) 800-1037</b></div>
         <div class="po-opt"><span class="po-radio"></span><div class="po-tx"><b>Buy now</b><small>One payment &middot; Immediate ownership</small></div><span class="po-price">$1,200.00</span></div>
         <div class="po-opt"><span class="po-radio"></span><div class="po-tx"><b>3 monthly payments</b><small>$300.00 today &middot; $300.00/mo &times; 3<br>Own after final payment</small></div><span class="po-price">$300.00<em>/mo</em></span></div>
         <div class="po-opt sel"><span class="po-radio"></span><div class="po-tx"><b>12 monthly payments</b><small>$92.28 today &middot; $92.31/mo &times; 12<br>Own after final payment</small></div><span class="po-price">$92.31<em>/mo</em></span></div>
