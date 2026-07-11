@@ -1645,6 +1645,19 @@
 .pt2-live{display:flex;align-items:center;gap:8px;margin-top:13px;font-size:12px;font-weight:600;color:#0E7A57;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.3);border-radius:10px;padding:8px 12px}
 .pt2-live i{width:7px;height:7px;border-radius:50%;background:#34D399;animation:tk-pulse 1.8s infinite}
 @media(max-width:900px){.ppt-v194{grid-template-columns:1fr;gap:24px}.payticket{justify-self:start}}
+
+/* v196: plan ticket = replica of the production Payment options panel */
+.pt2-mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;color:var(--ink);font-size:12px;letter-spacing:0;text-transform:none}
+.po-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin-top:8px}
+.po-opt.sel{border:1.5px solid var(--ac);background:rgba(79,70,229,.05)}
+.po-radio{flex:0 0 auto;width:16px;height:16px;border-radius:50%;border:1.5px solid rgba(16,19,58,.3);background:#fff}
+.po-opt.sel .po-radio{border-color:var(--ac);box-shadow:inset 0 0 0 4px #fff;background:var(--ac)}
+.po-tx{flex:1;min-width:0}
+.po-tx b{display:block;font-size:13.5px;font-weight:700;color:var(--ink)}
+.po-tx small{display:block;font-size:11px;color:var(--ink-58);margin-top:1px;line-height:1.4}
+.po-price{flex:0 0 auto;font-size:15px;font-weight:800;color:var(--ac);letter-spacing:-.01em}
+.po-opt:not(.sel) .po-price{color:var(--ink)}
+.po-price em{font-style:normal;font-size:11px;font-weight:600;color:var(--ink-40)}
 </style>
 </head>
 <body>
@@ -2050,14 +2063,11 @@
         <a class="btn btn-light" href="#">See how it works <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
       </div>
       <div class="payticket" aria-hidden="true">
-        <div class="pt2-head"><span>Payment plan</span><b>0% interest</b></div>
-        <div class="pt2-num">(917) 800-1037</div>
-        <div class="pt2-price"><b>$92.31</b><span>/mo &times; 12</span><small>$1,200 outright</small></div>
-        <div class="pt2-bar">
-          <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-        </div>
-        <div class="pt2-cap"><span>3 of 12 payments</span><span>yours at month 12</span></div>
-        <div class="pt2-live"><i></i>Live &amp; taking calls since day one</div>
+        <div class="pt2-head"><span>Payment options</span><b class="pt2-mono">(917) 800-1037</b></div>
+        <div class="po-opt"><span class="po-radio"></span><div class="po-tx"><b>Buy now</b><small>One payment &middot; Immediate ownership</small></div><span class="po-price">$1,200.00</span></div>
+        <div class="po-opt"><span class="po-radio"></span><div class="po-tx"><b>3 monthly payments</b><small>$300.00 today &middot; $300.00/mo &times; 3</small></div><span class="po-price">$300.00<em>/mo</em></span></div>
+        <div class="po-opt sel"><span class="po-radio"></span><div class="po-tx"><b>12 monthly payments</b><small>$92.28 today &middot; $92.31/mo &times; 12 &middot; own after final payment</small></div><span class="po-price">$92.31<em>/mo</em></span></div>
+      </div>
       </div>
     </div>
   </div>
