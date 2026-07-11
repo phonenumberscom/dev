@@ -1755,6 +1755,12 @@
   .faq-q:hover{transform:translateY(-2px);box-shadow:var(--sh-lg);border-color:color-mix(in srgb,var(--ac) 50%,transparent)}
 }
 @media(prefers-reduced-motion:reduce){.faq-q:hover{transform:none}}
+
+/* v213: testimonials hover = Collections recipe too (kills the heavy shadow) */
+@media(hover:hover){
+  .tst-card:hover{transform:translateY(-2px);box-shadow:var(--sh-lg);border-color:color-mix(in srgb,var(--ac) 50%,transparent)}
+  .tst-card:hover .tst-av{background:rgba(79,70,229,.12);transform:none}
+}
 </style>
 </head>
 <body>
