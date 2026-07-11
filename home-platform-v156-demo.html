@@ -1625,6 +1625,26 @@
 .ppt-ex b{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-weight:600;color:#fff;margin-right:5px}
 .ppt-ex em{font-style:normal;font-weight:700;color:#A7F3D0}
 @media(max-width:700px){.ppt-ex span:nth-child(3){display:none}}
+
+/* v194: payplan band goes visual — plan ticket with segmented payment bar */
+.ppt-v194{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.ppt-left{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.ppt-v194 .btn{flex:0 0 auto}
+.payticket{background:rgba(255,255,255,.97);border-radius:18px;padding:20px 22px 18px;max-width:380px;justify-self:end;width:100%;box-shadow:0 24px 60px -22px rgba(5,3,30,.6)}
+.pt2-head{display:flex;justify-content:space-between;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-40);margin-bottom:10px}
+.pt2-head b{color:#0E7A57}
+.pt2-num{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:22px;font-weight:700;color:var(--ink);letter-spacing:.01em}
+.pt2-price{display:flex;align-items:baseline;gap:6px;margin:6px 0 14px}
+.pt2-price b{font-size:26px;font-weight:800;color:var(--ac);letter-spacing:-.02em}
+.pt2-price span{font-size:13.5px;font-weight:600;color:var(--ink-58)}
+.pt2-price small{margin-left:auto;font-size:11.5px;color:var(--ink-40)}
+.pt2-bar{display:flex;gap:4px}
+.pt2-bar i{flex:1;height:9px;border-radius:4px;background:rgba(16,19,58,.10)}
+.pt2-bar i.on{background:linear-gradient(90deg,#4F46E5,#6D28D9)}
+.pt2-cap{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-40);margin-top:7px}
+.pt2-live{display:flex;align-items:center;gap:8px;margin-top:13px;font-size:12px;font-weight:600;color:#0E7A57;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.3);border-radius:10px;padding:8px 12px}
+.pt2-live i{width:7px;height:7px;border-radius:50%;background:#34D399;animation:tk-pulse 1.8s infinite}
+@media(max-width:900px){.ppt-v194{grid-template-columns:1fr;gap:24px}.payticket{justify-self:start}}
 </style>
 </head>
 <body>
@@ -2020,18 +2040,25 @@
 <!-- [#5b] PAYMENT PLANS — homepage teaser (full interactive slider widget lives on the number/checkout page; preserved in v95) -->
 <section class="payplan-teaser light">
   <div class="wrap">
-    <div class="ppt-band">
-      <div class="ppt-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M3 10.5h18" stroke="currentColor" stroke-width="1.7"/><circle cx="16.5" cy="14.5" r="1.4" fill="currentColor"/></svg></div>
-      <div class="ppt-copy">
-        <h3>Own any premium number on a payment plan</h3>
-        <p>0% interest · small down payment · plans from <b>$30/mo</b>. Activate today, pay over time.</p>
-        <div class="ppt-ex">
-          <span><b>(800) 555-CARE</b> $1,400 &rarr; <em>$116/mo &times; 12</em></span>
-          <span><b>(212) 200-0000</b> $18,500 &rarr; <em>$1,542/mo &times; 12</em></span>
-          <span><b>1-800-LAWYERS</b> $30,000 &rarr; <em>$2,500/mo &times; 12</em></span>
+    <div class="ppt-band ppt-v194">
+      <div class="ppt-left">
+        <div class="ppt-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M3 10.5h18" stroke="currentColor" stroke-width="1.7"/><circle cx="16.5" cy="14.5" r="1.4" fill="currentColor"/></svg></div>
+        <div class="ppt-copy">
+          <h3>Own any premium number on a payment plan</h3>
+          <p>0% interest · small down payment · plans from <b>$30/mo</b>. Activate today, pay over time.</p>
         </div>
+        <a class="btn btn-light" href="#">See how it works <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
       </div>
-      <a class="btn btn-light" href="#">See how it works <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+      <div class="payticket" aria-hidden="true">
+        <div class="pt2-head"><span>Payment plan</span><b>0% interest</b></div>
+        <div class="pt2-num">1-800-LAWYERS</div>
+        <div class="pt2-price"><b>$2,500</b><span>/mo &times; 12</span><small>$30,000 outright</small></div>
+        <div class="pt2-bar">
+          <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="pt2-cap"><span>3 of 12 payments</span><span>yours at month 12</span></div>
+        <div class="pt2-live"><i></i>Live &amp; taking calls since day one</div>
+      </div>
     </div>
   </div>
 </section>
