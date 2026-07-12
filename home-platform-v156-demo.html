@@ -1801,6 +1801,28 @@
 
 /* v225: more air between search bar and chips */
 .hero-cats{margin-top:28px}
+
+/* v226: inventory peek fills the hero gap — product above the fold */
+.hero-peek{max-width:1020px;margin:38px auto 6px}
+.hp-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.hp-head span{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-40)}
+.hp-head a{font-size:13px;font-weight:600;color:var(--ac);text-decoration:none}
+.hp-head a:hover{text-decoration:underline}
+.hp-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.hp-card{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;box-shadow:0 1px 3px rgba(10,15,30,.05)}
+@media(hover:hover){.hp-card{transition:transform .2s,box-shadow .2s,border-color .2s}
+.hp-card:hover{transform:translateY(-2px);box-shadow:var(--sh-lg);border-color:color-mix(in srgb,var(--ac) 50%,transparent)}}
+.hp-card small{display:block;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-40)}
+.hp-card b{display:block;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:17px;font-weight:700;color:var(--ink);margin:6px 0 10px;letter-spacing:.01em}
+.hp-foot{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.hp-foot em{font-style:normal;font-size:10.5px;font-weight:700;color:#0E7A57;background:rgba(23,138,101,.1);border:1px solid rgba(23,138,101,.28);border-radius:99px;padding:2.5px 8px;white-space:nowrap}
+.hp-foot em.slow{color:var(--ink-40);background:rgba(16,19,58,.05);border-color:rgba(16,19,58,.12)}
+.hp-foot span{font-size:14.5px;font-weight:800;color:var(--ink)}
+.hp-foot span i{font-style:normal;font-size:10.5px;font-weight:600;color:var(--ink-40)}
+@media(max-width:860px){.hp-row{grid-template-columns:1fr 1fr;gap:9px}.hero-peek{margin-top:26px}.hp-card b{font-size:15px}}
+
+/* v227: reclaim the hero's dead bottom padding — peek row sits right under the countries line */
+.hero.search-first .hero-grid{padding-bottom:34px!important}
 </style>
 </head>
 <body>
@@ -2003,6 +2025,16 @@
     </div>
 
     <!-- PLATFORM SCALE — real, defensible claims (no invented numbers) -->
+    <div class="hero-peek">
+      <div class="hp-head"><span>Fresh in the marketplace</span><a href="search-redesign-v222.html">See all 50,000+ &rarr;</a></div>
+      <div class="hp-row">
+        <a class="hp-card" href="search-redesign-v222.html"><small>Toll-Free &middot; Repeating</small><b>(888) 777-7777</b><div class="hp-foot"><em>&#9889; Get it now</em><span>$26,000</span></div></a>
+        <a class="hp-card" href="search-redesign-v222.html"><small>Local &middot; New York</small><b>(212) 200-0000</b><div class="hp-foot"><em>&#9889; Get it now</em><span>$18,500</span></div></a>
+        <a class="hp-card" href="search-redesign-v222.html"><small>Toll-Free &middot; Vanity</small><b>(800) 555-CARE</b><div class="hp-foot"><em>&#9889; Get it now</em><span>$1,400<i>/mo</i></span></div></a>
+        <a class="hp-card" href="search-redesign-v222.html"><small>Local &middot; New York</small><b>(646) 555-0100</b><div class="hp-foot"><em class="slow">&#128337; 7&ndash;10 days</em><span>$2,400</span></div></a>
+      </div>
+    </div>
+
     <div class="scale">
       <div class="row">
         <div class="s"><span class="si"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke="currentColor" stroke-width="1.3"/></svg></span><div><div class="n">200+ Countries</div><div class="l">Global coverage</div></div></div>
