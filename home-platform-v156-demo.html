@@ -1889,6 +1889,15 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
   .ac-grid::-webkit-scrollbar{display:none}
   .ac-grid .ac-card{flex:0 0 72%;scroll-snap-align:start;height:190px;min-width:0}
 }
+
+/* v241: mobile tool rows — pill pins top-right, text gets full width (no more 3-line title crush) */
+@media(max-width:700px){
+  .trow{position:relative;align-items:flex-start;padding:16px 14px;flex-wrap:nowrap}
+  .trow-go.soon{position:absolute;top:14px;right:14px;font-size:10px;padding:4px 9px}
+  .trow-tx{flex:1 1 0;min-width:0}
+  .trow-tx h3{padding-right:92px;font-size:15px}
+  .trow-tx p{margin-top:3px}
+}
 </style>
 </head>
 <body>
