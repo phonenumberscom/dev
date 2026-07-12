@@ -1773,6 +1773,21 @@
 .faq-q{border-radius:16px}
 .faq-q summary{padding:26px 0;font-size:17.5px}
 .faq-q .faq-a{font-size:15px;line-height:1.65;padding-bottom:24px}
+
+/* v219: commerce-explicit fold — category chips + 3-step strip, compressed hero */
+.hero-cats{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:20px}
+.hero-cats a{font-size:13px;font-weight:600;color:var(--ink-72);background:#fff;border:1px solid var(--line);border-radius:99px;padding:8px 16px;text-decoration:none;transition:.15s;box-shadow:0 1px 3px rgba(10,15,30,.05)}
+.hero-cats a:hover{border-color:var(--ac);color:var(--ac)}
+.hero-cats .hc-all{color:var(--ac);border-color:rgba(79,70,229,.3);background:rgba(79,70,229,.05)}
+.hero-steps{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 14px;margin-top:22px;font-size:13px;color:var(--ink-58)}
+.hero-steps span{display:inline-flex;align-items:center;gap:8px;font-weight:600}
+.hero-steps i{font-style:normal;width:20px;height:20px;border-radius:50%;background:rgba(79,70,229,.1);color:var(--ac);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.hero-steps em{font-style:normal;color:var(--ink-40)}
+/* compress the dead air so ticker + trust strip rise into the fold */
+.hero.search-first .heroaction{margin-bottom:0}
+.hero.search-first{padding-bottom:0!important}
+.hero.search-first .ha-launch{position:absolute}
+@media(max-width:700px){.hero-steps{display:none}.hero-cats{gap:7px}.hero-cats a{font-size:12px;padding:7px 12px}}
 </style>
 </head>
 <body>
@@ -1847,7 +1862,7 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="hero-kicker">The Phone Number Authority</span>
+        <span class="hero-kicker">The Premium Phone Number Marketplace</span>
         <h1>Own the number<br><span class="gt">they&rsquo;ll never forget.</span></h1>
         <div class="lead">
           <p style="text-wrap:balance">50,000+ premium numbers — live in minutes, yours for good, and portable to any carrier on earth.</p>
@@ -1862,6 +1877,14 @@
           </div>
 
           <div class="ha-sub" data-mode="market"><b>Premium</b>, vanity, toll-free &amp; local numbers across 200+ countries.</div>
+          <div class="hero-cats">
+            <a href="search-redesign-v222.html?type=vanity">Vanity Words</a>
+            <a href="search-redesign-v222.html?type=toll-free">Toll-Free 800</a>
+            <a href="search-redesign-v222.html?type=local">Local Numbers</a>
+            <a href="search-redesign-v222.html">Repeating Digits</a>
+            <a href="search-redesign-v222.html" class="hc-all">Browse all &rarr;</a>
+          </div>
+          <div class="hero-steps"><span><i>1</i>Search 50,000+ numbers</span><em>&rarr;</em><span><i>2</i>Buy it &mdash; or from $30/mo</span><em>&rarr;</em><span><i>3</i>Live &amp; taking calls today</span></div>
           <div class="ha-launch" role="listbox" aria-label="Search options">
             <div class="lp-lab">Browse by type</div>
             <div class="lp-cats">
