@@ -1788,6 +1788,10 @@
 .hero.search-first{padding-bottom:0!important}
 .hero.search-first .ha-launch{position:absolute}
 @media(max-width:700px){.hero-steps{display:none}.hero-cats{gap:7px}.hero-cats a{font-size:12px;padding:7px 12px}}
+
+/* v220: chips directly under the bar, countries line below them, steps removed */
+.hero-cats{margin-top:18px}
+.ha-sub[data-mode="market"]{margin-top:16px!important}
 </style>
 </head>
 <body>
@@ -1876,7 +1880,6 @@
             <button class="ha-go">Search</button>
           </div>
 
-          <div class="ha-sub" data-mode="market"><b>Premium</b>, vanity, toll-free &amp; local numbers across 200+ countries.</div>
           <div class="hero-cats">
             <a href="search-redesign-v222.html?type=vanity">Vanity Words</a>
             <a href="search-redesign-v222.html?type=toll-free">Toll-Free 800</a>
@@ -1884,7 +1887,8 @@
             <a href="search-redesign-v222.html">Repeating Digits</a>
             <a href="search-redesign-v222.html" class="hc-all">Browse all &rarr;</a>
           </div>
-          <div class="hero-steps"><span><i>1</i>Search 50,000+ numbers</span><em>&rarr;</em><span><i>2</i>Buy it &mdash; or from $30/mo</span><em>&rarr;</em><span><i>3</i>Live &amp; taking calls today</span></div>
+          <div class="ha-sub" data-mode="market"><b>Premium</b>, vanity, toll-free &amp; local numbers across 200+ countries.</div>
+          
           <div class="ha-launch" role="listbox" aria-label="Search options">
             <div class="lp-lab">Browse by type</div>
             <div class="lp-cats">
