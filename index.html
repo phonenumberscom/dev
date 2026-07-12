@@ -2905,9 +2905,12 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
   var heroAction=document.querySelector('.heroaction'); if(!heroAction) return;
   var nav=document.querySelector('header.nav');
   var navSearch=document.querySelector('.nav-search');
-  function past(){ return heroAction.getBoundingClientRect().bottom < 4; }
+  /* hysteresis: open below 4px, close only above 140px — the band's own height can't re-trigger the toggle */
   function onScroll(){
-    if(nav) nav.classList.toggle('scrolled', past());
+    if(!nav) return;
+    var b = heroAction.getBoundingClientRect().bottom;
+    if(nav.classList.contains('scrolled')){ if(b > 140) nav.classList.remove('scrolled'); }
+    else { if(b < 4) nav.classList.add('scrolled'); }
   }
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
