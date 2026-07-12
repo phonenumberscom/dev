@@ -1837,6 +1837,21 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
 .scale{margin-top:10px!important;padding-top:0!important}
 .scale .row{padding:26px 0!important}
 .hero-peek{margin-top:26px}
+
+/* ===== v233: GLASS EVERYWHERE (owner decision) =====
+   Frosted material unified across light-canvas cards. Carve-outs: payment ticket +
+   its option rows stay solid white (production-checkout replica); cards on navy stay as-is.
+   Glass cards hover WITHOUT transform — blur + movement distorts corners (v214 lesson). */
+.hp-card,.mprop,.tst-card,.faq-q,.coll,.scard,.mi-card,.trow,.case,.hero-cats a{
+  background:rgba(255,255,255,.62);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-color:rgba(255,255,255,.88)}
+@media(hover:hover){
+  .hp-card:hover,.mprop:hover,.tst-card:hover,.faq-q:hover,.coll:hover,.case:hover,.trow:hover,.mi-card:hover,.scard:hover{transform:none}
+}
+@supports not (backdrop-filter:blur(1px)){
+  .hp-card,.mprop,.tst-card,.faq-q,.coll,.scard,.mi-card,.trow,.case,.hero-cats a{background:#FAFAFE}
+}
 </style>
 </head>
 <body>
