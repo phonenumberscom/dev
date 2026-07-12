@@ -1870,6 +1870,16 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
   .heroaction{max-width:100%}
   .hero-cats{width:calc(100% + 40px)}
 }
+
+/* v239: mobile search bar = single row, square icon button (Atom pattern; owner preference) */
+.hgo-ic{display:none;width:22px;height:22px}
+@media(max-width:700px){
+  .hero.search-first .ha-mode{flex-wrap:nowrap!important;gap:8px;padding:8px 8px 8px 16px!important}
+  .hero.search-first .ha-mode input{min-width:0;flex:1 1 auto;font-size:16px!important}
+  .hero.search-first .ha-go{flex:0 0 auto!important;width:52px!important;height:52px!important;padding:0!important;border-radius:12px!important;display:flex;align-items:center;justify-content:center}
+  .hero.search-first .hgo-tx{display:none}
+  .hero.search-first .hgo-ic{display:block}
+}
 </style>
 </head>
 <body>
@@ -1955,7 +1965,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
           <div class="ha-mode active" data-mode="market">
             <span class="ha-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
             <input type="text" placeholder="Try an area code, word, or pattern" aria-label="Search phone numbers">
-            <button class="ha-go">Search</button>
+            <button class="ha-go"><span class="hgo-tx">Search</span><svg class="hgo-ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2.4"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
           </div>
 
           <div class="hero-cats"><span class="hc-label">Browse:</span>
