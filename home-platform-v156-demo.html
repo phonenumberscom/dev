@@ -1880,6 +1880,15 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
   .hero.search-first .hgo-tx{display:none}
   .hero.search-first .hgo-ic{display:block}
 }
+
+/* v240: mobile area codes = one cinematic swipe row (carrier logo grid stays — trust wall reads at a glance) */
+@media(max-width:700px){
+  .ac-grid{display:flex!important;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;padding:4px 20px 10px;margin:0 -20px;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 16px,#000 calc(100% - 28px),transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 16px,#000 calc(100% - 28px),transparent)}
+  .ac-grid::-webkit-scrollbar{display:none}
+  .ac-grid .ac-card{flex:0 0 72%;scroll-snap-align:start;height:190px;min-width:0}
+}
 </style>
 </head>
 <body>
