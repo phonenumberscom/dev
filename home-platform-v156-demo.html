@@ -1912,6 +1912,12 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
    (single layer, real job over scrolling content). */
 .hp-card,.mprop,.tst-card,.faq-q,.coll,.scard,.mi-card,.trow,.case,.hero-cats a,.fbox,.cr-tile{
   -webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+
+/* v244: contrast pass (owner: text too light/washed out) — every ink tier one register darker.
+   ink-58 .66→.78 (body/secondary, 5.4:1→~7:1) · ink-40 .40→.58 (micro-labels, 2.5:1→~5:1)
+   · ink-72 .72→.84 · ticker status words white .5→.75. Hierarchy preserved, just darker. */
+:root{--ink-58:rgba(16,19,58,.78);--ink-40:rgba(16,19,58,.63);--ink-72:rgba(16,19,58,.84)}
+.tk-act{color:rgba(255,255,255,.75)}
 </style>
 </head>
 <body>
