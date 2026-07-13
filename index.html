@@ -1905,6 +1905,13 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
 .hp-card,.mprop,.tst-card,.faq-q,.coll,.scard,.mi-card,.trow,.case,.hero-cats a,.fbox,.cr-tile{transform:translateZ(0)}
 .tk-track,.t-track{transform:translateZ(0)}
 .ticker,.trusted{isolation:isolate}
+
+/* v243: flicker plan B — keep the glass LOOK (translucent tint), drop the blur COST.
+   On a flat canvas, backdrop blur of a flat color is visually a no-op but forces Chromium
+   to re-rasterize every layer each animation frame = the shimmer. Header keeps its blur
+   (single layer, real job over scrolling content). */
+.hp-card,.mprop,.tst-card,.faq-q,.coll,.scard,.mi-card,.trow,.case,.hero-cats a,.fbox,.cr-tile{
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important}
 </style>
 </head>
 <body>
