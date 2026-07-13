@@ -1898,6 +1898,13 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
   .trow-tx h3{padding-right:92px;font-size:15px}
   .trow-tx p{margin-top:3px}
 }
+
+/* v242: Chromium flicker fix — promote glass cards + marquee tracks to their own compositor
+   layers so blur rasterizes once instead of every animation frame. translateZ(0), NOT will-change
+   (Safari stale-fragment lesson, v55). */
+.hp-card,.mprop,.tst-card,.faq-q,.coll,.scard,.mi-card,.trow,.case,.hero-cats a,.fbox,.cr-tile{transform:translateZ(0)}
+.tk-track,.t-track{transform:translateZ(0)}
+.ticker,.trusted{isolation:isolate}
 </style>
 </head>
 <body>
