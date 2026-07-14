@@ -2202,7 +2202,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
   <div class="wrap">
     <h2>Your number is waiting.</h2>
     <p>Search premium vanity, toll-free, and local inventory across 200+ countries.</p>
-    <form class="midsearch" onsubmit="document.querySelector('.market').scrollIntoView({behavior:'smooth'});return false">
+    <form class="midsearch" onsubmit="var v=this.querySelector('input').value.trim();location.href='search-redesign-v222.html'+(v?'?q='+encodeURIComponent(v):'');return false">
       <span class="ms-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
       <input type="text" placeholder="Search numbers — LAWYER, 800, your city…" aria-label="Search numbers">
       <button class="ms-btn" type="submit">Find Numbers</button>
@@ -2349,35 +2349,10 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
 
 
 <!-- [#8] CASE STUDIES — PLACEHOLDER (replace with real, authorized customer outcomes) -->
-<section class="cases light" style="display:none">
-  <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Case Studies</span><h2>Numbers that moved the needle</h2><p>Placeholder cards — swap for real, authorized customer results.</p></div>
-    <div class="case-grid">
-      <a class="case" href="#"><div class="case-logo">Logo</div><div class="case-metric">[ metric ]</div><p>Placeholder summary of the outcome and how the right number drove it.</p><span class="case-link">Read case study →</span></a>
-      <a class="case" href="#"><div class="case-logo">Logo</div><div class="case-metric">[ metric ]</div><p>Placeholder summary of the outcome and how the right number drove it.</p><span class="case-link">Read case study →</span></a>
-      <a class="case" href="#"><div class="case-logo">Logo</div><div class="case-metric">[ metric ]</div><p>Placeholder summary of the outcome and how the right number drove it.</p><span class="case-link">Read case study →</span></a>
-    </div>
-  </div>
-</section>
+
 
 <!-- [#9] TESTIMONIALS — PLACEHOLDER (replace with real, authorized quotes) -->
-<section class="tmonials tint" style="display:none">
-  <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Testimonials</span><h2>Trusted by teams who own their numbers</h2></div>
-    <div class="tm-carousel">
-      <button class="tm-arrow tm-prev" id="tmPrev" type="button" aria-label="Previous testimonials"><svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <div class="tm-track" id="tmTrack">
-        <figure class="tm"><div class="tm-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg></div><blockquote>“Placeholder testimonial — replace with a real, authorized customer quote. This is where a customer tells the story: the problem they had finding the right number, how PhoneNumbers.com and the Number Graph solved it, and the concrete result they saw afterward.”</blockquote><figcaption><b>Name Placeholder</b><span class="tm-date">April 2025</span></figcaption></figure>
-        <figure class="tm"><div class="tm-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg></div><blockquote>“Placeholder testimonial — a short, punchy quote works well here too.”</blockquote><figcaption><b>Name Placeholder</b><span class="tm-date">March 2025</span></figcaption></figure>
-        <figure class="tm"><div class="tm-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg></div><blockquote>“Placeholder testimonial — replace with a real, authorized customer quote about the premium number they acquired, how fast activation was, and the difference it made for their brand.”</blockquote><figcaption><b>Name Placeholder</b><span class="tm-date">February 2025</span></figcaption></figure>
-        <figure class="tm"><div class="tm-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg></div><blockquote>“Placeholder testimonial — replace with a real customer quote highlighting a specific result, like faster activation or a more memorable number.”</blockquote><figcaption><b>Name Placeholder</b><span class="tm-date">January 2025</span></figcaption></figure>
-        <figure class="tm"><div class="tm-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg></div><blockquote>“Placeholder testimonial — replace with a real, authorized customer quote. A longer one can walk through the before-and-after: what they struggled with, what they chose, and the measurable impact afterward.”</blockquote><figcaption><b>Name Placeholder</b><span class="tm-date">December 2024</span></figcaption></figure>
-        <figure class="tm"><div class="tm-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg></div><blockquote>“Placeholder testimonial — a concise, credible quote with a concrete outcome works great here.”</blockquote><figcaption><b>Name Placeholder</b><span class="tm-date">November 2024</span></figcaption></figure>
-      </div>
-      <button class="tm-arrow tm-next" id="tmNext" type="button" aria-label="Next testimonials"><svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    </div>
-  </div>
-</section>
+
 
 <!-- [#10] POPULAR COLLECTIONS -->
 <section class="collections light">
