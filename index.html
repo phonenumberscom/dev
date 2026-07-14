@@ -2870,11 +2870,8 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
 
   /* route any condensed search into the hero Lookup */
   function route(val){
-    var ta=document.querySelector('.ha-mode[data-mode="market"] textarea');
-    var go=document.querySelector('.ha-mode[data-mode="market"] .ai-send');
-    if(ta){ ta.value=val; ta.dispatchEvent(new Event('input')); }
-    window.scrollTo({top:0, behavior:'smooth'});
-    setTimeout(function(){ if(go) go.click(); }, 450);
+    var v=(val||'').trim();
+    location.href='search-redesign-v222.html'+(v?'?q='+encodeURIComponent(v):'');
   }
   function wire(inputSel, btnSel, root){
     var inp=root.querySelector(inputSel), btn=root.querySelector(btnSel);
