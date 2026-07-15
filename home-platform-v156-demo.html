@@ -666,6 +666,11 @@
   .hero.search-first .lead{max-width:600px;margin:0 auto}
   .hero.search-first .hsupport{display:none}
   .hero.search-first .heroaction{max-width:740px!important;margin:30px auto 0!important}
+/* v266: viewport-hugging fold — springs grow only when the screen is taller than the fold, so the LIVE ACTIVITY ticker lands at the bottom edge on desktop; laptops unchanged (springs collapse to 0) */
+@media(min-width:1001px){
+  .hero>.wrap{display:flex;flex-direction:column;min-height:calc(100vh - 130px)}
+  .hero>.wrap>.fspring{flex:1 1 0;min-height:0}
+}
   .hero.search-first .ha-tabs{margin:0 auto 18px!important}
   .hero.search-first .ha-mode{padding:14px 14px 14px 24px!important;border-radius:18px!important;box-shadow:0 28px 60px -22px rgba(40,30,120,.42)}
   .hero.search-first .ha-mode input{font-size:19px!important}
@@ -2201,7 +2206,8 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
     <!-- PLATFORM SCALE — real, defensible claims (no invented numbers) -->
     
 
-    <div class="scale">
+    <div class="fspring" aria-hidden="true"></div>
+<div class="scale">
       <div class="row">
         <div class="s"><span class="si"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke="currentColor" stroke-width="1.3"/></svg></span><div><div class="n">200+ Countries</div><div class="l">Global coverage</div></div></div>
         <div class="s"><span class="si"><svg viewBox="0 0 24 24" fill="none"><circle cx="6" cy="6" r="2.4" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="6" r="2.4" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="18" r="2.4" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 7.5L11 15M16.5 7.5L13 15M8.4 6h7.2" stroke="currentColor" stroke-width="1.5"/></svg></span><div><div class="n">Every Major Carrier</div><div class="l">Direct relationships</div></div></div>
@@ -2210,7 +2216,8 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
       </div>
     </div>
 
-    <div class="hero-peek">
+    <div class="fspring" aria-hidden="true"></div>
+<div class="hero-peek">
       <div class="hp-head"><span>Fresh in the marketplace</span><a href="search-redesign-v232.html">See all 50M+ &rarr;</a></div>
       <div class="hp-row">
         <a class="hp-card" href="search-redesign-v232.html"><small>Toll-Free &middot; Repeating</small><b>(888) 777-7777</b><div class="hp-foot"><em>&#9889; Get it now</em><span>$26,000</span></div></a>
