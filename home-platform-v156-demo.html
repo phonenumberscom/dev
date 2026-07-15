@@ -711,8 +711,7 @@
   .lp-pop a:hover{border-color:var(--ac);color:var(--ac)}
   @media(max-width:720px){.lp-cats{grid-template-columns:repeat(3,1fr)}.ha-launch{padding:12px}}
   /* v152: caption-collapse, recent row, top icon strip */
-  .hero.search-first .ha-sub{transition:opacity .2s,max-height .22s,margin .22s}
-  .hero.search-first .heroaction:focus-within .ha-sub{opacity:0;max-height:0;margin:0;overflow:hidden}
+  /* v269: v152 caption-collapse on focus REMOVED — it served the launchpad (deleted v223); it was hiding the countries line and shifting the trust strip whenever the search box had focus */
   .ha-launch{top:calc(100% + 6px)}
   .lp-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:5px 2px}
   .lp-row[hidden]{display:none}
