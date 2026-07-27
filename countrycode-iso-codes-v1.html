@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISO 3166 Country Codes — Alpha-2, Alpha-3 &amp; Numeric | CountryCode.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B1B33;
+  --ink-70:rgba(11,27,51,.82);
+  --ink-50:rgba(11,27,51,.66);
+  --canvas:#F4F8FC;
+  --card:#FFFFFF;
+  --line:rgba(11,27,51,.10);
+  --blue:#0E63F4;
+  --blue-deep:#0A47B8;
+  --chip:#E7F0FE;
+  --green:#0B7A46;
+  --green-bg:#E4F6EE;
+  --mono:'IBM Plex Mono',monospace;
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--canvas);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+header{position:sticky;top:0;z-index:50;background:rgba(244,248,252,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:28px;height:66px}
+.logo{font-weight:800;font-size:21px;letter-spacing:-.02em;display:flex;align-items:baseline}
+.logo .tld{color:var(--blue);font-weight:700}
+.logo .globe{width:26px;height:26px;margin-right:9px;align-self:center}
+.nav-search{flex:1;max-width:420px;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 14px}
+.nav-search svg{flex:none;opacity:.4}
+.nav-search input{flex:1;border:0;outline:0;font:600 14.5px 'Plus Jakarta Sans',sans-serif;color:var(--ink);background:transparent;min-width:0}
+.nav-search input::placeholder{color:rgba(11,27,51,.38);font-weight:500}
+.nav-cta{margin-left:auto;background:linear-gradient(180deg,#1470FF,#0A47B8);color:#fff;font-weight:700;font-size:14.5px;padding:10px 18px;border-radius:12px;box-shadow:0 4px 14px rgba(14,99,244,.25);white-space:nowrap}
+@media(max-width:700px){.nav-search{display:none}}
+
+.crumb{padding:18px 0 0;font-size:13.5px;font-weight:600;color:var(--ink-50)}
+.crumb a:hover{color:var(--blue)}
+.crumb .sep{margin:0 8px;opacity:.5}
+
+.hero{padding:34px 0 8px;background:radial-gradient(56% 60% at 88% 0%, rgba(14,99,244,.10), transparent 60%)}
+.hero h1{font-size:38px;font-weight:800;letter-spacing:-.03em;line-height:1.12;max-width:760px}
+.hero h1 .accent{color:var(--blue)}
+.hero p.sub{margin-top:14px;font-size:16.5px;color:var(--ink-50);line-height:1.6;max-width:700px}
+.fresh{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--green-bg);color:var(--green);font-size:12.5px;font-weight:700;padding:6px 13px;border-radius:99px}
+.fresh .dot{width:7px;height:7px;border-radius:50%;background:#12A85F;box-shadow:0 0 0 3px rgba(18,168,95,.18)}
+@media(max-width:640px){.hero h1{font-size:29px}}
+
+.explain{padding:26px 0 6px}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.exp{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.exp .tag{font-family:var(--mono);font-weight:700;font-size:19px;color:var(--blue-deep);background:var(--chip);display:inline-block;padding:4px 12px;border-radius:9px}
+.exp h3{font-size:15.5px;font-weight:800;margin:12px 0 6px}
+.exp p{font-size:13.5px;color:var(--ink-50);line-height:1.6}
+.exp p code{font-family:var(--mono);font-size:12.5px;background:#EEF4FD;padding:1px 6px;border-radius:5px;color:var(--blue-deep)}
+@media(max-width:800px){.exp-grid{grid-template-columns:1fr}}
+
+.table-section{padding:26px 0 30px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:18px;flex-wrap:wrap}
+.section-head h2{font-size:24px;font-weight:800;letter-spacing:-.02em}
+.section-head p{color:var(--ink-50);font-size:14px;margin-top:5px}
+.dl{font-size:14px;font-weight:700;color:var(--blue);display:inline-flex;gap:7px;align-items:center}
+.table-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(11,27,51,.05)}
+.table-filter{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center}
+.table-filter input{flex:1;border:1px solid var(--line);border-radius:11px;padding:11px 16px;font:600 15px 'Plus Jakarta Sans',sans-serif;outline:0;color:var(--ink)}
+.table-filter input:focus{border-color:var(--blue)}
+.count-pill{font-size:13px;font-weight:700;color:var(--ink-50);white-space:nowrap}
+.tbl-scroll{max-height:640px;overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:720px}
+thead th{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-50);text-align:left;padding:12px 18px;background:#FAFCFE;border-bottom:1px solid var(--line);position:sticky;top:0}
+tbody td{padding:11px 18px;border-bottom:1px solid rgba(11,27,51,.05);font-size:14.5px;font-weight:600;vertical-align:middle}
+tbody tr:hover{background:#F2F7FE}
+td.mono{font-family:var(--mono);font-weight:600;color:var(--blue-deep);font-size:13.5px}
+td.dial a{color:var(--blue-deep);font-family:var(--mono);font-weight:600;font-size:13.5px}
+td.dial a:hover{text-decoration:underline}
+td.dial .none{color:rgba(11,27,51,.35);font-size:12.5px;font-weight:600;font-style:normal}
+.flag{margin-right:10px;font-size:16px}
+.cname .official{display:block;font-size:11.5px;font-weight:600;color:var(--ink-50);margin-top:2px}
+
+.note{margin-top:14px;font-size:13.5px;color:var(--ink-50);line-height:1.6;max-width:760px}
+.note b{color:var(--ink-70)}
+
+.faq-wrap{padding:10px 0 30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 10px 30px rgba(11,27,51,.05)}
+.card h2{font-size:22px;font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.card h2 .ico{width:36px;height:36px;border-radius:10px;background:var(--chip);display:flex;align-items:center;justify-content:center;font-size:17px}
+.faq{margin-top:8px}
+.faq details{border-top:1px solid var(--line);padding:16px 0}
+.faq details:first-of-type{border-top:0}
+.faq summary{font-size:16px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:"+";font-size:20px;font-weight:600;color:var(--blue);transition:.15s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin-top:10px;font-size:14.5px;color:var(--ink-70);line-height:1.65;max-width:780px}
+.faq p code{font-family:var(--mono);background:#EEF4FD;padding:1px 7px;border-radius:6px;font-size:13px;color:var(--blue-deep)}
+
+.cta{margin:20px 0 60px}
+.cta-inner{border:2px dotted rgba(14,99,244,.35);border-radius:22px;padding:36px 40px;display:flex;align-items:center;gap:30px;background:#fff;flex-wrap:wrap}
+.cta-inner h2{font-size:24px;font-weight:800;letter-spacing:-.02em}
+.cta-inner p{color:var(--ink-50);margin-top:8px;font-size:15px;max-width:520px;line-height:1.6}
+.cta-inner .btn{margin-left:auto;background:linear-gradient(180deg,#1470FF,#0A47B8);color:#fff;font-weight:700;font-size:16px;padding:15px 28px;border-radius:14px;white-space:nowrap;box-shadow:0 8px 22px rgba(14,99,244,.28)}
+
+footer{background:#0B1B33;color:rgba(255,255,255,.6);padding:40px 0;font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.foot .logo{color:#fff;font-size:18px}
+.foot-links{display:flex;gap:22px;font-weight:600}
+.foot-links a:hover{color:#fff}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="countrycode-home-v1.html">
+      <svg class="globe" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#0E63F4" stroke-width="2"/><path d="M2 12h20M12 2c2.7 2.6 4.2 6.2 4.2 10S14.7 19.4 12 22M12 2C9.3 4.6 7.8 8.2 7.8 12s1.5 7.4 4.2 10" stroke="#0E63F4" stroke-width="2" stroke-linecap="round"/></svg>
+      CountryCode<span class="tld">.com</span>
+    </a>
+    <div class="nav-search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#0B1B33" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="#0B1B33" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="text" placeholder="Search any country or code…">
+    </div>
+    <a class="nav-cta" href="#">Get a Number</a>
+  </div>
+</header>
+
+<div class="wrap crumb">
+  <a href="countrycode-home-v1.html">Home</a><span class="sep">›</span><b>ISO Country Codes</b>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>ISO 3166 Country Codes: <span class="accent">Alpha-2, Alpha-3 &amp; Numeric</span></h1>
+    <p class="sub">The complete official list — all 249 countries and territories in the ISO 3166-1 standard, with their two-letter, three-letter and numeric codes, cross-referenced with each country's telephone calling code.</p>
+    <div class="fresh"><span class="dot"></span>Matches the current ISO 3166-1 standard · Verified July 2026</div>
+  </div>
+</section>
+
+<section class="explain">
+  <div class="wrap exp-grid">
+    <div class="exp">
+      <span class="tag">IN</span>
+      <h3>Alpha-2 — two letters</h3>
+      <p>The most widely used format: internet domains (<code>.in</code>), shipping, currency prefixes and software locales. Defined in ISO 3166-1 alpha-2.</p>
+    </div>
+    <div class="exp">
+      <span class="tag">IND</span>
+      <h3>Alpha-3 — three letters</h3>
+      <p>Closer to the country name, so easier to recognize. Used on passports, in banking (IBAN, SWIFT), at the UN and in international sport.</p>
+    </div>
+    <div class="exp">
+      <span class="tag">356</span>
+      <h3>Numeric — three digits</h3>
+      <p>Script-independent, so it works in any language or alphabet. Used by the UN Statistics Division and in EMV chip payment systems.</p>
+    </div>
+  </div>
+</section>
+
+<section class="table-section" id="table">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2>All ISO country codes, A–Z</h2>
+        <p>Official names shown beneath where they differ. Calling codes link to each country's dialing guide.</p>
+      </div>
+      <a class="dl" href="#">⬇ Download full list (CSV)</a>
+    </div>
+    <div class="table-card">
+      <div class="table-filter">
+        <input id="filter" type="text" placeholder="Filter — “Germany”, “DE”, “276”, “+49”…" autocomplete="off">
+        <span class="count-pill" id="pill"></span>
+      </div>
+      <div class="tbl-scroll">
+        <table>
+          <thead><tr><th>Country</th><th>Alpha-2</th><th>Alpha-3</th><th>Numeric</th><th>Calling code</th></tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="note"><b>Note:</b> five territories have ISO codes but no telephone country code — Bouvet Island, the French Southern Territories, Heard Island &amp; McDonald Islands, South Georgia, and the U.S. Minor Outlying Islands. They're uninhabited or administered remotely, so there's no phone network to call.</p>
+  </div>
+</section>
+
+<section class="faq-wrap">
+  <div class="wrap">
+    <div class="card">
+      <h2><span class="ico">💬</span>Common questions</h2>
+      <div class="faq">
+        <details open>
+          <summary>What's the difference between Alpha-2 and Alpha-3 codes?</summary>
+          <p>Both identify the same country. <code>Alpha-2</code> (two letters, like <code>DE</code>) is the general-purpose standard used for internet domains and software. <code>Alpha-3</code> (three letters, like <code>DEU</code>) resembles the country name more closely and is preferred on passports and in finance. Germany is <code>DE</code>, <code>DEU</code> and <code>276</code> — all three are ISO 3166-1 codes.</p>
+        </details>
+        <details>
+          <summary>Is a country's ISO code the same as its phone code?</summary>
+          <p>No — they're different systems. ISO codes are letters and digits assigned by the ISO standards body; calling codes (like <code>+49</code>) are assigned by the ITU for telephone routing. This table cross-references both, which is why India shows <code>IN</code> / <code>IND</code> / <code>356</code> <em>and</em> <code>+91</code>.</p>
+        </details>
+        <details>
+          <summary>Why isn't Kosovo in the list?</summary>
+          <p>Kosovo doesn't yet have an official ISO 3166 code. The user-assigned code <code>XK</code> is widely used in practice (by the EU, SWIFT and many databases), and Kosovo does have its own calling code, <code>+383</code>.</p>
+        </details>
+        <details>
+          <summary>Which country names have changed recently?</summary>
+          <p>The standard now uses <code>Czechia</code> (Czech Republic), <code>Eswatini</code> (formerly Swaziland), <code>Cabo Verde</code> (Cape Verde), <code>North Macedonia</code> (formerly Macedonia) and <code>Timor-Leste</code> (East Timor). We show the name people actually search for, with the official ISO name alongside.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div>
+        <h2>Looking for dialing codes instead?</h2>
+        <p>Every country's phone code, area codes, mobile formats and step-by-step dialing instructions.</p>
+      </div>
+      <a class="btn" href="countrycode-home-v1.html">Browse country codes →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span class="logo">CountryCode<span style="color:#4D8DFF">.com</span></span>
+    <nav class="foot-links">
+      <a href="countrycode-home-v1.html">All Countries</a><a href="#">Downloads</a><a href="#">About Our Data</a><a href="#">Report a Correction</a>
+    </nav>
+    <span>© 2026 CountryCode.com</span>
+  </div>
+</footer>
+
+<script>
+/* [display, alpha2, alpha3, numeric, officialNameIfDifferent] — ISO 3166-1, 249 entries */
+const ISO=[
+["Afghanistan","AF","AFG","004"],["Albania","AL","ALB","008"],["Algeria","DZ","DZA","012"],["American Samoa","AS","ASM","016"],["Andorra","AD","AND","020"],["Angola","AO","AGO","024"],["Anguilla","AI","AIA","660"],["Antarctica","AQ","ATA","010"],["Antigua and Barbuda","AG","ATG","028"],["Argentina","AR","ARG","032"],["Armenia","AM","ARM","051"],["Aruba","AW","ABW","533"],["Australia","AU","AUS","036"],["Austria","AT","AUT","040"],["Azerbaijan","AZ","AZE","031"],["Bahamas","BS","BHS","044"],["Bahrain","BH","BHR","048"],["Bangladesh","BD","BGD","050"],["Barbados","BB","BRB","052"],["Belarus","BY","BLR","112"],["Belgium","BE","BEL","056"],["Belize","BZ","BLZ","084"],["Benin","BJ","BEN","204"],["Bermuda","BM","BMU","060"],["Bhutan","BT","BTN","064"],["Bolivia","BO","BOL","068","Bolivia (Plurinational State of)"],["Bonaire, Sint Eustatius and Saba","BQ","BES","535"],["Bosnia and Herzegovina","BA","BIH","070"],["Botswana","BW","BWA","072"],["Bouvet Island","BV","BVT","074"],["Brazil","BR","BRA","076"],["British Indian Ocean Territory","IO","IOT","086"],["British Virgin Islands","VG","VGB","092","Virgin Islands (British)"],["Brunei","BN","BRN","096","Brunei Darussalam"],["Bulgaria","BG","BGR","100"],["Burkina Faso","BF","BFA","854"],["Burundi","BI","BDI","108"],["Cabo Verde","CV","CPV","132","formerly Cape Verde"],["Cambodia","KH","KHM","116"],["Cameroon","CM","CMR","120"],["Canada","CA","CAN","124"],["Cayman Islands","KY","CYM","136"],["Central African Republic","CF","CAF","140"],["Chad","TD","TCD","148"],["Chile","CL","CHL","152"],["China","CN","CHN","156"],["Christmas Island","CX","CXR","162"],["Cocos (Keeling) Islands","CC","CCK","166"],["Colombia","CO","COL","170"],["Comoros","KM","COM","174"],["Cook Islands","CK","COK","184"],["Costa Rica","CR","CRI","188"],["Croatia","HR","HRV","191"],["Cuba","CU","CUB","192"],["Curaçao","CW","CUW","531"],["Cyprus","CY","CYP","196"],["Czechia","CZ","CZE","203","Czech Republic"],["Côte d'Ivoire","CI","CIV","384","Ivory Coast"],["Denmark","DK","DNK","208"],["Djibouti","DJ","DJI","262"],["Dominica","DM","DMA","212"],["Dominican Republic","DO","DOM","214"],["DR Congo","CD","COD","180","Congo, Democratic Republic of the"],["Ecuador","EC","ECU","218"],["Egypt","EG","EGY","818"],["El Salvador","SV","SLV","222"],["Equatorial Guinea","GQ","GNQ","226"],["Eritrea","ER","ERI","232"],["Estonia","EE","EST","233"],["Eswatini","SZ","SWZ","748","formerly Swaziland"],["Ethiopia","ET","ETH","231"],["Falkland Islands","FK","FLK","238","Malvinas"],["Faroe Islands","FO","FRO","234"],["Fiji","FJ","FJI","242"],["Finland","FI","FIN","246"],["France","FR","FRA","250"],["French Guiana","GF","GUF","254"],["French Polynesia","PF","PYF","258"],["French Southern Territories","TF","ATF","260"],["Gabon","GA","GAB","266"],["Gambia","GM","GMB","270"],["Georgia","GE","GEO","268"],["Germany","DE","DEU","276"],["Ghana","GH","GHA","288"],["Gibraltar","GI","GIB","292"],["Greece","GR","GRC","300"],["Greenland","GL","GRL","304"],["Grenada","GD","GRD","308"],["Guadeloupe","GP","GLP","312"],["Guam","GU","GUM","316"],["Guatemala","GT","GTM","320"],["Guernsey","GG","GGY","831"],["Guinea","GN","GIN","324"],["Guinea-Bissau","GW","GNB","624"],["Guyana","GY","GUY","328"],["Haiti","HT","HTI","332"],["Heard Island and McDonald Islands","HM","HMD","334"],["Honduras","HN","HND","340"],["Hong Kong","HK","HKG","344"],["Hungary","HU","HUN","348"],["Iceland","IS","ISL","352"],["India","IN","IND","356"],["Indonesia","ID","IDN","360"],["Iran","IR","IRN","364","Iran (Islamic Republic of)"],["Iraq","IQ","IRQ","368"],["Ireland","IE","IRL","372"],["Isle of Man","IM","IMN","833"],["Israel","IL","ISR","376"],["Italy","IT","ITA","380"],["Jamaica","JM","JAM","388"],["Japan","JP","JPN","392"],["Jersey","JE","JEY","832"],["Jordan","JO","JOR","400"],["Kazakhstan","KZ","KAZ","398"],["Kenya","KE","KEN","404"],["Kiribati","KI","KIR","296"],["Kuwait","KW","KWT","414"],["Kyrgyzstan","KG","KGZ","417"],["Laos","LA","LAO","418","Lao People's Democratic Republic"],["Latvia","LV","LVA","428"],["Lebanon","LB","LBN","422"],["Lesotho","LS","LSO","426"],["Liberia","LR","LBR","430"],["Libya","LY","LBY","434"],["Liechtenstein","LI","LIE","438"],["Lithuania","LT","LTU","440"],["Luxembourg","LU","LUX","442"],["Macao","MO","MAC","446","Macau"],["Madagascar","MG","MDG","450"],["Malawi","MW","MWI","454"],["Malaysia","MY","MYS","458"],["Maldives","MV","MDV","462"],["Mali","ML","MLI","466"],["Malta","MT","MLT","470"],["Marshall Islands","MH","MHL","584"],["Martinique","MQ","MTQ","474"],["Mauritania","MR","MRT","478"],["Mauritius","MU","MUS","480"],["Mayotte","YT","MYT","175"],["Mexico","MX","MEX","484"],["Micronesia","FM","FSM","583","Micronesia (Federated States of)"],["Moldova","MD","MDA","498","Moldova, Republic of"],["Monaco","MC","MCO","492"],["Mongolia","MN","MNG","496"],["Montenegro","ME","MNE","499"],["Montserrat","MS","MSR","500"],["Morocco","MA","MAR","504"],["Mozambique","MZ","MOZ","508"],["Myanmar","MM","MMR","104"],["Namibia","NA","NAM","516"],["Nauru","NR","NRU","520"],["Nepal","NP","NPL","524"],["Netherlands","NL","NLD","528"],["New Caledonia","NC","NCL","540"],["New Zealand","NZ","NZL","554"],["Nicaragua","NI","NIC","558"],["Niger","NE","NER","562"],["Nigeria","NG","NGA","566"],["Niue","NU","NIU","570"],["Norfolk Island","NF","NFK","574"],["North Korea","KP","PRK","408","Korea, Democratic People's Republic of"],["North Macedonia","MK","MKD","807","formerly Macedonia"],["Northern Mariana Islands","MP","MNP","580"],["Norway","NO","NOR","578"],["Oman","OM","OMN","512"],["Pakistan","PK","PAK","586"],["Palau","PW","PLW","585"],["Palestine","PS","PSE","275","Palestine, State of"],["Panama","PA","PAN","591"],["Papua New Guinea","PG","PNG","598"],["Paraguay","PY","PRY","600"],["Peru","PE","PER","604"],["Philippines","PH","PHL","608"],["Pitcairn","PN","PCN","612"],["Poland","PL","POL","616"],["Portugal","PT","PRT","620"],["Puerto Rico","PR","PRI","630"],["Qatar","QA","QAT","634"],["Republic of the Congo","CG","COG","178","Congo"],["Romania","RO","ROU","642"],["Russia","RU","RUS","643","Russian Federation"],["Rwanda","RW","RWA","646"],["Réunion","RE","REU","638"],["Saint Barthélemy","BL","BLM","652"],["Saint Helena","SH","SHN","654","Saint Helena, Ascension and Tristan da Cunha"],["Saint Kitts and Nevis","KN","KNA","659"],["Saint Lucia","LC","LCA","662"],["Saint Martin (French part)","MF","MAF","663"],["Saint Pierre and Miquelon","PM","SPM","666"],["Saint Vincent and the Grenadines","VC","VCT","670"],["Samoa","WS","WSM","882"],["San Marino","SM","SMR","674"],["Sao Tome and Principe","ST","STP","678"],["Saudi Arabia","SA","SAU","682"],["Senegal","SN","SEN","686"],["Serbia","RS","SRB","688"],["Seychelles","SC","SYC","690"],["Sierra Leone","SL","SLE","694"],["Singapore","SG","SGP","702"],["Sint Maarten (Dutch part)","SX","SXM","534"],["Slovakia","SK","SVK","703"],["Slovenia","SI","SVN","705"],["Solomon Islands","SB","SLB","090"],["Somalia","SO","SOM","706"],["South Africa","ZA","ZAF","710"],["South Georgia and the South Sandwich Islands","GS","SGS","239"],["South Korea","KR","KOR","410","Korea, Republic of"],["South Sudan","SS","SSD","728"],["Spain","ES","ESP","724"],["Sri Lanka","LK","LKA","144"],["Sudan","SD","SDN","729"],["Suriname","SR","SUR","740"],["Svalbard and Jan Mayen","SJ","SJM","744"],["Sweden","SE","SWE","752"],["Switzerland","CH","CHE","756"],["Syria","SY","SYR","760","Syrian Arab Republic"],["Taiwan","TW","TWN","158"],["Tajikistan","TJ","TJK","762"],["Tanzania","TZ","TZA","834","Tanzania, United Republic of"],["Thailand","TH","THA","764"],["Timor-Leste","TL","TLS","626","East Timor"],["Togo","TG","TGO","768"],["Tokelau","TK","TKL","772"],["Tonga","TO","TON","776"],["Trinidad and Tobago","TT","TTO","780"],["Tunisia","TN","TUN","788"],["Turkey","TR","TUR","792","Türkiye"],["Turkmenistan","TM","TKM","795"],["Turks and Caicos Islands","TC","TCA","796"],["Tuvalu","TV","TUV","798"],["U.S. Minor Outlying Islands","UM","UMI","581","United States Minor Outlying Islands"],["U.S. Virgin Islands","VI","VIR","850","Virgin Islands (U.S.)"],["Uganda","UG","UGA","800"],["Ukraine","UA","UKR","804"],["United Arab Emirates","AE","ARE","784"],["United Kingdom","GB","GBR","826","United Kingdom of Great Britain and Northern Ireland"],["United States","US","USA","840","United States of America"],["Uruguay","UY","URY","858"],["Uzbekistan","UZ","UZB","860"],["Vanuatu","VU","VUT","548"],["Vatican City","VA","VAT","336","Holy See"],["Venezuela","VE","VEN","862","Venezuela (Bolivarian Republic of)"],["Vietnam","VN","VNM","704","Viet Nam"],["Wallis and Futuna","WF","WLF","876"],["Western Sahara","EH","ESH","732"],["Yemen","YE","YEM","887"],["Zambia","ZM","ZMB","894"],["Zimbabwe","ZW","ZWE","716"],["Åland Islands","AX","ALA","248"]
+];
+ISO.sort((a,b)=>a[0].localeCompare(b[0]));
+
+/* alpha-2 → calling code (ITU); absent key = no calling code */
+const DIAL={AF:"93",AL:"355",DZ:"213",AS:"1-684",AD:"376",AO:"244",AI:"1-264",AQ:"672",AG:"1-268",AR:"54",AM:"374",AW:"297",AU:"61",AT:"43",AZ:"994",BS:"1-242",BH:"973",BD:"880",BB:"1-246",BY:"375",BE:"32",BZ:"501",BJ:"229",BM:"1-441",BT:"975",BO:"591",BQ:"599",BA:"387",BW:"267",BR:"55",IO:"246",VG:"1-284",BN:"673",BG:"359",BF:"226",BI:"257",CV:"238",KH:"855",CM:"237",CA:"1",KY:"1-345",CF:"236",TD:"235",CL:"56",CN:"86",CX:"61",CC:"61",CO:"57",KM:"269",CK:"682",CR:"506",HR:"385",CU:"53",CW:"599",CY:"357",CZ:"420",CI:"225",DK:"45",DJ:"253",DM:"1-767",DO:"1-809",CD:"243",EC:"593",EG:"20",SV:"503",GQ:"240",ER:"291",EE:"372",SZ:"268",ET:"251",FK:"500",FO:"298",FJ:"679",FI:"358",FR:"33",GF:"594",PF:"689",GA:"241",GM:"220",GE:"995",DE:"49",GH:"233",GI:"350",GR:"30",GL:"299",GD:"1-473",GP:"590",GU:"1-671",GT:"502",GG:"44",GN:"224",GW:"245",GY:"592",HT:"509",HN:"504",HK:"852",HU:"36",IS:"354",IN:"91",ID:"62",IR:"98",IQ:"964",IE:"353",IM:"44",IL:"972",IT:"39",JM:"1-876",JP:"81",JE:"44",JO:"962",KZ:"7",KE:"254",KI:"686",KW:"965",KG:"996",LA:"856",LV:"371",LB:"961",LS:"266",LR:"231",LY:"218",LI:"423",LT:"370",LU:"352",MO:"853",MG:"261",MW:"265",MY:"60",MV:"960",ML:"223",MT:"356",MH:"692",MQ:"596",MR:"222",MU:"230",YT:"262",MX:"52",FM:"691",MD:"373",MC:"377",MN:"976",ME:"382",MS:"1-664",MA:"212",MZ:"258",MM:"95",NA:"264",NR:"674",NP:"977",NL:"31",NC:"687",NZ:"64",NI:"505",NE:"227",NG:"234",NU:"683",NF:"672",KP:"850",MK:"389",MP:"1-670",NO:"47",OM:"968",PK:"92",PW:"680",PS:"970",PA:"507",PG:"675",PY:"595",PE:"51",PH:"63",PN:"64",PL:"48",PT:"351",PR:"1-787",QA:"974",CG:"242",RO:"40",RU:"7",RW:"250",RE:"262",BL:"590",SH:"290",KN:"1-869",LC:"1-758",MF:"590",PM:"508",VC:"1-784",WS:"685",SM:"378",ST:"239",SA:"966",SN:"221",RS:"381",SC:"248",SL:"232",SG:"65",SX:"1-721",SK:"421",SI:"386",SB:"677",SO:"252",ZA:"27",KR:"82",SS:"211",ES:"34",LK:"94",SD:"249",SR:"597",SJ:"47",SE:"46",CH:"41",SY:"963",TW:"886",TJ:"992",TZ:"255",TH:"66",TL:"670",TG:"228",TK:"690",TO:"676",TT:"1-868",TN:"216",TR:"90",TM:"993",TC:"1-649",TV:"688",UM:null,VI:"1-340",UG:"256",UA:"380",AE:"971",GB:"44",US:"1",UY:"598",UZ:"998",VU:"678",VA:"379",VE:"58",VN:"84",WF:"681",EH:"212",YE:"967",ZM:"260",ZW:"263",AX:"358"};
+
+const flag=iso=>iso.replace(/./g,c=>String.fromCodePoint(127397+c.charCodeAt(0)));
+const tbody=document.getElementById('tbody'),pill=document.getElementById('pill');
+function row(c){
+  const d=DIAL[c[1]];
+  const dial=d?`<a href="#" title="Dialing guide">+${d}</a>`:`<span class="none">no calling code</span>`;
+  const off=c[4]?`<span class="official">${c[4]}</span>`:'';
+  return `<tr><td class="cname"><span class="flag">${flag(c[1])}</span>${c[0]}${off}</td><td class="mono">${c[1]}</td><td class="mono">${c[2]}</td><td class="mono">${c[3]}</td><td class="dial">${dial}</td></tr>`;
+}
+function render(list){
+  tbody.innerHTML=list.map(row).join('');
+  pill.textContent=list.length+' of '+ISO.length+' entries';
+}
+render(ISO);
+const norm=s=>s.toLowerCase().replace(/[+\s]/g,'');
+document.getElementById('filter').addEventListener('input',e=>{
+  const raw=e.target.value.trim(), n=norm(raw);
+  if(!n){render(ISO);return}
+  const isPlus=raw.startsWith('+'), isNum=/^\d+$/.test(n);
+  render(ISO.filter(c=>{
+    const d=DIAL[c[1]];
+    if(isPlus)return d&&norm(d).startsWith(n);
+    if(isNum)return c[3].includes(n)||(d&&norm(d).startsWith(n));
+    return norm(c[0]).includes(n)||(c[4]&&norm(c[4]).includes(n))||norm(c[1]+c[2]).includes(n);
+  }));
+});
+</script>
+</body>
+</html>
