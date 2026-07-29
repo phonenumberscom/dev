@@ -1591,7 +1591,9 @@
 .mf-more:hover{text-decoration:underline}
 
 /* v176: full-bleed header — logo pinned ~36px from viewport edge (Atom-matched, = search page geometry) */
-@media(min-width:1024px){header.nav > .wrap{max-width:1200px;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px}}
+@media(min-width:1024px){header.nav > .wrap{max-width:1200px;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;position:relative}
+header.nav nav.main{position:absolute;left:50%;transform:translateX(-50%);margin:0;gap:22px}
+header.nav .nav-right{margin-left:auto}}
 
 /* v177: tools deferred to post-launch — Try Now → Coming soon (muted, no action arrow) */
 .trow-go.soon{color:var(--ink-40);background:rgba(16,19,58,.06);border-radius:99px;padding:5px 12px;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
@@ -2011,26 +2013,10 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
   <div class="wrap">
     <a class="brand" href="#"><svg class="lmk" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd-hh"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd-hh)"/></svg><span class="bw">PhoneNumbers<span class="c">.com</span></span></a>
     <nav class="main">
-        <div class="nav-item">
-          <a class="simple" href="#">Marketplace</a>
-          <div class="nav-dd nav-dd-wide"><div class="dd-feat"><a class="dd-tile" href="#"><span class="ti"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h12l3 5-9 13L3 8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 8h18" stroke="currentColor" stroke-width="1.3"/></svg></span><span class="dd-tx"><b>Premium Number Marketplace</b><span>Curated premium numbers across every category.</span></span></a><a class="dd-tile" href="#"><span class="ti"><svg viewBox="0 0 24 24" fill="none"><path d="M5 6V4h14v2M12 4v16M9 20h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dd-tx"><b>Vanity &amp; Word Numbers</b><span>1-800 words and brandable patterns.</span></span></a><a class="dd-tile" href="#"><span class="ti"><svg viewBox="0 0 24 24" fill="none"><path d="M2 5h4l1.5 4-2 1.5a9 9 0 004.5 4.5L12 13l5 1.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 5h6m-3-3v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="dd-tx"><b>Toll-Free Marketplace</b><span>800, 888, 877, 866 &amp; more.</span></span></a></div><div class="dd-col"><div class="dd-h">Popular Collections</div><a href="#">Toll-Free</a><a href="#">Vanity Word</a><a href="#">Local — Major Cities</a><a href="#">Repeating</a><a href="#">Triple &amp; Quad</a><a href="#">Sequential Blocks</a><a href="#">Industry Numbers</a></div><div class="dd-col"><div class="dd-h">Acquire</div><a href="#">Buy Outright</a><a href="#">Payment Plans</a><a href="#">Sell a Number</a><div class="dd-h">Number Services</div><a href="#">Porting</a><a href="#">Instant Activation</a><a href="#">Bulk Acquisition</a></div></div>
-        </div>
-        <div class="nav-item">
-          <a class="simple" href="#">Intelligence</a>
-          <div class="nav-dd"><div class="dd-col"><div class="dd-h">Number Tools</div><a href="#">Phone Number Lookup</a><a href="#">Reverse Lookup</a><a href="#">Carrier Lookup</a><a href="#">Spam &amp; Risk Check</a><a href="#">CNAM Lookup</a><a href="#">Number Validator</a></div><div class="dd-col"><div class="dd-h">Platform</div><a href="#">The Number Graph</a><a href="#">Lookup API</a><a href="#">Bulk Lookup</a><a href="#">Reputation Monitor</a></div></div>
-        </div>
-        <div class="nav-item">
-          <a class="simple" href="#">Services</a>
-          <div class="nav-dd"><div class="dd-col"><div class="dd-h">Activate</div><a href="#">Business VoIP</a><a href="#">SIP Trunking</a><a href="#">Wireless Plans</a><a href="#">Virtual Numbers</a><a href="#">Call Forwarding</a><a href="#">Travel eSIMs</a></div></div>
-        </div>
-        <div class="nav-item">
-          <a class="simple" href="#">Developers</a>
-          <div class="nav-dd"><div class="dd-col"><div class="dd-h">Build</div><a href="#">Lookup API</a><a href="#">Validation API</a><a href="#">Carrier API</a><a href="#">Provisioning API</a><a href="#">Documentation</a><a href="#">Get an API Key</a></div></div>
-        </div>
-        <div class="nav-item">
-          <a class="simple" href="#">Resources</a>
-          <div class="nav-dd"><div class="dd-col"><div class="dd-h">Company</div><a href="#">About</a><a href="#">Blog</a><a href="#">Help Center</a><a href="#">Contact</a><a href="#">Partners</a></div></div>
-        </div>
+      <a class="simple" href="#">Home</a>
+      <a class="simple" href="search-redesign-v236.html">Numbers</a>
+      <a class="simple" href="#">Tools</a>
+      <a class="simple" href="carriers.html">Resources</a>
     </nav>
     <div class="nav-right">
       <a class="nav-ic" href="#" aria-label="Search" title="Search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.7"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></a>
@@ -2091,11 +2077,11 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
           </div>
 
           <div class="hero-cats"><span class="hc-label">Browse:</span>
-            <a href="search-redesign-v235.html?type=vanity">Vanity Words</a>
-            <a href="search-redesign-v235.html?type=toll-free">Toll-Free 800</a>
-            <a href="search-redesign-v235.html?type=local">Local Numbers</a>
-            <a href="search-redesign-v235.html">Repeating Digits</a>
-            <a href="search-redesign-v235.html" class="hc-all">Browse all &rarr;</a>
+            <a href="search-redesign-v236.html?type=vanity">Vanity Words</a>
+            <a href="search-redesign-v236.html?type=toll-free">Toll-Free 800</a>
+            <a href="search-redesign-v236.html?type=local">Local Numbers</a>
+            <a href="search-redesign-v236.html">Repeating Digits</a>
+            <a href="search-redesign-v236.html" class="hc-all">Browse all &rarr;</a>
           </div>
           <div class="ha-sub" data-mode="market">Premium, vanity, toll-free &amp; local numbers across 200+ countries.</div>
           
@@ -2218,12 +2204,12 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
 
     <div class="fspring" aria-hidden="true"></div>
 <div class="hero-peek">
-      <div class="hp-head"><span>Fresh in the marketplace</span><a href="search-redesign-v235.html">See all 50M+ &rarr;</a></div>
+      <div class="hp-head"><span>Fresh in the marketplace</span><a href="search-redesign-v236.html">See all 50M+ &rarr;</a></div>
       <div class="hp-row">
-        <a class="hp-card" href="search-redesign-v235.html"><small>Toll-Free &middot; Repeating</small><b>(888) 777-7777</b><div class="hp-foot"><em>&#9889; Get it now</em><span>$26,000</span></div></a>
-        <a class="hp-card" href="search-redesign-v235.html"><small>Local &middot; New York</small><b>(212) 200-0000</b><div class="hp-foot"><em>&#9889; Get it now</em><span>$18,500</span></div></a>
-        <a class="hp-card" href="search-redesign-v235.html"><small>Toll-Free &middot; Vanity</small><b>(800) 555-CARE</b><div class="hp-foot"><em>&#9889; Get it now</em><span>$1,400<i>/mo</i></span></div></a>
-        <a class="hp-card" href="search-redesign-v235.html"><small>Local &middot; New York</small><b>(646) 555-0100</b><div class="hp-foot"><em class="slow">&#128337; 7&ndash;10 days</em><span>$2,400</span></div></a>
+        <a class="hp-card" href="search-redesign-v236.html"><small>Toll-Free &middot; Repeating</small><b>(888) 777-7777</b><div class="hp-foot"><em>&#9889; Get it now</em><span>$26,000</span></div></a>
+        <a class="hp-card" href="search-redesign-v236.html"><small>Local &middot; New York</small><b>(212) 200-0000</b><div class="hp-foot"><em>&#9889; Get it now</em><span>$18,500</span></div></a>
+        <a class="hp-card" href="search-redesign-v236.html"><small>Toll-Free &middot; Vanity</small><b>(800) 555-CARE</b><div class="hp-foot"><em>&#9889; Get it now</em><span>$1,400<i>/mo</i></span></div></a>
+        <a class="hp-card" href="search-redesign-v236.html"><small>Local &middot; New York</small><b>(646) 555-0100</b><div class="hp-foot"><em class="slow">&#128337; 7&ndash;10 days</em><span>$2,400</span></div></a>
       </div>
     </div>
   </div>
@@ -2483,7 +2469,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
   <div class="wrap">
     <h2>Your number is waiting.</h2>
     <p>Search premium vanity, toll-free, and local inventory across 200+ countries.</p>
-    <form class="midsearch" onsubmit="var v=this.querySelector('input').value.trim();location.href='search-redesign-v235.html'+(v?'?q='+encodeURIComponent(v):'');return false">
+    <form class="midsearch" onsubmit="var v=this.querySelector('input').value.trim();location.href='search-redesign-v236.html'+(v?'?q='+encodeURIComponent(v):'');return false">
       <span class="ms-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
       <input type="text" placeholder="Search numbers — LAWYER, 800, your city…" aria-label="Search numbers">
       <button class="ms-btn" type="submit">Find Numbers</button>
@@ -2616,7 +2602,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
     <h2>Own the Phone Number Your <span class="gt">Brand Deserves</span></h2>
     <p>Premium vanity, toll-free, and local numbers across 200+ countries &mdash; every listing priced, graded, and verified by the Number Graph. Search by word, area code, or pattern: your number is in there.</p>
     <div class="row">
-      <a class="btn btn-grad" href="search-redesign-v235.html">Search 50M+ Numbers <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+      <a class="btn btn-grad" href="search-redesign-v236.html">Search 50M+ Numbers <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
     </div>
   </div>
 </section>
@@ -2908,7 +2894,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
   /* route any condensed search into the hero Lookup */
   function route(val){
     var v=(val||'').trim();
-    location.href='search-redesign-v235.html'+(v?'?q='+encodeURIComponent(v):'');
+    location.href='search-redesign-v236.html'+(v?'?q='+encodeURIComponent(v):'');
   }
   function wire(inputSel, btnSel, root){
     var inp=root.querySelector(inputSel), btn=root.querySelector(btnSel);
@@ -3125,9 +3111,9 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
 })();
 </script>
 <script>
-/* DEMO ONLY — links this homepage mockup to the search mockup (search-redesign-v235.html). Strip for production. */
+/* DEMO ONLY — links this homepage mockup to the search mockup (search-redesign-v236.html). Strip for production. */
 (function(){
-  var S='search-redesign-v235.html';
+  var S='search-redesign-v236.html';
   var rules=[
     [/toll.?free/i, S+'?type=toll-free'],
     [/international/i, S+'?type=international'],
