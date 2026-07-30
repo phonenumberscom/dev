@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Confirmed | PhoneNumbers.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --canvas:#E8EAF7; --ink:#10133A; --ink-72:rgba(16,19,58,.84); --ink-58:rgba(16,19,58,.78); --ink-40:rgba(16,19,58,.63);
+  --brand:#5B3FE8; --grad:linear-gradient(180deg,#5B52EC,#4338CA);
+  --line:rgba(16,19,58,.10); --hair:rgba(16,19,58,.08);
+  --green:#1B7F4B; --green-soft:rgba(27,127,75,.10);
+  --sans:'Plus Jakarta Sans',-apple-system,'Segoe UI',sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--canvas)}
+body{font-family:var(--sans);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+
+/* ============ checkout header ============ */
+header{position:sticky;top:0;z-index:50;background:rgba(244,245,251,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;height:64px;position:relative}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.brand .lmk{width:30px;height:30px;color:var(--brand)}
+.brand .c{color:var(--ink-40);font-weight:700}
+.steps{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600}
+.step{display:flex;align-items:center;gap:7px;color:var(--ink-40)}
+.step .dot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.step.done .dot{background:var(--green-soft);color:var(--green)}
+.step.cur{color:var(--ink)}
+.step.cur .dot{background:var(--grad);color:#fff}
+.steps .sep{color:rgba(16,19,58,.25)}
+.hright{margin-left:auto;display:flex;align-items:center;gap:14px;font-size:13px;color:var(--ink-40)}
+.ssl{display:flex;align-items:center;gap:6px}
+.help{border:1px solid var(--line);border-radius:99px;padding:6px 16px;font-weight:600;color:var(--ink-58)}
+.help:hover{color:var(--brand)}
+@media(max-width:800px){.steps{display:none}.ssl{display:none}}
+
+/* ============ the moment ============ */
+.hero{background:radial-gradient(50% 46% at 50% 0%, rgba(108,92,255,.10), transparent 60%), var(--canvas);
+  text-align:center;padding:92px 0 74px}
+.ok{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:var(--green);margin-bottom:30px}
+.ok .ring{width:26px;height:26px;border-radius:50%;border:1.8px solid currentColor;display:inline-flex;align-items:center;justify-content:center}
+.ok svg{width:12px;height:12px}
+.hero h1{font-size:44px;line-height:1.12;letter-spacing:-.022em;font-weight:800;max-width:640px;margin:0 auto 14px}
+.hero .lead{font-size:16.5px;color:var(--ink-58);max-width:460px;margin:0 auto}
+
+.num{font-family:var(--sans);font-weight:800;font-size:clamp(46px,6.6vw,80px);letter-spacing:-.015em;line-height:1;margin:64px 0 20px}
+.nummeta{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-40)}
+.nummeta i{font-style:normal;margin:0 12px;color:rgba(16,19,58,.28)}
+.statusline{display:inline-flex;align-items:center;gap:10px;margin-top:34px;font-size:14.5px;font-weight:500;color:var(--ink-58)}
+.statusline b{font-weight:600;color:var(--ink-72)}
+.statusline .p{width:8px;height:8px;border-radius:50%;background:var(--brand);animation:pulse 1.8s ease infinite;flex:0 0 auto}
+@keyframes pulse{0%,100%{transform:scale(.7);opacity:.55}50%{transform:scale(1);opacity:1}}
+
+.cta{margin-top:46px;display:flex;align-items:center;justify-content:center;gap:26px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;border-radius:14px;padding:16px 34px;font-family:var(--sans);font-size:16.5px;font-weight:700;cursor:pointer;background:var(--grad);border:none;color:#fff;box-shadow:0 16px 34px -16px rgba(67,56,202,.5)}
+.btn:hover{filter:brightness(1.06)}
+.tlink{font-size:15px;font-weight:600;color:var(--brand)}
+.tlink:hover{text-decoration:underline}
+@media(max-width:700px){.hero{padding:64px 0 56px}.hero h1{font-size:31px}.num{margin-top:48px}}
+
+/* ============ receipt ============ */
+.sheet{max-width:620px;margin:0 auto;padding:0 32px 26px}
+.card{background:none;border:none;border-radius:0;padding:0;box-shadow:none}
+.trow{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid rgba(16,19,58,.12);font-size:15px}
+.trow:last-child{border-bottom:none}
+.trow .l{color:var(--ink-58)}
+.trow .v{font-weight:600;text-align:right}
+.trow .v.mono{font-family:var(--mono)}
+.trow.em .l{color:var(--ink);font-weight:700}
+.trow.em .v{font-weight:800;font-size:16.5px}
+.sheeth{max-width:620px;margin:64px auto 6px;padding:0 32px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-40)}
+
+/* what happens next — quiet rows */
+.nextrows{padding-bottom:84px}
+.nrow{display:flex;align-items:baseline;gap:20px;padding:15px 0;border-bottom:1px solid rgba(16,19,58,.12);font-size:15px}
+.nrow:last-child{border-bottom:none}
+.nrow .w{flex:0 0 74px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-40)}
+.nrow p{color:var(--ink-72)}
+.nrow p b{font-weight:700;color:var(--ink)}
+.nrow a{color:var(--brand);font-weight:600}
+.nrow a:hover{text-decoration:underline}
+
+/* ============ footer ============ */
+footer{border-top:1px solid var(--line);background:#E2E4F3;padding:56px 0 0}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:36px}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
+.fbrand{font-size:19px;font-weight:800}
+.fbrand .c{color:var(--brand)}
+.ftag{font-size:13.5px;color:var(--ink-58);margin-top:12px;max-width:270px}
+.fcol .h{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-40);margin-bottom:14px}
+.fcol a{display:block;font-size:14px;color:var(--ink-58);padding:4.5px 0}
+.fcol a:hover{color:var(--brand)}
+.legal{border-top:1px solid var(--line);margin-top:44px;padding:20px 0;text-align:center;font-size:13px;color:var(--ink-40)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hrow">
+    <a class="brand" href="home-platform-v156-demo.html"><svg class="lmk" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd)"/></svg><span>PhoneNumbers<span class="c">.com</span></span></a>
+    <div class="steps" aria-label="Checkout progress">
+      <span class="step done"><span class="dot">✓</span>Checkout</span><span class="sep">›</span>
+      <span class="step done"><span class="dot">✓</span>Number Setup</span><span class="sep">›</span>
+      <span class="step cur"><span class="dot">3</span>Confirmation</span>
+    </div>
+    <div class="hright">
+      <span class="ssl"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="11" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.8"/></svg>SSL Secured</span>
+      <a class="help" href="#">Help</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="ok"><span class="ring"><svg viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Payment confirmed</span>
+    <h1>Congratulations — your new number is on the way.</h1>
+    <p class="lead">We're activating your line now. A confirmation email with next steps is on its way to your inbox.</p>
+
+    <div class="num">(216)&#8202;865-7600</div>
+    <div class="nummeta">Local<i>·</i>Cleveland, OH<i>·</i><span id="meta-plan">12-month plan</span></div>
+
+    <div class="statusline"><span class="p"></span><span id="status-tx"><b>Activating on our network</b> — ready in about 15 minutes</span></div>
+
+    <div class="cta">
+      <a class="btn" href="search-redesign-v239.html">Browse more numbers</a>
+      <a class="tlink" href="#">View order &amp; receipt</a>
+    </div>
+  </div>
+</section>
+
+<div class="sheeth">Order details</div>
+<div class="sheet">
+  <div class="card">
+    <div class="trow"><span class="l">Order number</span><span class="v mono">HJM-5HW</span></div>
+    <div class="trow"><span class="l">Number</span><span class="v mono">(216) 865-7600</span></div>
+    <div class="trow"><span class="l">Plan</span><span class="v" id="row-plan">12-month payment plan</span></div>
+    <div class="trow"><span class="l">Setup</span><span class="v" id="row-setup">Forwarding to (201) 555-0123</span></div>
+    <div class="trow"><span class="l">Recurring estimate</span><span class="v mono" id="row-rec">$10.68/mo</span></div>
+    <div class="trow em"><span class="l">Total paid today</span><span class="v mono">$7.72</span></div>
+  </div>
+</div>
+
+<div class="sheeth">What happens next</div>
+<div class="sheet nextrows">
+  <div class="card" id="next-rows">
+    <div class="nrow"><span class="w">Now</span><p><b>Confirmation email.</b> Your order details and receipt link are in your inbox.</p></div>
+    <div class="nrow"><span class="w">15 min</span><p><b>Test your number.</b> Give it a call — your line should be live and ringing.</p></div>
+    <div class="nrow"><span class="w">Anytime</span><p><b>Manage in your portal.</b> Routing, call logs, and settings — <a href="#">open your dashboard</a>.</p></div>
+    <div class="nrow"><span class="w">Help</span><p><b>Questions?</b> Our team can help with setup, routing, and porting — <a href="#">talk to us</a>.</p></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">PhoneNumbers<span class="c">.com</span></div>
+        <p class="ftag">The phone number authority — own, understand, and activate phone numbers at scale.</p>
+      </div>
+      <div class="fcol"><div class="h">Platform</div><a href="#">Number Intelligence</a><a href="#">The Number Graph</a><a href="#">Lookup API</a><a href="#">Validation API</a><a href="#">Provisioning API</a><a href="#">Documentation</a></div>
+      <div class="fcol"><div class="h">Marketplace</div><a href="search-redesign-v239.html">Browse Numbers</a><a href="search-redesign-v239.html">Vanity Numbers</a><a href="search-redesign-v239.html?type=toll-free">Toll-Free Numbers</a><a href="search-redesign-v239.html?type=local">Local Numbers</a><a href="search-redesign-v239.html">Industry Numbers</a><a href="porting-instructions.html">Number Porting</a></div>
+      <div class="fcol"><div class="h">Services</div><a href="#">Business VoIP</a><a href="#">SIP Trunking</a><a href="#">Wireless Plans</a><a href="#">Virtual Numbers</a><a href="#">Call Forwarding</a><a href="#">Travel eSIMs</a></div>
+      <div class="fcol"><div class="h">Company</div><a href="#">About Us</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Partners</a><a href="#">Contact Us</a></div>
+    </div>
+    <div class="legal">© 2026 PhoneNumbers.com — EPhone Numbers LLC. The phone number authority.</div>
+  </div>
+</footer>
+
+<div class="demo-switch" aria-hidden="true">
+  <span>Demo — setup choice:</span>
+  <button class="on" data-mode="forward">Forward</button>
+  <button data-mode="park">Park</button>
+  <button data-mode="port">Port out</button>
+</div>
+<style>
+.demo-switch{position:fixed;left:18px;bottom:18px;z-index:80;display:flex;align-items:center;gap:6px;background:#10133A;color:rgba(255,255,255,.65);border-radius:99px;padding:7px 8px 7px 16px;font-size:12px;font-weight:600;box-shadow:0 14px 30px -12px rgba(16,19,58,.5)}
+.demo-switch button{background:none;border:none;color:rgba(255,255,255,.65);font:inherit;font-weight:700;padding:5px 12px;border-radius:99px;cursor:pointer}
+.demo-switch button.on{background:#5B52EC;color:#fff}
+@media print{.demo-switch{display:none}}
+</style>
+<script>
+/* DEMO ONLY — in production the state comes from the order's setup choice on the Number Setup step. Strip for production. */
+(function(){
+  var num = '(216) 865-7600';
+  var STATES = {
+    forward: {
+      status: '<b>Activating on our network</b> — ready in about 15 minutes',
+      metaPlan: '12-month plan', rowPlan: '12-month payment plan',
+      rowSetup: 'Forwarding to (201) 555-0123', rowRec: '$10.68/mo',
+      rows: [
+        ['Now', '<b>Confirmation email.</b> Your order details and receipt link are in your inbox.'],
+        ['15 min', '<b>Your line goes live.</b> Calls to ' + num + ' will ring (201) 555-0123 — give it a try.'],
+        ['Anytime', '<b>Change your routing.</b> Update the forward-to number or settings — <a href="#">open your dashboard</a>.'],
+        ['Help', '<b>Questions?</b> Our team can help with setup and routing — <a href="#">talk to us</a>.']
+      ]
+    },
+    park: {
+      status: '<b>Parked and reserved</b> — your number is safe with us until you\u2019re ready',
+      metaPlan: '12-month plan', rowPlan: '12-month payment plan',
+      rowSetup: 'Parked — free for 6 months', rowRec: '$10.68/mo',
+      rows: [
+        ['Now', '<b>Confirmation email.</b> Your order details and receipt link are in your inbox.'],
+        ['Today', '<b>Your number is reserved.</b> It\u2019s yours — nothing rings yet, and no setup is needed. Parking is free for 6 months, then $2.99/mo.'],
+        ['Anytime', '<b>Activate when ready.</b> Add call forwarding or start a port from — <a href="#">your dashboard</a>.'],
+        ['Help', '<b>Questions?</b> Our team can help you pick the right setup — <a href="#">talk to us</a>.']
+      ]
+    },
+    port: {
+      status: '<b>Ready to port</b> — your transfer credentials are in your portal',
+      metaPlan: 'Paid in full', rowPlan: 'Paid in full',
+      rowSetup: 'Port to your carrier', rowRec: '\u2014',
+      rows: [
+        ['Now', '<b>Confirmation email + transfer credentials.</b> Your account number and transfer PIN are in your portal — your new carrier will ask for both.'],
+        ['1–3 days', '<b>Start the port with your carrier.</b> They initiate the transfer; local numbers typically complete in 1–3 business days. <a href="porting-instructions.html">Carrier porting instructions</a>.'],
+        ['After', '<b>Your number moves to your carrier.</b> We\u2019ll confirm when the port completes — nothing else to do on our side.'],
+        ['Help', '<b>Porting questions?</b> Our porting team handles this every day — <a href="#">talk to us</a>.']
+      ]
+    }
+  };
+  function esc(t){return t}
+  function apply(mode){
+    var st = STATES[mode];
+    document.getElementById('status-tx').innerHTML = st.status;
+    document.getElementById('meta-plan').textContent = st.metaPlan;
+    document.getElementById('row-plan').textContent = st.rowPlan;
+    document.getElementById('row-setup').textContent = st.rowSetup;
+    document.getElementById('row-rec').textContent = st.rowRec;
+    document.getElementById('next-rows').innerHTML = st.rows.map(function(r){
+      return '<div class="nrow"><span class="w">' + r[0] + '</span><p>' + r[1] + '</p></div>';
+    }).join('');
+    document.querySelectorAll('.demo-switch button').forEach(function(b){ b.classList.toggle('on', b.dataset.mode === mode); });
+  }
+  document.querySelectorAll('.demo-switch button').forEach(function(b){
+    b.addEventListener('click', function(){ apply(b.dataset.mode); });
+  });
+  apply('forward');
+})();
+</script>
+</body>
+</html>
