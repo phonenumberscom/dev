@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Confirmed | PhoneNumbers.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --canvas:#E8EAF7; --ink:#10133A; --ink-72:rgba(16,19,58,.84); --ink-58:rgba(16,19,58,.78); --ink-40:rgba(16,19,58,.63);
+  --brand:#5B3FE8; --grad:linear-gradient(180deg,#5B52EC,#4338CA);
+  --glass:rgba(255,255,255,.62); --glass-b:rgba(255,255,255,.88);
+  --line:rgba(16,19,58,.10); --navy:#0E1134; --green:#1B7F4B; --green-soft:rgba(27,127,75,.10); --mint:#7CE3A8;
+  --sans:'Plus Jakarta Sans',-apple-system,'Segoe UI',sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--canvas)}
+body{font-family:var(--sans);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+
+/* ============ checkout header ============ */
+header{position:sticky;top:0;z-index:50;background:rgba(244,245,251,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;height:64px;position:relative}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.brand .lmk{width:30px;height:30px;color:var(--brand)}
+.brand .c{color:var(--ink-40);font-weight:700}
+.steps{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600}
+.step{display:flex;align-items:center;gap:7px;color:var(--ink-40)}
+.step .dot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.step.done .dot{background:var(--green-soft);color:var(--green)}
+.step.cur{color:var(--ink)}
+.step.cur .dot{background:var(--grad);color:#fff}
+.steps .sep{color:rgba(16,19,58,.25)}
+.hright{margin-left:auto;display:flex;align-items:center;gap:14px;font-size:13px;color:var(--ink-40)}
+.ssl{display:flex;align-items:center;gap:6px}
+.help{border:1px solid var(--line);border-radius:99px;padding:6px 16px;font-weight:600;color:var(--ink-58);background:var(--glass)}
+.help:hover{color:var(--brand)}
+@media(max-width:800px){.steps{display:none}.ssl{display:none}}
+
+/* ============ navy aurora hero with number ticket ============ */
+.band{position:relative;overflow:hidden;background:
+  radial-gradient(70% 120% at 15% -20%, rgba(108,92,255,.34), transparent 55%),
+  radial-gradient(55% 100% at 88% 0%, rgba(59,91,245,.28), transparent 60%),
+  radial-gradient(40% 80% at 70% 110%, rgba(124,92,240,.18), transparent 60%),
+  var(--navy);
+  color:#fff}
+.band::after{content:"";position:absolute;right:-70px;bottom:-90px;width:250px;height:250px;transform:rotate(-8deg);opacity:.07;z-index:0;
+  background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="white"><mask id="m"><rect width="48" height="48" fill="white"/><g stroke="black" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(%23m)"/></svg>') no-repeat center/contain}
+.bgrid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:74px 0 84px}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--mint);background:rgba(124,227,168,.12);border:1px solid rgba(124,227,168,.28);border-radius:99px;padding:7px 16px;margin-bottom:22px}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--mint)}
+.band h1{font-size:46px;line-height:1.08;letter-spacing:-.02em;font-weight:800;margin-bottom:18px}
+.band .lead{font-size:16.5px;color:rgba(255,255,255,.75);max-width:460px;margin-bottom:26px}
+.orderline{display:flex;align-items:center;gap:14px;font-size:14px;color:rgba(255,255,255,.6)}
+.orderline b{font-family:var(--mono);font-weight:600;color:#fff}
+.orderline .st{color:var(--mint);font-weight:700}
+
+/* the ticket */
+.ticketwrap{display:flex;justify-content:center}
+.ticket{position:relative;background:#fff;color:var(--ink);border-radius:20px;padding:30px 34px;width:min(430px,100%);
+  transform:rotate(-1.4deg);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.14), 0 0 80px -8px rgba(124,92,240,.55)}
+.ticket .tk{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-40);margin-bottom:12px}
+.ticket .num{font-family:var(--mono);font-size:34px;font-weight:600;letter-spacing:.01em;margin-bottom:16px}
+.ticket .meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.ticket .meta span{font-size:12px;font-weight:700;border-radius:99px;padding:5px 13px}
+.ticket .meta .plan{color:var(--green);background:var(--green-soft)}
+.ticket .meta .loc{color:var(--ink-58);background:rgba(16,19,58,.06)}
+.ticket .status{display:flex;align-items:center;gap:10px;border-top:1px dashed rgba(16,19,58,.18);padding-top:18px;font-size:14px;font-weight:600;color:var(--ink-72)}
+.ticket .status i{width:10px;height:10px;border-radius:50%;background:var(--brand);animation:pulse 1.6s ease infinite;flex:0 0 auto}
+.ticket .status em{font-style:normal;color:var(--ink-40);font-weight:500}
+@keyframes pulse{0%,100%{transform:scale(.72);opacity:.65}50%{transform:scale(1);opacity:1}}
+@media(max-width:940px){
+  .bgrid{grid-template-columns:1fr;gap:40px;padding:52px 0 60px;text-align:center}
+  .band .lead{margin-left:auto;margin-right:auto}
+  .orderline{justify-content:center}
+  .band h1{font-size:34px}
+  .ticket{transform:rotate(0)}
+}
+
+/* ============ slim stepper ============ */
+.stepper{display:flex;align-items:flex-start;gap:0;padding:34px 0 8px}
+.sp{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;padding:0 12px}
+.sp::before{content:"";position:absolute;top:13px;left:calc(-50% + 26px);right:calc(50% + 26px);height:2px;background:var(--line)}
+.sp:first-child::before{display:none}
+.sp.done::before{background:rgba(27,127,75,.4)}
+.sp .d{width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-bottom:10px;position:relative;z-index:1}
+.sp.done .d{background:linear-gradient(180deg,#2EBE7E,#189A62);color:#fff}
+.sp.cur .d{background:var(--grad);color:#fff;box-shadow:0 0 0 5px rgba(91,63,232,.14)}
+.sp.todo .d{background:#fff;border:1.5px solid var(--line);color:var(--ink-40)}
+.sp b{font-size:14px}
+.sp p{font-size:12.5px;color:var(--ink-40);max-width:210px}
+@media(max-width:700px){.sp p{display:none}}
+
+/* ============ content split: next steps + sticky receipt rail ============ */
+.split{display:grid;grid-template-columns:1fr 372px;gap:44px;align-items:start;padding:30px 0 72px}
+@media(max-width:940px){.split{grid-template-columns:1fr}}
+.nh{font-size:19px;font-weight:800;letter-spacing:-.01em;margin:14px 0 4px}
+.rows{list-style:none}
+.rows li{display:flex;gap:16px;padding:19px 0;border-bottom:1px solid var(--line)}
+.rows li:last-child{border-bottom:none}
+.rows .ic{flex:0 0 40px;width:40px;height:40px;border-radius:12px;background:rgba(91,63,232,.09);color:var(--brand);display:flex;align-items:center;justify-content:center}
+.rows .ic svg{width:19px;height:19px}
+.rows b{display:block;font-size:15px;margin-bottom:2px}
+.rows p{font-size:14px;color:var(--ink-58);max-width:520px}
+.rows .when{margin-left:auto;flex:0 0 auto;font-size:12.5px;font-weight:600;color:var(--ink-40);padding-top:2px}
+
+/* receipt rail */
+.rail{position:sticky;top:88px;background:var(--glass);border:1px solid var(--glass-b);border-radius:18px;box-shadow:0 22px 50px -30px rgba(40,30,120,.35);padding:24px}
+.rail .rh{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-40);margin-bottom:16px}
+.rrow{display:flex;justify-content:space-between;font-size:14.5px;padding:7px 0}
+.rrow .amt{font-family:var(--mono);font-weight:600}
+.rrow.muted{color:var(--ink-58)}
+.rrow.total{border-top:1px solid var(--line);margin-top:10px;padding-top:15px;font-weight:800;font-size:16px}
+.rnote{font-size:12.5px;color:var(--ink-40);margin:12px 0 18px}
+.rail .btn{width:100%;justify-content:center;margin-bottom:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:14px 22px;font-family:var(--sans);font-size:15px;font-weight:700;cursor:pointer}
+.btn.primary{background:var(--grad);border:none;color:#fff;font-size:16px;box-shadow:0 16px 34px -14px rgba(67,56,202,.55)}
+.btn.primary:hover{filter:brightness(1.06)}
+.btn.ghost{background:#fff;border:1px solid var(--line);color:var(--ink-72)}
+.btn.ghost:hover{border-color:rgba(91,63,232,.35);color:var(--brand)}
+.rhelp{text-align:center;font-size:13px;color:var(--ink-40);margin-top:6px}
+.rhelp a{color:var(--brand);font-weight:600}
+
+/* ============ footer ============ */
+footer{background:#E2E4F3;border-top:1px solid var(--line);padding:44px 0 0}
+.fgrid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+.fbrand{font-size:17px;font-weight:800}
+.fbrand .c{color:var(--brand)}
+.flinks{display:flex;gap:26px;font-size:14px;color:var(--ink-58);flex-wrap:wrap}
+.flinks a:hover{color:var(--brand)}
+.legal{border-top:1px solid var(--line);margin-top:28px;padding:18px 0;text-align:center;font-size:13px;color:var(--ink-40)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hrow">
+    <a class="brand" href="home-platform-v156-demo.html"><svg class="lmk" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd)"/></svg><span>PhoneNumbers<span class="c">.com</span></span></a>
+    <div class="steps" aria-label="Checkout progress">
+      <span class="step done"><span class="dot">✓</span>Checkout</span><span class="sep">›</span>
+      <span class="step done"><span class="dot">✓</span>Number Setup</span><span class="sep">›</span>
+      <span class="step cur"><span class="dot">3</span>Confirmation</span>
+    </div>
+    <div class="hright">
+      <span class="ssl"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="11" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.8"/></svg>SSL Secured</span>
+      <a class="help" href="#">Help</a>
+    </div>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap bgrid">
+    <div>
+      <span class="chip"><i></i>Payment confirmed</span>
+      <h1>Congratulations — your new number is on the way.</h1>
+      <p class="lead">We're activating your line on our network. You'll get a confirmation email shortly with next steps.</p>
+      <div class="orderline">Order <b>HJM-5HW</b> · <span class="st">confirmed</span></div>
+    </div>
+    <div class="ticketwrap">
+      <div class="ticket">
+        <div class="tk">Your new number</div>
+        <div class="num">(216) 865-7600</div>
+        <div class="meta"><span class="plan">12-month payment plan</span><span class="loc">Local · Cleveland, OH</span></div>
+        <div class="status"><i></i>Activating on our network <em>· ready in ~15 min</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="stepper">
+    <div class="sp done"><span class="d">✓</span><b>Payment processed</b><p>Your payment cleared and your order is confirmed.</p></div>
+    <div class="sp cur"><span class="d">2</span><b>Number activation</b><p>Provisioning your number on our licensed VoIP network.</p></div>
+    <div class="sp todo"><span class="d">3</span><b>Portal access</b><p>Manage routing, call logs, and settings from your dashboard.</p></div>
+  </div>
+</div>
+
+<div class="wrap split">
+  <div>
+    <h2 class="nh">What happens next</h2>
+    <ul class="rows">
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 7l8.5 6 8.5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><b>Confirmation email</b><p>A short confirmation is in your inbox with your order details and receipt link.</p></div><span class="when">now</span></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0-1 1-2 2-2h2l2 5-2.5 1.5a12 12 0 006 6L15 13l5 2v2c0 1-1 2-2 2A16 16 0 014 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+        <div><b>Test your number</b><p>Give it a call — your line should be live and ringing.</p></div><span class="when">~15 min</span></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/></svg></span>
+        <div><b>Manage in your portal</b><p>Update routing, view call logs, and change settings anytime.</p></div><span class="when">anytime</span></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c4.5-3.6 8-6.8 8-10.5A5.5 5.5 0 0012 6a5.5 5.5 0 00-8 4.5C4 14.2 7.5 17.4 12 21z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+        <div><b>Need a hand?</b><p>Our team can help with setup, routing, and porting questions.</p></div><span class="when">7 days/wk</span></li>
+    </ul>
+  </div>
+
+  <aside class="rail">
+    <div class="rh">Order summary</div>
+    <div class="rrow muted"><span>Order</span><span class="amt">HJM-5HW</span></div>
+    <div class="rrow muted"><span>Recurring estimate</span><span class="amt">$10.68/mo</span></div>
+    <div class="rrow total"><span>Total paid today</span><span class="amt">$7.72</span></div>
+    <p class="rnote">Full number details, promos, and a printable receipt are in your customer portal.</p>
+    <a class="btn primary" href="search-redesign-v239.html">Browse more numbers →</a>
+    <button class="btn ghost">View order &amp; receipt</button>
+    <button class="btn ghost">Print receipt</button>
+    <p class="rhelp">Questions about your order? <a href="#">Talk to us</a></p>
+  </aside>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">PhoneNumbers<span class="c">.com</span></div>
+      <nav class="flinks">
+        <a href="search-redesign-v239.html">Browse Numbers</a>
+        <a href="#">Area Codes</a>
+        <a href="carriers.html">Carriers</a>
+        <a href="porting-instructions.html">Porting</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </nav>
+    </div>
+    <div class="legal">© 2026 PhoneNumbers.com — EPhone Numbers LLC. The phone number authority.</div>
+  </div>
+</footer>
+
+</body>
+</html>
