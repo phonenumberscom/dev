@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Confirmed | PhoneNumbers.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --canvas:#E8EAF7; --ink:#10133A; --ink-72:rgba(16,19,58,.84); --ink-58:rgba(16,19,58,.78); --ink-40:rgba(16,19,58,.63);
+  --brand:#5B3FE8; --brand-dark:#4338CA; --grad:linear-gradient(180deg,#5B52EC,#4338CA);
+  --glass:rgba(255,255,255,.62); --glass-b:rgba(255,255,255,.88);
+  --line:rgba(16,19,58,.10); --green:#1B7F4B; --green-soft:rgba(27,127,75,.10); --green-dot:#22B573;
+  --sans:'Plus Jakarta Sans',-apple-system,'Segoe UI',sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--canvas)}
+body{font-family:var(--sans);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+
+/* ============ checkout header (minimal chrome, compact 1200 band) ============ */
+header{position:sticky;top:0;z-index:50;background:rgba(244,245,251,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;height:64px;position:relative}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.brand .lmk{width:30px;height:30px;color:var(--brand)}
+.brand .c{color:var(--ink-40);font-weight:700}
+.steps{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600}
+.step{display:flex;align-items:center;gap:7px;color:var(--ink-40)}
+.step .dot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.step.done .dot{background:var(--green-soft);color:var(--green)}
+.step.cur{color:var(--ink)}
+.step.cur .dot{background:var(--grad);color:#fff}
+.steps .sep{color:rgba(16,19,58,.25)}
+.hright{margin-left:auto;display:flex;align-items:center;gap:14px;font-size:13px;color:var(--ink-40)}
+.ssl{display:flex;align-items:center;gap:6px}
+.help{border:1px solid var(--line);border-radius:99px;padding:6px 16px;font-weight:600;color:var(--ink-58);background:var(--glass)}
+.help:hover{color:var(--brand);border-color:rgba(91,63,232,.3)}
+@media(max-width:800px){.steps{display:none}}
+
+/* ============ success hero ============ */
+.hero{background:radial-gradient(58% 64% at 86% 2%,rgba(108,92,255,.18),transparent 56%),var(--canvas);text-align:center;padding:54px 0 8px}
+.check{width:74px;height:74px;border-radius:50%;background:linear-gradient(180deg,#2EBE7E,#189A62);box-shadow:0 18px 40px -14px rgba(24,154,98,.55);display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px}
+.check svg{width:34px;height:34px;color:#fff}
+.kick{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.hero h1{font-size:44px;line-height:1.1;letter-spacing:-.02em;font-weight:800;margin-bottom:16px}
+.hero .lead{font-size:16.5px;color:var(--ink-58);max-width:520px;margin:0 auto 24px}
+.orderpill{display:inline-flex;align-items:center;gap:10px;background:var(--glass);border:1px solid var(--glass-b);border-radius:99px;padding:9px 20px;font-size:14px;color:var(--ink-58);box-shadow:0 10px 26px -14px rgba(16,19,58,.18)}
+.orderpill b{font-family:var(--mono);font-weight:600;color:var(--ink)}
+.orderpill .st{color:var(--green);font-weight:700}
+@media(max-width:700px){.hero h1{font-size:32px}.hero{padding-top:40px}}
+
+/* ============ cards ============ */
+main{padding:36px 0 72px}
+.card{background:var(--glass);border:1px solid var(--glass-b);border-radius:18px;box-shadow:0 22px 50px -30px rgba(40,30,120,.35)}
+.card-h{display:flex;align-items:center;gap:10px;padding:20px 26px;border-bottom:1px solid var(--line);font-size:16px;font-weight:700}
+.card-h svg{width:18px;height:18px;color:var(--brand)}
+.card-b{padding:24px 26px}
+
+.numbers{margin-bottom:26px}
+.numtile{display:inline-flex;flex-direction:column;gap:9px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 26px}
+.numtile .n{font-family:var(--mono);font-size:26px;font-weight:600;letter-spacing:.01em}
+.plan{align-self:flex-start;font-size:12px;font-weight:700;color:var(--green);background:var(--green-soft);border-radius:99px;padding:4px 12px}
+
+.two{display:grid;grid-template-columns:1fr 1.15fr;gap:26px;margin-bottom:26px}
+@media(max-width:900px){.two{grid-template-columns:1fr}}
+
+/* timeline */
+.tl{list-style:none}
+.tl li{position:relative;padding:0 0 26px 40px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:13px;top:30px;bottom:2px;width:2px;background:var(--line)}
+.tl li:last-child::before{display:none}
+.tl .dot{position:absolute;left:0;top:1px;width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+.tl .done .dot{background:linear-gradient(180deg,#2EBE7E,#189A62);color:#fff}
+.tl .cur .dot{background:var(--grad);color:#fff}
+.tl .cur .dot i{width:9px;height:9px;border-radius:50%;background:#fff;animation:pulse 1.6s ease infinite}
+@keyframes pulse{0%,100%{transform:scale(.7);opacity:.7}50%{transform:scale(1);opacity:1}}
+.tl .todo .dot{background:#fff;border:1.5px solid var(--line);color:var(--ink-40)}
+.tl b{display:block;font-size:15px;margin-bottom:3px}
+.tl p{font-size:14px;color:var(--ink-58)}
+.tl .tag{display:inline-block;margin-top:7px;font-size:12px;font-weight:700;border-radius:99px;padding:3px 11px}
+.tl .done .tag{color:var(--green);background:var(--green-soft)}
+.tl .cur .tag{color:var(--brand);background:rgba(91,63,232,.09)}
+
+/* next tiles */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.next{grid-template-columns:1fr}}
+.nx{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+.nx .ic{width:38px;height:38px;border-radius:11px;background:rgba(91,63,232,.09);color:var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.nx .ic svg{width:19px;height:19px}
+.nx b{display:block;font-size:14.5px;margin-bottom:4px}
+.nx p{font-size:13.5px;color:var(--ink-58)}
+
+/* order summary */
+.sumrow{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;font-size:15px}
+.sumrow.total{border-top:1px solid var(--line);margin-top:8px;padding-top:16px;font-weight:700;font-size:16.5px}
+.sumrow .amt{font-family:var(--mono);font-weight:600}
+.sumrow .rec{color:var(--ink-58)}
+.sumnote{font-size:13.5px;color:var(--ink-40);margin:14px 0 22px}
+.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:14px 26px;font-family:var(--sans);font-size:15px;font-weight:700;cursor:pointer}
+.btn.ghost{background:var(--glass);border:1px solid var(--line);color:var(--ink-72)}
+.btn.ghost:hover{border-color:rgba(91,63,232,.35);color:var(--brand)}
+.btn.primary{background:var(--grad);border:none;color:#fff;margin-left:auto;font-size:16.5px;padding:16px 32px;box-shadow:0 16px 34px -14px rgba(67,56,202,.55)}
+.btn.primary:hover{filter:brightness(1.06)}
+@media(max-width:560px){.btn.primary{margin-left:0;width:100%;justify-content:center}.btn.ghost{flex:1;justify-content:center}}
+
+/* ============ footer ============ */
+footer{background:#E2E4F3;border-top:1px solid var(--line);padding:56px 0 0;margin-top:20px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:34px}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
+.fbrand{font-size:19px;font-weight:800}
+.fbrand .c{color:var(--brand)}
+.fabout{font-size:13.5px;color:var(--ink-58);margin:12px 0 16px;max-width:280px}
+.fflags{display:flex;gap:8px}
+.fflags span{font-size:12.5px;font-weight:600;background:var(--glass);border:1px solid var(--glass-b);border-radius:99px;padding:5px 13px;color:var(--ink-58)}
+.fcol .h{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-40);margin-bottom:14px}
+.fcol a{display:block;font-size:14px;color:var(--ink-58);padding:4.5px 0}
+.fcol a:hover{color:var(--brand)}
+.legal{border-top:1px solid var(--line);margin-top:44px;padding:20px 0;text-align:center;font-size:13px;color:var(--ink-40)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hrow">
+    <a class="brand" href="home-platform-v156-demo.html"><svg class="lmk" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd)"/></svg><span>PhoneNumbers<span class="c">.com</span></span></a>
+    <div class="steps" aria-label="Checkout progress">
+      <span class="step done"><span class="dot">✓</span>Checkout</span><span class="sep">›</span>
+      <span class="step done"><span class="dot">✓</span>Number Setup</span><span class="sep">›</span>
+      <span class="step cur"><span class="dot">3</span>Confirmation</span>
+    </div>
+    <div class="hright">
+      <span class="ssl"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="11" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.8"/></svg>SSL Secured</span>
+      <a class="help" href="#">Help</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="check"><svg viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5L19.5 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="kick">Payment confirmed</span>
+    <h1>Congratulations — your new number is on the way</h1>
+    <p class="lead">We're activating your line on our network. You'll get a confirmation email shortly with next steps.</p>
+    <span class="orderpill">Order <b>HJM-5HW</b> · <span class="st">confirmed</span></span>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <div class="card numbers">
+      <div class="card-h"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0-1 1-2 2-2h2l2 5-2.5 1.5a12 12 0 006 6L15 13l5 2v2c0 1-1 2-2 2A16 16 0 014 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Your new numbers</div>
+      <div class="card-b">
+        <div class="numtile">
+          <span class="n">(216) 865-7600</span>
+          <span class="plan">12-month payment plan</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="card">
+        <div class="card-h"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Activation timeline</div>
+        <div class="card-b">
+          <ul class="tl">
+            <li class="done"><span class="dot">✓</span><b>Payment processed</b><p>Your payment cleared successfully and your order is confirmed.</p><span class="tag">Done</span></li>
+            <li class="cur"><span class="dot"><i></i></span><b>Number activation</b><p>Our team is provisioning your number on our licensed VoIP network.</p><span class="tag">In progress</span></li>
+            <li class="todo"><span class="dot">3</span><b>Account portal access</b><p>Manage routing, view call logs, and update settings from your dashboard.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-h"><svg viewBox="0 0 24 24" fill="none"><path d="M13 3L5 14h6l-1 7 8-11h-6l1-7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>What happens next</div>
+        <div class="card-b">
+          <div class="next">
+            <div class="nx"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 7l8.5 6 8.5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Confirmation email</b><p>A short confirmation is in your inbox — use View order &amp; receipt below for the full breakdown anytime.</p></div>
+            <div class="nx"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0-1 1-2 2-2h2l2 5-2.5 1.5a12 12 0 006 6L15 13l5 2v2c0 1-1 2-2 2A16 16 0 014 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><b>Test your number</b><p>Try calling your new number in about 15 minutes.</p></div>
+            <div class="nx"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/></svg></span><b>Manage in portal</b><p>Update routing and settings from your account anytime.</p></div>
+            <div class="nx"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c4.5-3.6 8-6.8 8-10.5A5.5 5.5 0 0012 6a5.5 5.5 0 00-8 4.5C4 14.2 7.5 17.4 12 21z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><b>Need help?</b><p>Our team can help with setup and routing questions.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h14v16l-2.5-1.5L14 20l-2-1.5L10 20l-2.5-1.5L5 20V4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9h6M9 13h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Order summary</div>
+      <div class="card-b">
+        <div class="sumrow total"><span>Total paid today</span><span class="amt">$7.72</span></div>
+        <div class="sumrow"><span class="rec">Recurring estimate</span><span class="amt rec">$10.68/mo</span></div>
+        <p class="sumnote">Full number details, promos, and a printable receipt are in your customer portal.</p>
+        <div class="actions">
+          <button class="btn ghost">View order &amp; receipt</button>
+          <button class="btn ghost">Print receipt</button>
+          <a class="btn primary" href="search-redesign-v239.html">Browse more numbers →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">PhoneNumbers<span class="c">.com</span></div>
+        <p class="fabout">Premium vanity, local, and toll-free phone numbers for US businesses. Same-day activation.</p>
+        <div class="fflags"><span>🇺🇸 US</span><span>🇨🇦 Canada</span></div>
+      </div>
+      <div class="fcol"><div class="h">Browse Numbers</div><a href="search-redesign-v239.html">All Numbers</a><a href="search-redesign-v239.html?type=local">Local Numbers</a><a href="#">Area Codes</a><a href="search-redesign-v239.html">Vanity Numbers</a><a href="search-redesign-v239.html?type=toll-free">Toll-Free 1-800</a></div>
+      <div class="fcol"><div class="h">International</div><a href="#">United States</a><a href="#">Canada</a></div>
+      <div class="fcol"><div class="h">Tools &amp; Resources</div><a href="#">Number Spell Tool</a><a href="#">Number Valuation</a><a href="carriers.html">Carriers</a><a href="porting-instructions.html">Porting</a></div>
+      <div class="fcol"><div class="h">Company</div><a href="#">Contact Us</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+    <div class="legal">© 2026 PhoneNumbers.com — EPhone Numbers LLC. The phone number authority.</div>
+  </div>
+</footer>
+
+</body>
+</html>
