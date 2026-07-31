@@ -3118,6 +3118,8 @@ body.show-chg .chg{outline:2px dashed #E8A13D;outline-offset:3px;border-radius:4
 .chg-toggle{position:fixed;left:18px;bottom:18px;z-index:80;background:#10133A;color:#fff;border-radius:99px;padding:11px 20px;font-size:12.5px;font-weight:700;cursor:pointer;box-shadow:0 14px 30px -12px rgba(16,19,58,.5);opacity:.94}
 body:not(.show-chg) .chg-toggle{opacity:.6}
 @media print{.chg-toggle{display:none}}
+/* v287: single-line lead — appended at END so it beats the 500px!important in the stack */
+@media(min-width:701px){.hero .lead{max-width:none!important}.hero .lead p{white-space:nowrap}}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
