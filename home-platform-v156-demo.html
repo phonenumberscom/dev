@@ -3120,6 +3120,8 @@ body:not(.show-chg) .chg-toggle{opacity:.6}
 @media print{.chg-toggle{display:none}}
 /* v287: single-line lead — appended at END so it beats the 500px!important in the stack */
 @media(min-width:701px){.hero .lead{max-width:none!important}.hero .lead p{white-space:nowrap}}
+/* v300: strip slot 4 text ink (gold was the old 'Premium' label treatment) */
+.scale .s:nth-child(4) .n{color:var(--ink)!important}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
