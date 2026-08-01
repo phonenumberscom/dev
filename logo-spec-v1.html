@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo Spec | PhoneNumbers.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#10133A;--brand:#5B3FE8;--line:rgba(16,19,58,.12);--muted:rgba(16,19,58,.75)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#E8EAF7;color:var(--ink);padding:56px 32px;line-height:1.5}
+.page{max-width:860px;margin:0 auto}
+h1{font-size:24px;margin-bottom:6px}
+.sub{color:var(--muted);font-size:14.5px;margin-bottom:40px}
+.spec{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 30px;margin-bottom:26px}
+.spec h2{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(16,19,58,.55);margin-bottom:20px}
+.row{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
+.note code{background:rgba(91,63,232,.08);padding:2px 7px;border-radius:5px;font-size:12px}
+
+/* THE LOCKUP — two pieces */
+.brand{display:inline-flex;align-items:center;gap:8px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.brand .lmk{color:var(--brand);flex:0 0 auto}
+.brand .c{color:rgba(16,19,58,.55);font-weight:700}
+.brand-full{font-size:20px}
+.brand-full .lmk{width:23px;height:23px}
+.brand-compact{font-size:17px;gap:6px}
+.brand-compact .lmk{width:18px;height:18px}
+
+/* header simulations */
+.simbar{background:#F4F5FB;border:1px solid var(--line);border-radius:12px;height:56px;display:flex;align-items:center;padding:0 18px;gap:12px;min-width:340px}
+.burger{font-size:19px;color:var(--ink);line-height:1}
+.gaptag{font-size:11px;font-weight:700;color:#B3261E;background:rgba(179,38,30,.08);border-radius:99px;padding:2px 9px}
+.searchstub{margin-left:auto;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:13px;color:rgba(16,19,58,.45)}
+
+.badimg{display:inline-block;border:1.5px dashed #B3261E;border-radius:8px;padding:6px 10px}
+.badimg .fakeimg{font-size:32px;font-weight:800;letter-spacing:-.02em}
+.badimg .fakeimg .h{color:var(--brand)}
+.cap{font-size:11.5px;font-weight:700;margin-top:8px}
+.cap.bad{color:#B3261E}.cap.good{color:#1B7F4B}
+.dim{font-size:11px;color:rgba(16,19,58,.5);font-weight:600}
+</style>
+</head>
+<body>
+<div class="page">
+<h1>Logo spec — build sheet</h1>
+<p class="sub">Two pieces: SVG mark + live text. Never one flattened image. All values below are exact.</p>
+
+<div class="spec">
+  <h2>1 · Full-size lockup (main header)</h2>
+  <div class="row">
+    <span class="brand brand-full"><svg class="lmk" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="m1"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#m1)"/></svg>PhoneNumbers<span class="c">.com</span></span>
+    <span class="dim">mark 23×23 · text 20px / 800 / −.02em · gap 8px · total ≈ 212×32</span>
+  </div>
+  <p class="note">Mark = SVG, brand purple <code>#5B3FE8</code>. Wordmark = live text, Plus Jakarta Sans. <code>.com</code> at weight 700, ink 55%.</p>
+</div>
+
+<div class="spec">
+  <h2>2 · Compact sticky bar (tight to the hamburger, Atom density)</h2>
+  <div class="row">
+    <div class="simbar">
+      <span class="burger">☰</span>
+      <span class="brand brand-compact"><svg class="lmk" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="m2"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#m2)"/></svg>PhoneNumbers<span class="c">.com</span></span>
+      <span class="searchstub">🔍 Search numbers…</span>
+    </div>
+  </div>
+  <p class="note">Burger→logo gap <code>12px</code> (bar's flex gap). Logo scales down: mark <code>18×18</code>, text <code>17px</code>, inner gap <code>6px</code>. Search field follows immediately. Live behavior: <a href="search-redesign-v241.html">search mockup v241</a> — scroll to reveal.</p>
+</div>
+
+<div class="spec">
+  <h2>3 · What NOT to do (current production)</h2>
+  <div class="row">
+    <div>
+      <span class="badimg"><span class="fakeimg"><span class="h">#</span> PhoneNumbers<span style="color:rgba(16,19,58,.55)">.com</span></span></span>
+      <div class="cap bad">✗ One flattened image, 337×32 — wordmark oversized relative to the mark; can't be fixed by scaling</div>
+    </div>
+  </div>
+  <p class="note">If an image asset must be kept, re-export the artwork to the section-1 proportions. Scaling the current file down makes the mark unreadably small.</p>
+</div>
+
+</div>
+</body>
+</html>
