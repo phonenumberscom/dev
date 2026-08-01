@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Official Logo Spec | PhoneNumbers.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0A0F1E;--brand:#5B3FE8;--line:rgba(16,19,58,.12);--muted:rgba(16,19,58,.75)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#E8EAF7;color:var(--ink);padding:56px 32px;line-height:1.5}
+.page{max-width:880px;margin:0 auto}
+h1{font-size:24px;margin-bottom:6px}
+.sub{color:var(--muted);font-size:14.5px;margin-bottom:8px}
+.warn{background:#FFF7E8;border:1px solid #E8C877;border-radius:10px;padding:10px 16px;font-size:13.5px;margin-bottom:36px}
+.spec{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 30px;margin-bottom:26px}
+.spec h2{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(16,19,58,.55);margin-bottom:20px}
+.row{display:flex;align-items:center;gap:34px;flex-wrap:wrap}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
+.note code{background:rgba(91,63,232,.08);padding:2px 7px;border-radius:5px;font-size:12px}
+.cap{font-size:11.5px;font-weight:700;margin-top:8px;color:rgba(16,19,58,.6)}
+.cap.good{color:#1B7F4B}
+.simbar{background:#F4F5FB;border:1px solid var(--line);border-radius:12px;height:56px;display:flex;align-items:center;padding:0 18px;gap:12px;min-width:380px}
+.burger{font-size:19px;line-height:1}
+.searchstub{margin-left:auto;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:13px;color:rgba(16,19,58,.45)}
+.darkchip{background:#0A0F1E;border-radius:12px;padding:18px 24px;display:inline-flex}
+.dl{margin-top:10px;font-size:13px}
+.dl a{color:var(--brand);font-weight:600;text-decoration:none;margin-right:16px}
+.dl a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="page">
+<h1>Official logo — build sheet</h1>
+<p class="sub">Source of truth: <b>PhoneNumbers.com Final Brand Assets v1.2</b>. Files live in <code>/dev/brand/</code> — use these, never redraw.</p>
+<div class="warn">⚠ Supersedes logo-spec v1/v2, which showed an unofficial reconstruction. Production's current logo proportions are <b>correct</b> — the only open question is display height (panel 2).</div>
+
+<div class="spec">
+  <h2>1 · The official lockup</h2>
+  <img src="brand/phonenumbers-logo-primary.svg" alt="PhoneNumbers.com official logo" style="height:44px">
+  <p class="note">Wordmark: Plus Jakarta Sans <b>SemiBold 600</b> · ".com": Regular 400 at <b>72.5%</b> of wordmark size, same ink ·
+  Mark: primary "Fine Cut" (9.6% stroke) · Brand Purple <code>#5B3FE8</code> · Ink <code>#0A0F1E</code> · natural ratio 10.54:1.</p>
+  <p class="dl">
+    <a href="brand/phonenumbers-logo-primary.svg" download>logo-primary.svg</a>
+    <a href="brand/phonenumbers-logo-ink.svg" download>logo-ink.svg</a>
+    <a href="brand/phonenumbers-logo-white.svg" download>logo-white.svg</a>
+  </p>
+</div>
+
+<div class="spec">
+  <h2>2 · Display height in the header — pick one</h2>
+  <div class="row" style="flex-direction:column;align-items:flex-start;gap:22px">
+    <div><img src="brand/phonenumbers-logo-primary.svg" style="height:32px" alt=""><div class="cap">A · 32px tall → 337px wide (what production renders today)</div></div>
+    <div><img src="brand/phonenumbers-logo-primary.svg" style="height:28px" alt=""><div class="cap good">B · 28px tall → 295px wide (recommended — lighter in the 1200px band)</div></div>
+    <div><img src="brand/phonenumbers-logo-primary.svg" style="height:26px" alt=""><div class="cap">C · 26px tall → 274px wide (most understated)</div></div>
+  </div>
+  <p class="note">Proportions never change — only the render height. Same asset, one CSS value.</p>
+</div>
+
+<div class="spec">
+  <h2>3 · Compact sticky bar (Atom density)</h2>
+  <div class="simbar">
+    <span class="burger">☰</span>
+    <img src="brand/phonenumbers-logo-primary.svg" style="height:22px" alt="">
+    <span class="searchstub">🔍 Search numbers…</span>
+  </div>
+  <p class="note">Burger→logo gap <code>12px</code>. Logo at <code>22px</code> tall (232px wide). Search follows immediately.
+  At very small sizes (≤18px) switch the standalone mark to the <b>small cut</b>: <code>brand/phonenumbers-mark-small-primary.svg</code>.</p>
+</div>
+
+<div class="spec">
+  <h2>4 · Marks &amp; dark surfaces</h2>
+  <div class="row">
+    <div><img src="brand/phonenumbers-mark-primary.svg" style="height:40px" alt=""><div class="cap">Primary mark (fine cut)</div></div>
+    <div><img src="brand/phonenumbers-mark-small-primary.svg" style="height:24px" alt=""><div class="cap">Small cut — favicons / ≤18px UI</div></div>
+    <div><div class="darkchip"><img src="brand/phonenumbers-logo-white.svg" style="height:26px" alt=""></div><div class="cap">White on Ink #0A0F1E</div></div>
+  </div>
+  <p class="note">Favicon: use the supplied <code>.ico</code> / PNG set — never rasterize the fine cut at 16px.</p>
+</div>
+
+</div>
+</body>
+</html>
