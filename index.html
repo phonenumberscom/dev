@@ -2021,16 +2021,13 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
       <a class="simple" href="carriers.html">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="nav-ic" href="#/profile" aria-label="Account" title="Account"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 20a7.5 7.5 0 0115 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></a>
-      <a class="nav-ic nav-cart" href="#/checkout" aria-label="Cart" title="Cart"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/><path d="M2.5 3.5H5l2.4 12a1.5 1.5 0 001.5 1.2h8a1.5 1.5 0 001.5-1.2L21.5 7.5H6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="cart-badge">2</span></a>
+      <a class="nav-ic" href="#/profile" aria-label="Account" title="Account"><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:17px;height:17px"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg></a>
+      <a class="nav-ic nav-cart" href="#/checkout" aria-label="Cart" title="Cart"><svg viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" style="width:19px;height:19px"><path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg><span class="cart-badge">2</span></a>
       <div class="nav-loc-wrap">
         <button class="nav-loc" aria-haspopup="true" aria-expanded="false" aria-label="Region &amp; currency"><span class="flag">🇺🇸</span><span class="loc-code">US</span><svg class="loc-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></button>
         <div class="loc-menu" hidden role="menu">
-          <button class="loc-opt active" role="menuitem" data-code="US" data-flag="🇺🇸"><span class="flag">🇺🇸</span>United States<span class="loc-cur">USD&nbsp;$</span></button>
-          <button class="loc-opt" role="menuitem" data-code="CA" data-flag="🇨🇦"><span class="flag">🇨🇦</span>Canada<span class="loc-cur">CAD&nbsp;$</span></button>
-          <button class="loc-opt" role="menuitem" data-code="UK" data-flag="🇬🇧"><span class="flag">🇬🇧</span>United Kingdom<span class="loc-cur">GBP&nbsp;£</span></button>
-          <button class="loc-opt" role="menuitem" data-code="AU" data-flag="🇦🇺"><span class="flag">🇦🇺</span>Australia<span class="loc-cur">AUD&nbsp;$</span></button>
-        </div>
+      <button class="loc-opt" type="button"><span class="flag">🍁</span>Canada</button>
+    </div>
       </div>
     </div>
     <button class="navtoggle" aria-label="Open menu" aria-expanded="false">
@@ -3129,6 +3126,12 @@ header.nav{background:rgba(232,234,247,.9)!important}
 header.nav{background:rgba(255,255,255,.92)!important}
 /* v309 FINAL logo size: 22px, matching search v247 */
 .brand .offlogo{height:22px}
+/* v311: production-exact nav icons (FA solid), dropdown = Canada only, mobile lead flows as one paragraph */
+@media(max-width:700px){
+  .hero .lead p{display:inline;margin:0}
+  .hero .lead p + p::before{content:" "}
+  header.nav > .wrap{padding-right:14px}
+}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
