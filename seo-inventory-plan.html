@@ -84,6 +84,20 @@ For numbers: a number belongs to one country — US numbers exist ONLY under
 301-redirects. Every page carries a self-referencing canonical tag. Sitemaps list canonical URLs
 only. Build this in from day one.</div>
 
+<h2>Example URLs — every case</h2>
+<table>
+  <tr><th>Case</th><th>URL</th></tr>
+  <tr><td>Listing, vanity (tier 1)</td><td><code>phonenumbers.com/en-us/numbers/1719LAWYERS</code></td></tr>
+  <tr><td>Listing, local (later)</td><td><code>phonenumbers.com/en-us/numbers/18177529281</code></td></tr>
+  <tr><td>Canonical: US number's en-ca alias</td><td><code>/en-ca/numbers/1719LAWYERS</code> → <b>301</b> → <code>/en-us/numbers/1719LAWYERS</code></td></tr>
+  <tr><td>Canonical: CA number's en-us alias</td><td><code>/en-us/numbers/16045550188</code> → <b>301</b> → <code>/en-ca/numbers/16045550188</code></td></tr>
+  <tr><td>New sitemap, tier 1</td><td><code>phonenumbers.com/sitemap-numbers-premium.xml</code> (+ <code>-1.xml</code>, <code>-2.xml</code>… per 50K)</td></tr>
+  <tr><td>Category page, industry</td><td><code>/en-us/numbers/industry/law-firms</code> — a real path, not <code>/search?industry=LAW</code> (params don't rank)</td></tr>
+  <tr><td>Category page, pattern</td><td><code>/en-us/numbers/patterns/repeating-digits</code></td></tr>
+  <tr><td>Atom's listing (the model)</td><td><code>atom.com/name/OakSnap</code></td></tr>
+  <tr><td>Atom's category page</td><td><code>atom.com/business-name-generator/coffee</code></td></tr>
+</table>
+
 <h2>The build, in order</h2>
 <table>
   <tr><th>Step</th><th>What</th><th>Why first</th></tr>
