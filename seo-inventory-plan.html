@@ -76,13 +76,21 @@ products are a traffic source they're courting deliberately.</p>
 <div class="box"><b>For us:</b> check our robots.txt doesn't block GPTBot/ClaudeBot/PerplexityBot.
 Given our AI Overview win this week, we want every AI crawler reading the catalog.</div>
 
+<h2>The canonical shield — keep it, lift it in step</h2>
+<div class="warn"><b>Today every listing page's canonical points to the search page — deliberately.</b>
+That was the right protection while listings were JavaScript shells: it stopped Google from crawling
+thousands of blank near-identical pages (the CountryCode lesson). The migration rule: a page keeps
+the shield until it has real server-rendered content — then, <b>in the same deploy</b>, its canonical
+flips to self-referencing and its URL joins the sitemap. Never lift the shield before content ships;
+never ship content still wearing the shield.</div>
+
 <h2>The one mistake to avoid (we've been burned once)</h2>
 <div class="warn"><b>No duplicate pages across locales.</b> On country codes we ended up with the
 same page under <code>/en-us/…</code> and <code>/en-ca/…</code> and Google had to guess.
 For numbers: a number belongs to one country — US numbers exist ONLY under
 <code>/en-us/numbers/…</code>, Canadian ONLY under <code>/en-ca/numbers/…</code>. The other prefix
-301-redirects. Every page carries a self-referencing canonical tag. Sitemaps list canonical URLs
-only. Build this in from day one.</div>
+301-redirects. Every page carries a self-referencing canonical tag (once the shield lifts). Sitemaps
+list canonical URLs only. Build this in from day one.</div>
 
 <h2>Example URLs — every case</h2>
 <table>
