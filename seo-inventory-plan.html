@@ -1,0 +1,104 @@
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Inventory SEO Plan — Plain English | PhoneNumbers.com</title>
+<style>
+  body{font-family:'Plus Jakarta Sans',-apple-system,Segoe UI,sans-serif;color:#10133A;background:#fff;margin:0;padding:48px 56px;line-height:1.6;max-width:880px}
+  h1{font-size:25px;margin:0 0 6px}
+  .sub{color:rgba(16,19,58,.65);margin:0 0 34px;font-size:15px}
+  h2{font-size:18px;margin:36px 0 10px}
+  h3{font-size:15px;margin:22px 0 6px}
+  p,li{font-size:15px;color:rgba(16,19,58,.88)}
+  ul{padding-left:22px}
+  li{margin-bottom:6px}
+  code{background:rgba(91,63,232,.07);padding:2px 7px;border-radius:5px;font-size:13px}
+  .box{background:#F4F4FB;border:1px solid rgba(16,19,58,.1);border-radius:12px;padding:16px 20px;margin:14px 0}
+  .warn{background:#FFF7E8;border:1px solid #E8C877;border-radius:10px;padding:12px 16px;font-size:14px}
+  table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid rgba(16,19,58,.12);vertical-align:top}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:rgba(16,19,58,.55)}
+</style>
+
+<h1>Making our inventory visible on Google — the plain-English plan</h1>
+<p class="sub">For the whole team. Based on studying how atom.com (the domain marketplace) structures
+their site for Google — verified from their actual sitemap files, 2026-08-02.</p>
+
+<h2>The idea in one paragraph</h2>
+<p>Every product should have its own web page that Google can read, and Google should be handed a
+list of all those pages. Atom does this with domains: every domain they sell has a page like
+<code>atom.com/name/OakSnap</code> with a unique paragraph about that name, and they give Google list
+files containing roughly <b>900,000 of these pages</b>. When someone searches for something specific,
+one of those pages catches the search. Our numbers already have their own URLs
+(<code>/en-us/numbers/1719LAWYERS</code>) — but the pages are blank to Google and we've never handed
+Google the list. This plan fixes that.</p>
+
+<h2>What we learned from Atom's setup (with the takeaway for us)</h2>
+
+<h3>1 · One page per product, with unique text</h3>
+<p>Each Atom listing page has a short, specific write-up ("Vialta is a six-letter symphony…").
+Not a template sentence with the name swapped in — actual specific detail. That uniqueness is why
+Google bothers to keep the pages.</p>
+<div class="box"><b>For us:</b> every number page gets 2–3 sentences generated from what we already
+know about it: what it spells, the area code's city, the pattern type, the memorability grade, which
+industry it suits. "(719) LAWYERS is a toll-free vanity number that spells LAWYERS — a
+memorable line for a law practice, ready to activate today." We have better data per item than
+Atom does.</div>
+
+<h3>2 · The "list files" (sitemaps) are organized by page type, in chunks</h3>
+<p>Atom doesn't have one giant list. Their <code>robots.txt</code> points to a master index that
+splits into families: marketing pages (159 URLs), premium listings (9 files × 50,000), standard
+listings (8 × 50,000), category pages (1,332), registrar pages (514), blog. Files max out at 50,000
+URLs each — that's the sitemap standard.</p>
+<div class="box"><b>For us:</b> keep the current sitemap for site pages, and add new families:
+<code>sitemap-numbers-premium.xml</code> (vanity + premium tiers first), later
+<code>sitemap-numbers-local.xml</code>, chunked at 50K. Add the index to robots.txt. Our 461
+area-code pages already follow this pattern — extend it, don't invent it.</div>
+
+<h3>3 · They keep the bulk inventory OFF the main site</h3>
+<p>Interesting trick: Atom's premium listings live on <code>atom.com/name/…</code>, but their huge
+standard-tier catalog lives on a separate subdomain (<code>domains.atom.com/lpd/name/…</code>).
+That keeps hundreds of thousands of thinner pages from diluting the main site's reputation.</p>
+<div class="box"><b>For us:</b> same principle, simpler version — index the <b>premium/vanity tier
+first</b> (pages with genuinely unique stories), and hold the mass of ordinary local numbers back
+until tier one proves out. Quality of what Google samples matters more than quantity submitted.</div>
+
+<h3>4 · They run a second engine: category pages</h3>
+<p>Atom has 1,332 pages like <code>/business-name-generator/coffee</code>,
+<code>/business-name-generator/insurance</code> — one landing page per niche, each a curated
+collection. This catches "coffee shop name ideas"-type searches that no single product page can.</p>
+<div class="box"><b>For us:</b> we already have the area-code family (461 pages ✓). The equivalents
+we're missing: <b>per-industry pages</b> (law, medical, real estate — "phone numbers for law firms"),
+<b>per-pattern pages</b> (repeating digits, sequential, mirror), and eventually <b>per-city</b>.
+Each is a filtered search view given a real URL, title, and intro paragraph.</div>
+
+<h3>5 · They explicitly welcome AI crawlers</h3>
+<p>The first rule in Atom's robots.txt is <code>Allow: GPTBot</code>. AI assistants that recommend
+products are a traffic source they're courting deliberately.</p>
+<div class="box"><b>For us:</b> check our robots.txt doesn't block GPTBot/ClaudeBot/PerplexityBot.
+Given our AI Overview win this week, we want every AI crawler reading the catalog.</div>
+
+<h2>The one mistake to avoid (we've been burned once)</h2>
+<div class="warn"><b>No duplicate pages across locales.</b> On country codes we ended up with the
+same page under <code>/en-us/…</code> and <code>/en-ca/…</code> and Google had to guess.
+For numbers: a number belongs to one country — US numbers exist ONLY under
+<code>/en-us/numbers/…</code>, Canadian ONLY under <code>/en-ca/numbers/…</code>. The other prefix
+301-redirects. Every page carries a self-referencing canonical tag. Sitemaps list canonical URLs
+only. Build this in from day one.</div>
+
+<h2>The build, in order</h2>
+<table>
+  <tr><th>Step</th><th>What</th><th>Why first</th></tr>
+  <tr><td>1</td><td>Server-render the listing pages (real text, unique title, price, Product/Offer
+    schema) instead of the "Loading number…" shell</td><td>Nothing else matters until the pages
+    have readable content</td></tr>
+  <tr><td>2</td><td>Canonical rules per the box above</td><td>Prevents the country-codes problem
+    at scale</td></tr>
+  <tr><td>3</td><td>Sitemap family for the premium/vanity tier + robots.txt index line</td>
+    <td>Hands Google the list, best inventory first</td></tr>
+  <tr><td>4</td><td>Industry + pattern category pages</td><td>Second engine; catches searches no
+    single listing can</td></tr>
+  <tr><td>5</td><td>Watch Search Console for 2–4 weeks, then widen tiers</td><td>Let Google's
+    response decide how fast to scale</td></tr>
+</table>
+
+<p class="sub" style="margin-top:30px">Reference model: atom.com robots.txt → sitemap-index →
+families → 50K chunks. Everything above was verified against their live files, not guessed.</p>
