@@ -2078,7 +2078,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
             <a href="search-redesign-v250.html?type=toll-free">Toll-Free 800</a>
             <a href="search-redesign-v250.html?type=local">Local Numbers</a>
             <a href="search-redesign-v250.html">Repeating Digits</a>
-            <a href="search-redesign-v250.html" class="hc-all">All Numbers &rarr;</a>
+            <a href="search-redesign-v250.html" class="hc-all chg">All Numbers &rarr;</a>
           </div>
           <!-- v281: chips-line removed — redundant with hero lead + strip slot 1; countries claim retired -->
           
@@ -3137,6 +3137,8 @@ header.nav{background:rgba(255,255,255,.92)!important}
 .hero .lead b{color:var(--ink);font-weight:700}
 /* v317: 'All Numbers' chip = same oval as siblings (accent style + highlight removed) */
 .hero-cats a.hc-all{color:var(--ink-72);background:#FAFAFE;border-color:rgba(255,255,255,.88)}
+/* v318: change-marker on rounded elements = amber RING (follows the oval), not the dashed box */
+body.show-chg .hero-cats a.chg{outline:none!important;box-shadow:0 0 0 2.5px #E8A13D}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
