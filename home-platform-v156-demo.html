@@ -2062,8 +2062,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
         <span class="hero-kicker">The Premium Phone Number Marketplace</span>
         <h1>Own the phone number<br><span class="gt">they&rsquo;ll never forget.</span></h1>
         <div class="lead">
-          <p style="margin-bottom:2px">Search 50M+ premium vanity, toll-free, and local phone numbers.</p>
-<p>Buy outright or pay over time, then activate or port your number.</p>
+          <p class="chg" style="text-wrap:balance">Search <b>50M+</b> premium vanity, toll-free, and local phone numbers. Buy outright or pay over time, then activate or port your number.</p>
         </div>
         <div class="hsupport">Look up any number · own premium numbers · activate service — all powered by the <b>Number Graph</b>.</div>
         <!-- MULTI-MODE ACTION BAR — routes the 4 visitor intents -->
@@ -3132,6 +3131,10 @@ header.nav{background:rgba(255,255,255,.92)!important}
   .hero .lead p + p::before{content:" "}
   header.nav > .wrap{padding-right:14px}
 }
+/* v312: lead = one flowing balanced paragraph (not two stacked lines); 50M+ bold */
+.hero .lead{max-width:600px!important}
+.hero .lead p{white-space:normal}
+.hero .lead b{color:var(--ink);font-weight:700}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
