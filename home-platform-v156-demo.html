@@ -2259,7 +2259,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
       
       
       <div class="fbox"><div class="fb-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div><div class="fb-eyebrow">1 · Find</div><h3 class="chg">Find the perfect number</h3><p class="chg">Hunt by keyword, area code, or pattern &mdash; results ranked by memorability, so the right number surfaces in seconds.</p></div>
-      <div class="fbox"><div class="fb-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2.2" stroke="currentColor" stroke-width="1.7"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="fb-eyebrow">2 · Own</div><h3 class="chg">Own it &mdash; outright or monthly</h3><p class="chg">Every listing is vetted before you see it. Buy outright or pay over time at 0% &mdash; with a money-back transfer guarantee.</p></div>
+      <div class="fbox"><div class="fb-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2.2" stroke="currentColor" stroke-width="1.7"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="fb-eyebrow">2 · Own</div><h3 class="chg">Own it, your way</h3><p class="chg">Every listing is vetted before you see it. Buy outright or pay over time at 0% &mdash; with a money-back transfer guarantee.</p></div>
       
       <div class="fbox"><div class="fb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div><div class="fb-eyebrow">3 · Activate</div><h3 class="chg">Live in minutes</h3><p class="chg">Switched on same-day on our licensed network, or ported to your carrier. Managed for life from your portal.</p></div>
     </div>
@@ -3153,6 +3153,8 @@ body.show-chg .sec-head h2{outline:2px dashed #E8A13D;outline-offset:4px;border-
 /* v322: hero kicker to Atom-caliber badge weight (was 12px/600/1.44 vs their 14.9/700/2.2) */
 .hero-kicker, .hero-kicker .kicker-text{font-size:14.5px!important;font-weight:700!important;letter-spacing:.15em!important}
 body.show-chg .hero-kicker{outline:2px dashed #E8A13D;outline-offset:4px;border-radius:4px}
+/* v330: step titles never wrap */
+@media(min-width:701px){.feat6 .fbox h3{white-space:nowrap}}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
