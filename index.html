@@ -3139,6 +3139,8 @@ header.nav{background:rgba(255,255,255,.92)!important}
 .hero-cats a.hc-all{color:var(--ink-72);background:#FAFAFE;border-color:rgba(255,255,255,.88)}
 /* v318: change-marker on rounded elements = amber RING (follows the oval), not the dashed box */
 body.show-chg .hero-cats a.chg{outline:none!important;box-shadow:0 0 0 2.5px #E8A13D}
+/* v319: the generic .chg rule sets border-radius:4px (for text spans) — restore the chip's own oval */
+body.show-chg .hero-cats a.chg{border-radius:99px!important}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
