@@ -3149,6 +3149,12 @@ body.show-chg .sec-head h2{outline:2px dashed #E8A13D;outline-offset:4px;border-
 body.show-chg .hero-kicker{outline:2px dashed #E8A13D;outline-offset:4px;border-radius:4px}
 /* v330: step titles never wrap */
 @media(min-width:701px){.feat6 .fbox h3{white-space:nowrap}}
+/* v335: cards to Atom scale — padding 34, radius 24, title 21, body 16/1.62 (was 30/20/19/14.5) */
+@media(min-width:701px){
+  .feat6 .fbox{padding:34px!important;border-radius:24px!important}
+  .feat6 .fbox h3{font-size:21px!important}
+  .feat6 .fbox p{font-size:16px!important;line-height:1.62!important}
+}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
