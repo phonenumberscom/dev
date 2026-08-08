@@ -3154,6 +3154,8 @@ body.show-chg .diff6 .chg{outline-offset:5px}
 /* v382: marketplace grid typography matches site rules — card numbers/prices in Jakarta (mono reserved for ticker/order codes/receipts) */
 .mi-num{font-family:var(--sans)!important;font-weight:600!important;letter-spacing:-.01em!important}
 .mi-price{font-family:var(--sans)!important;font-weight:800!important}
+/* v383: highlight the v382 typography change — grid numbers/prices carry markers in highlight mode */
+body.show-chg .mi-num,body.show-chg .mi-price{outline:2px dashed #E8A13D;outline-offset:3px;border-radius:4px}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
