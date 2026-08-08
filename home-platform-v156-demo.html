@@ -3157,6 +3157,10 @@ body.show-chg .hero-kicker{outline:2px dashed #E8A13D;outline-offset:4px;border-
 }
 /* v338: step numerals as the card anchor — big brand numerals in the tile, eyebrows are verbs */
 .fb-stepnum{font-family:var(--sans);font-size:26px;font-weight:800;color:var(--ac);display:flex;align-items:center;justify-content:center}
+/* v345: Call-Driven Industries badge dot pulses (purple — green is reserved for live-data signals) */
+.t-badge i{animation:tbpulse 2.4s ease-out infinite}
+@keyframes tbpulse{0%{box-shadow:0 0 0 0 rgba(142,134,248,.55)}70%{box-shadow:0 0 0 7px rgba(142,134,248,0)}100%{box-shadow:0 0 0 0 rgba(142,134,248,0)}}
+body.show-chg .t-badge{box-shadow:0 0 0 2.5px #E8A13D}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
