@@ -2289,7 +2289,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
 
 <section class="tint">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head sec-head-wide">
       <span class="eyebrow">The Difference</span>
       <h2>What Makes PhoneNumbers.com Different</h2>
       <p><span class="chg">Most marketplaces resell numbers someone else gave up. Ours come carrier-direct, with patterns and formats that rarely reach the open market.</span></p>
@@ -3161,6 +3161,10 @@ body.show-chg .hero-kicker{outline:2px dashed #E8A13D;outline-offset:4px;border-
 .t-badge i{animation:tbpulse 2.4s ease-out infinite}
 @keyframes tbpulse{0%{box-shadow:0 0 0 0 rgba(142,134,248,.55)}70%{box-shadow:0 0 0 7px rgba(142,134,248,0)}100%{box-shadow:0 0 0 0 rgba(142,134,248,0)}}
 body.show-chg .t-badge{box-shadow:0 0 0 2.5px #E8A13D}
+/* v348: Difference sec-head widened so the H2 fits one line (title needs ~720px, global cap is 680px); sub stays at 680 measure */
+.sec-head.sec-head-wide{max-width:800px}
+.sec-head.sec-head-wide p{max-width:680px;margin-left:auto;margin-right:auto}
+body.show-chg .sec-head-wide h2{outline:2px dashed #E8A13D;outline-offset:6px}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
