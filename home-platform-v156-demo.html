@@ -2306,9 +2306,9 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
 <section class="market">
   <div class="wrap">
     <div class="mtop">
-      <span class="eyebrow on-dark chg">Buy With Confidence</span>
-      <h2 class="chg">Trusted by businesses nationwide</h2>
-      <p class="chg">Secure checkout, transparent pricing, verified listings, and expert support, every step of the way.</p>
+      <span class="eyebrow on-dark chg">The Marketplace</span>
+      <h2 class="chg">Explore millions of premium phone numbers</h2>
+      <p class="chg">Browse verified listings across vanity, toll-free, local, repeating, and industry categories, all with transparent pricing and flexible payment options.</p>
     </div>
     <div class="mkt-inventory">
       <div class="mi-head">
@@ -2335,6 +2335,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
 
     <div class="mkt-browseby chg">Prefer to explore? Browse by <a href="#">industry</a>, <a href="#">area code</a>, or <a href="#">pattern</a>.</div>
       
+      <div class="mkt-trust chg"><div class="mt-kicker">Buy With Confidence</div><div class="mt-title">Trusted by businesses nationwide</div><p>Secure checkout, transparent pricing, verified listings, and expert support, every step of the way.</p></div>
       <div class="mcta"><a class="btn btn-grad" href="#">Browse All 50M+ Numbers <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a></div>
   </div>
 </section>
@@ -3147,6 +3148,9 @@ body.show-chg .diff6 .chg{outline-offset:5px}
 .mkt-trust .mt-kicker{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ac)}
 .mkt-trust .mt-title{font-size:22px;font-weight:700;letter-spacing:-.01em;color:var(--ink);margin-top:9px}
 .mkt-trust p{font-size:15.5px;line-height:1.6;color:rgba(16,19,58,.75);margin-top:8px}
+/* v381: market header widened so the H2 holds one line (needs ~810px, was 700); sub keeps 700 measure */
+.market .mtop{max-width:840px!important}
+.market .mtop p{max-width:700px;margin-left:auto;margin-right:auto}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
