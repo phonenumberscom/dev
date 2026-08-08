@@ -3203,6 +3203,9 @@ body.show-chg .mi-num,body.show-chg .mi-price{outline:2px dashed #E8A13D;outline
 /* grid keeps homepage columns; card fills cell */
 .mi-grid .card{width:auto;max-width:none}
 body.show-chg .mi-grid .card{outline:2px dashed #E8A13D;outline-offset:4px}
+/* v386: payment band kicker upgraded to badge pill (was 10.5px text — smallest on page, biggest differentiator); matches industries t-badge family */
+.ppt-kick{display:inline-flex;align-items:center;gap:9px;font-size:12.5px!important;font-weight:700;letter-spacing:.1em!important;text-transform:uppercase;color:#DDD9FF!important;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:8px 17px;margin-bottom:6px}
+.ppt-kick::before{content:"";width:7px;height:7px;border-radius:50%;background:#8E86F8;animation:tbpulse 2.4s ease-out infinite}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
