@@ -2307,37 +2307,12 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
   <div class="wrap">
     <div class="mtop">
       <span class="eyebrow on-dark">The Marketplace</span>
-      <h2>Own the Right Phone Number</h2>
-      <p>If a phone number is identity, the right number is an asset you own. It shapes memorability, answer rates, customer trust, and marketing performance. Premium communication identity across every category.</p>
+      <h2 class="chg">Numbers ready to own today</h2>
+      <p class="chg">Live listings with clear prices, for businesses and individuals alike.</p>
     </div>
-    <div class="mkt-props">
-      <div class="mprop"><span class="mp-ic"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><b>Live in minutes</b><p>Owned inventory activates the moment you buy. Look for the <em>Get it now</em> chip.</p></div>
-      <div class="mprop"><span class="mp-ic"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.5 12l1.8 1.8L15 10.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Yours for good</b><p>You own the number outright. An asset, not a rental. Park it until launch day.</p></div>
-      <div class="mprop"><span class="mp-ic"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M4 7h13M14 3l4 4-4 4M20 17H7M10 13l-4 4 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Portable anywhere</b><p>Move it to any US or Canadian carrier. No port-out fees, zero downtime.</p></div>
-    </div>
-    <div class="mkt-feature">
-      <div class="mf-main">
-        <span class="mf-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>Most Wanted · Vanity · Legal</span>
-        <div class="mf-num">1-800-LAWYERS</div>
-        <div class="mf-sub">A category-defining number. The kind a customer remembers without writing it down.</div>
-        <div class="mf-intel"><span><i></i>Identity verified</span><span><i></i>Clean reputation</span><span><i></i>Carrier confirmed</span></div>
-      </div>
-      <div class="mf-side">
-        <div class="mf-meter">
-          <div class="lab"><span>Memorability score</span><b>99 / 100</b></div>
-          <div class="track"><div class="fill"></div></div>
-        </div>
-        <div class="mf-foot">
-          <div class="mf-price">$1,200<span class="per">/mo</span><small>lease-to-own · or $30,000 outright</small></div>
-          <span class="mf-actions"><a class="btn btn-light" href="#">View details <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a><a class="mf-more" href="#">More like this</a></span>
-        </div>
-      </div>
-    </div>
-
-    <!-- premium inventory browse grid (representative demo inventory) -->
     <div class="mkt-inventory">
       <div class="mi-head">
-        <span class="mi-title">Browse premium inventory</span>
+        <span class="mi-title">Browse premium numbers</span>
         <div class="mi-cats">
           <button type="button" class="mi-cat active" data-filter="all">All <span class="mi-ct">2,480</span></button>
           <button type="button" class="mi-cat" data-filter="vanity">Vanity <span class="mi-ct">410</span></button>
@@ -2358,13 +2333,8 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
       <div class="mi-empty" hidden>No numbers in this category yet. <a href="#">Browse all →</a></div>
     </div>
 
-    <div class="mfeat">
-      <span class="mtag"><span class="dot"></span>Brand Acquisition</span>
-      <span class="mtag"><span class="dot"></span>Category Ownership</span>
-      <span class="mtag"><span class="dot"></span>Memorable Identity</span>
-      <span class="mtag"><span class="dot"></span>Premium Digital Assets</span>
-    </div>
-    <div class="mcta"><a class="btn btn-grad" href="#">Browse Marketplace <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a></div>
+    <div class="mkt-browseby chg">Prefer to explore? Browse by <a href="#">industry</a>, <a href="#">area code</a>, or <a href="#">pattern</a>.</div>
+      <div class="mcta"><a class="btn btn-grad" href="#">Browse All 50M+ Numbers <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a></div>
   </div>
 </section>
 
@@ -3167,6 +3137,10 @@ body.show-chg .sec-head-wide h2{outline:2px dashed #E8A13D;outline-offset:6px}
 body.show-chg .diff6 .chg{outline-offset:5px}
 /* v355: portability card three-beat title (NYMobile-family voice) — may wrap two lines, override the global nowrap */
 .feat6 .fbox h3.h3-3beat{white-space:normal!important}
+/* v377: marketplace storefront rebuild — browse-by intent row */
+.mkt-browseby{margin-top:34px;text-align:center;font-size:15.5px;color:rgba(16,19,58,.75)}
+.mkt-browseby a{color:#4F46E5;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(79,70,229,.4)}
+.mkt-browseby a:hover{color:#2A2380;border-bottom-color:#2A2380}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
