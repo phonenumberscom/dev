@@ -2062,7 +2062,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
         <span class="hero-kicker">The Premium Phone Number Marketplace</span>
         <h1>Own the phone number<br><span class="gt">they&rsquo;ll never forget.</span></h1>
         <div class="lead">
-          <p class="chg" style="text-wrap:balance">Search <b>50M+</b> premium vanity, toll-free, and local phone numbers. Buy outright or pay over time, then activate or port your number.</p>
+          <p class="chg" style="text-wrap:balance">Search <b>50M+</b> premium vanity, toll-free, and local phone numbers. Buy outright or pay over time, then use it with the carrier you choose.</p>
         </div>
         <div class="hsupport">Look up any number · own premium numbers · activate service, all powered by the <b>Number Graph</b>.</div>
         <!-- MULTI-MODE ACTION BAR — routes the 4 visitor intents -->
@@ -2483,12 +2483,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
       <a class="trow" href="lookup.html" data-demo="bulk"><span class="trow-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l9 5-9 5-9-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 12l9 5 9-5M3 16.2l9 5 9-5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><div class="trow-tx"><h3>Bulk Lookup</h3><p>Validate &amp; enrich numbers in bulk via CSV</p></div><span class="trow-go soon">Coming soon</span></a>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="devbanner-sec light">
-  <div class="wrap">
-    <div class="devbanner"><svg class="band-key" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd-bk2"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd-bk2)"/></svg>
+      <div class="devbanner"><svg class="band-key" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd-bk2"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd-bk2)"/></svg>
       <svg class="db-circuit" viewBox="0 0 260 170" fill="none" aria-hidden="true"><rect x="100" y="55" width="60" height="60" rx="9" stroke="currentColor" stroke-width="2"/><rect x="116" y="71" width="28" height="28" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M115 55V30M130 55V30M145 55V30M115 115v25M130 115v25M145 115v25M100 70H66M100 85H66M100 100H66M160 70h34M160 85h34M160 100h34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="115" cy="30" r="3.5" fill="currentColor"/><circle cx="130" cy="30" r="3.5" fill="currentColor"/><circle cx="145" cy="30" r="3.5" fill="currentColor"/><circle cx="115" cy="140" r="3.5" fill="currentColor"/><circle cx="130" cy="140" r="3.5" fill="currentColor"/><circle cx="145" cy="140" r="3.5" fill="currentColor"/><circle cx="66" cy="70" r="3.5" fill="currentColor"/><circle cx="66" cy="85" r="3.5" fill="currentColor"/><circle cx="66" cy="100" r="3.5" fill="currentColor"/><circle cx="194" cy="70" r="3.5" fill="currentColor"/><circle cx="194" cy="85" r="3.5" fill="currentColor"/><circle cx="194" cy="100" r="3.5" fill="currentColor"/></svg>
       <div class="db-copy">
         <span class="eyebrow">Developer Platform</span>
@@ -2497,8 +2492,11 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
       </div>
       <a class="btn btn-grad" href="lookup.html">Explore Developer API <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
     </div>
+    
   </div>
 </section>
+
+
 
 <section class="testis tint">
   <div class="wrap">
@@ -3228,6 +3226,8 @@ section.final .row a.btn.btn-grad svg{width:20px;height:20px}
 .market .mtop h2{font-size:38px!important;font-weight:700!important}
 /* v412: marketplace H2 uses the section-heading ink (v40 display-indigo rule was coloring it #2A2380 purple; owner: match all other sections) */
 .market .mtop h2{color:var(--ink)!important}
+/* v414 PREVIEW (option A): dev banner merged into the tools section as a closing row — one platform band instead of two */
+.tools .devbanner{margin-top:26px}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
