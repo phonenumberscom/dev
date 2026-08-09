@@ -3230,6 +3230,10 @@ section.final .row a.btn.btn-grad svg{width:20px;height:20px}
 .tools .devbanner{margin-top:26px}
 /* v418: marketplace cards go flat — the face tile's background panel removed (matches production's flat cards) */
 .mi-grid .face{background:none!important;border:none!important;box-shadow:none!important}
+/* v419: match the search page exactly — the FACE tile is the card; the outer white wrapper (.mi-card) is removed and the meta row sits on the canvas. (v418 flattened the wrong layer; face restored here.) */
+.mi-grid .mi-card{background:none!important;border:none!important;box-shadow:none!important;padding:0!important}
+.mi-grid .mi-card:hover{transform:none!important;box-shadow:none!important;border:none!important}
+.mi-grid .face{background:rgba(255,255,255,.66)!important;border:1px solid rgba(255,255,255,.75)!important;border-radius:16px!important}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
