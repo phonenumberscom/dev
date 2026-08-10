@@ -2248,7 +2248,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
       <h2 class="chg">From search to first call.</h2>
       <p class="chg">The simplest way to search, buy, and activate a premium phone number.</p>
     </div>
-    
+    <!-- v333: legacy Discover/Secure/Manage/Activate flowrow removed — superseded by the 1·Find / 2·Own / 3·Activate step cards -->
 <div class="feat6">
       
       
@@ -2271,6 +2271,36 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
 <!-- [#4] -->
 <!-- [#4] GLOBAL RECOGNITION — reused Trusted-by -->
 <!-- TRUSTED BY (dark contrast box) -->
+<section class="roi light">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow chg">Why It Works</span>
+      <h2 class="chg">A number that pays for itself.</h2>
+      <p class="chg">For many businesses, one new client can cover the cost of a premium number.</p>
+    </div>
+    <div class="roi-panel chg">
+      <div class="roi-col">
+        <span class="roi-ic i1"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20l4-1L20 7a2.1 2.1 0 00-3-3L5 16l-1 4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+        <h3>Better recall</h3>
+        <p>Customers remember words, not digits. A memorable number keeps working after every ad impression: radio, billboard, TV.</p>
+      </div>
+      <div class="roi-col">
+        <span class="roi-ic i2"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+        <h3>Instant credibility</h3>
+        <p>A number that spells your service signals permanence. Customers trust you before you pick up.</p>
+      </div>
+      <div class="roi-col">
+        <span class="roi-ic i3"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.3l6.1-.7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <h3>Never expires</h3>
+        <p>Unlike ad spend, it doesn't expire. The number keeps working even when your campaigns aren't.</p>
+      </div>
+    </div>
+    <div class="roi-foot chg">
+      <span class="roi-scarce"><b>&#10003;</b> Each number is sold once. When it&rsquo;s gone, it&rsquo;s gone.</span>
+      </div>
+  </div>
+</section>
+
 <section class="light trusted-wrap">
   <div class="wrap">
     <div class="trusted"><svg class="band-key" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><mask id="okd-bk3"><rect width="48" height="48" fill="#fff"/><g stroke="#000" stroke-width="4.6" stroke-linecap="round" fill="none"><line x1="20.5" y1="13" x2="17.5" y2="35"/><line x1="30.5" y1="13" x2="27.5" y2="35"/><line x1="13" y1="19.5" x2="35.5" y2="19.5"/><line x1="12" y1="28.5" x2="34.5" y2="28.5"/></g></mask><rect x="4" y="4" width="40" height="40" rx="11" mask="url(#okd-bk3)"/></svg>
@@ -2286,6 +2316,10 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
     </div>
   </div>
 </section>
+
+<!-- [ROI] WHY IT WORKS — category sell (v431 variant) -->
+
+
 
 <section class="tint">
   <div class="wrap">
@@ -2440,17 +2474,7 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
   </div>
 </section>
 
-<section class="midcta">
-  <div class="wrap">
-    <h2>Your number is waiting.</h2>
-    <p class="chg">Exclusive, never-before-issued numbers across the US &amp; Canada.</p>
-    <form class="midsearch" onsubmit="var v=this.querySelector('input').value.trim();location.href='search-redesign-v250.html'+(v?'?q='+encodeURIComponent(v):'');return false">
-      <span class="ms-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-      <input type="text" placeholder="Search numbers — LAWYER, 800, your city…" aria-label="Search numbers">
-      <button class="ms-btn" type="submit">Find Numbers</button>
-    </form>
-  </div>
-</section>
+
 
 <!-- [#7] DEVELOPER BANNER — slim dark banner (full API section retired; preserved in v108) -->
 
@@ -2487,6 +2511,8 @@ header.nav.scrolled .nav-searchrow{max-height:112px;padding:20px 0}
     
   </div>
 </section>
+
+
 
 
 
@@ -3256,6 +3282,23 @@ section.areacodes{padding-top:96px!important}
 .trusted-wrap{padding-bottom:160px!important}
 section.tools{padding-bottom:140px!important}
 section.faq{padding-bottom:160px!important}
+/* v431 VARIANT: ROI section (category sell) + testimonials and mid-CTA removed */
+.roi .sec-head{max-width:760px}
+.roi-panel{display:grid;grid-template-columns:1fr 1fr 1fr;background:#FBFBFE;border:1px solid var(--line);border-radius:20px;box-shadow:0 14px 34px -24px rgba(16,19,58,.25);margin-top:44px}
+.roi-col{padding:34px 30px 36px}
+.roi-col + .roi-col{border-left:1px solid var(--line)}
+.roi-ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.roi-ic svg{width:22px;height:22px}
+.roi-ic.i1{background:#EEEDFC;color:#5B52EC}
+.roi-ic.i2{background:#E1F5EE;color:#0F6E56}
+.roi-ic.i3{background:#FAEEDA;color:#BA7517}
+.roi-col h3{font-size:19px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+.roi-col p{font-size:15.5px;line-height:1.62;color:rgba(16,19,58,.75);margin-top:10px}
+.roi-foot{display:flex;align-items:center;justify-content:center;margin-top:28px}
+.roi-scarce{font-size:15px;color:rgba(16,19,58,.78);display:flex;align-items:center;gap:9px}
+.roi-scarce b{color:#BA7517;font-weight:700}
+.roi-btns{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:860px){.roi-panel{grid-template-columns:1fr}.roi-col + .roi-col{border-left:none;border-top:1px solid var(--line)}}
 </style>
 <script>
 /* DEMO ONLY — review highlighter for the trust-strip copy change. Strip for production. */
@@ -3264,29 +3307,6 @@ section.faq{padding-bottom:160px!important}
   document.getElementById('chgtoggle').addEventListener('click', function(){
     document.body.classList.toggle('show-chg');
   });
-})();
-</script>
-<script>
-/* DEMO ONLY — links this homepage mockup to the search mockup (search-redesign-v250.html). Strip for production. */
-(function(){
-  var S='search-redesign-v250.html';
-  var rules=[
-    [/toll.?free/i, S+'?type=toll-free'],
-    [/international/i, S+'?type=international'],
-    [/marketplace|vanity|local|repeating|triple|quad|premium number|browse number|buy number/i, S]
-  ];
-  document.querySelectorAll('a').forEach(function(a){
-    var t=(a.textContent||'').trim();
-    if(!t || /phonenumbers\.com/i.test(t)) return;   /* never hijack the logo */
-    for(var i=0;i<rules.length;i++){
-      if(rules[i][0].test(t)){ a.setAttribute('href',rules[i][1]); a.removeAttribute('target'); break; }
-    }
-  });
-  var inp=document.querySelector('.hero input');
-  var send=document.querySelector('.hero .ha-go');
-  function go(){ var v=inp&&inp.value.trim(); location.href = v ? S+'?q='+encodeURIComponent(v) : S; }
-  if(send) send.addEventListener('click', go);
-  if(inp) inp.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); go(); } });
 })();
 </script>
 </body>
