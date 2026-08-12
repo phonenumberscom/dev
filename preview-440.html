@@ -1,0 +1,127 @@
+<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex, nofollow">
+<title>Search page — FINAL color system (one element, one meaning)</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:#E8EAF7;color:#10133A;line-height:1.5}
+header{background:rgba(255,255,255,.92);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid rgba(16,19,58,.08);padding:15px 32px;display:flex;align-items:center;gap:40px;position:sticky;top:0;z-index:9}
+.logo{font-weight:800;font-size:19px}.logo small{font-weight:400;opacity:.72}
+nav{display:flex;gap:22px;font-size:14px;font-weight:600;color:rgba(16,19,58,.72)}
+.crumb{max-width:1180px;margin:14px auto 0;padding:0 24px;font-size:12px;color:rgba(16,19,58,.5)}
+.hero{text-align:center;padding:34px 24px 8px}
+.kick{display:inline-block;background:#EEEDFC;color:#534AB7;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 15px;border-radius:99px}
+h1{font-size:44px;font-weight:800;letter-spacing:-.02em;margin:14px 0 10px}
+.sub{max-width:640px;margin:0 auto;font-size:15px;color:rgba(16,19,58,.66)}
+.toggle{display:inline-flex;background:#fff;border-radius:99px;padding:4px;margin:26px auto 14px;box-shadow:0 2px 8px rgba(16,19,58,.08)}
+.toggle span{padding:7px 22px;border-radius:99px;font-size:13.5px;font-weight:600;color:rgba(16,19,58,.6)}
+.toggle .on{background:linear-gradient(180deg,#5B52EC,#4338CA);color:#fff}
+.sbar{max-width:640px;margin:0 auto;background:#fff;border-radius:16px;box-shadow:0 14px 40px -18px rgba(16,19,58,.35);display:flex;align-items:center;padding:9px 9px 9px 20px;gap:14px}
+.sbar .dd{font-size:14px;font-weight:600;color:rgba(16,19,58,.72);border-right:1px solid rgba(16,19,58,.1);padding-right:14px}
+.sbar input{flex:1;border:none;outline:none;font-size:15px;font-family:inherit}
+.sbar button{background:linear-gradient(180deg,#5B52EC,#4338CA);color:#fff;font-weight:700;font-family:inherit;font-size:15px;border:none;border-radius:12px;padding:13px 30px}
+.frow{max-width:1180px;margin:30px auto 0;padding:0 24px;display:flex;align-items:center;gap:12px;font-size:13px}
+.fbtn{background:#fff;border:1px solid rgba(16,19,58,.12);border-radius:99px;padding:7px 15px;font-weight:600;color:rgba(16,19,58,.72)}
+.fbtn .n{background:#4F46E5;color:#fff;border-radius:99px;font-size:10.5px;padding:1px 6px;margin-left:5px}
+.spacer{flex:1}
+.count{color:rgba(16,19,58,.55)}
+.active-row{max-width:1180px;margin:14px auto 0;padding:0 24px;display:flex;gap:14px;align-items:center}
+.fchip{background:#EEEDFC;border:1px solid #B9B2F5;color:#3C3489;font-size:12.5px;font-weight:600;padding:6px 13px;border-radius:99px}
+.flink{font-size:12px;color:rgba(16,19,58,.5);text-decoration:underline}
+.grid{max-width:1180px;margin:34px auto 70px;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px 18px}
+.card{display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer}
+.face{position:relative;padding:16px 16px 34px;text-align:center;background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.75);border-radius:16px;backdrop-filter:blur(14px);transition:border-color .15s, box-shadow .15s}
+.card:hover .face{border-color:rgba(79,70,229,.45);box-shadow:0 8px 26px -14px rgba(79,70,229,.3)}
+.top{display:flex;align-items:center;min-height:22px;font-size:10.5px}
+.sp{flex:1}
+.ship{color:rgba(10,15,30,.55)}
+.ship.inst-c{background:rgba(22,163,74,.09);color:#0F6E56;font-weight:600;padding:3px 9px;border-radius:99px;font-size:10px}
+.prem{background:#FAEEDA;color:#854F0B;font-weight:700;padding:3px 9px;border-radius:99px;font-size:10px}
+.sale{background:#FCEBEB;color:#A32D2D;font-weight:700;padding:3px 9px;border-radius:99px;font-size:10px;margin-right:6px}
+.num{font-size:26px;font-weight:600;letter-spacing:-.01em;color:#0F172A;margin:22px 0 16px;font-variant-numeric:tabular-nums}
+.chiplet{display:inline-block;font-size:11px;padding:3px 11px;border-radius:99px}
+.c-local{background:#E1F5EE;color:#085041}
+.c-pattern{background:#FAEEDA;color:#854F0B}
+.meta{padding:12px 6px 0}
+.r1{display:flex;justify-content:space-between;font-size:15px;font-weight:600;color:#0F172A}
+.price{font-weight:700}
+.r2{display:flex;justify-content:space-between;font-size:12px;color:rgba(16,19,58,.6);margin-top:4px}
+.permo-c{color:rgba(79,70,229,.72);font-weight:600;font-size:11.5px}
+.zero{background:rgba(79,70,229,.10);color:rgba(60,52,137,.85);font-weight:700;font-size:9px;padding:1px 5px;border-radius:99px;vertical-align:1px}
+@media(max-width:980px){.grid{grid-template-columns:1fr 1fr}}
+</style>
+<header><span class="logo">&#35;&#8202;PhoneNumbers<small>.com</small></span><nav><span>Home</span><span style="color:#4F46E5">Numbers</span><span>Resources</span></nav></header>
+<div class="crumb">Home &rsaquo; Premium Phone Numbers</div>
+<div class="hero">
+  <span class="kick">Marketplace of 50M+ Premium Numbers</span>
+  <h1>Premium Phone Numbers</h1>
+  <p class="sub">Explore premium local, vanity, and toll-free numbers. Verified, scored for memorability, and ready to activate instantly. Flexible payment plans on many numbers.</p>
+  <div class="toggle"><span class="on">Local</span><span>Toll-Free</span></div>
+  <div class="sbar"><span class="dd">Area code &#9662;</span><input placeholder="Try an area code, word, or pattern"><button>Search</button></div>
+</div>
+<div class="frow"><span class="fbtn">&#9776; All Filters <span class="n">1</span></span><span class="fbtn">Price &#9662;</span><span class="fbtn">State &#9662;</span><span class="spacer"></span><span class="count">Showing 48+ numbers</span><span class="fbtn">Best Match &#9662;</span></div>
+<div class="active-row"><span class="fchip">Local &times;</span><span class="flink">Clear All Filters</span></div>
+<div class="grid"><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sp"></span><span class="ship">&#128337; 7&ndash;10 days</span></div>
+      <div class="num">(817) 752-9281</div><span class="chiplet c-local">Azle</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(817) 752-9281</span><span class="price">Call for price</span></div>
+      <div class="r2"><span class="loc">&#128205; TX</span><span class="permo">outright</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sale">&#127991; Sale</span><span class="sp"></span><span class="ship inst-c">&#9889; Instant activation</span></div>
+      <div class="num">(917) 800-3818</div><span class="chiplet c-local">New York City Zone 15</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(917) 800-3818</span><span class="price">$1,200.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo-c">or $92.31/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sp"></span><span class="ship inst-c">&#9889; Instant activation</span></div>
+      <div class="num">(917) 800-4308</div><span class="chiplet c-local">New York City Zone 15</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(917) 800-4308</span><span class="price">$1,200.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo-c">or $92.31/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sp"></span><span class="ship">&#128337; 7&ndash;10 days</span></div>
+      <div class="num">(949) 603-3222</div><span class="chiplet c-local">Saddleback Valley</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(949) 603-3222</span><span class="price">$200.00</span></div>
+      <div class="r2"><span class="loc">&#128205; CA</span><span class="permo">outright</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sp"></span><span class="ship">&#128337; 7&ndash;10 days</span></div>
+      <div class="num">(917) 800-2511</div><span class="chiplet c-local">New York City Zone 15</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(917) 800-2511</span><span class="price">$1,200.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo-c">or $92.31/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sale">&#127991; Sale</span><span class="sp"></span><span class="ship inst-c">&#9889; Instant activation</span></div>
+      <div class="num">(917) 917-4276</div><span class="chiplet c-local">New York City Zone 12</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(917) 917-4276</span><span class="price">$1,800.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo-c">or $138.46/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sp"></span><span class="ship">&#128337; 7&ndash;10 days</span></div>
+      <div class="num">(917) 800-7372</div><span class="chiplet c-local">New York City Zone 15</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(917) 800-7372</span><span class="price">$1,800.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo-c">or $138.46/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sp"></span><span class="ship">&#128337; 7&ndash;10 days</span></div>
+      <div class="num">(718) 223-5550</div><span class="chiplet c-local">New York City Zone 07</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(718) 223-5550</span><span class="price">$400.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo">outright</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sale">&#127991; Sale</span><span class="sp"></span><span class="ship inst-c">&#9889; Instant activation</span></div>
+      <div class="num">(904) 888-8333</div><span class="chiplet c-local">Jacksonville</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(904) 888-8333</span><span class="price">$2,000.00</span></div>
+      <div class="r2"><span class="loc">&#128205; FL</span><span class="permo-c">or $153.85/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="prem">&#9733; Premium</span><span class="sp"></span><span class="ship">&#128337; 7&ndash;10 days</span></div>
+      <div class="num">(970) 888-8888</div><span class="chiplet c-local">Colorado</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(970) 888-8888</span><span class="price">$100,000.00</span></div>
+      <div class="r2"><span class="loc">&#128205; CO</span><span class="permo-c">or $8,333/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sp"></span><span class="ship">&#128337; 7&ndash;10 days</span></div>
+      <div class="num">(917) 800-1030</div><span class="chiplet c-local">New York City Zone 15</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(917) 800-1030</span><span class="price">$1,200.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo-c">or $92.31/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sp"></span><span class="ship inst-c">&#9889; Instant activation</span></div>
+      <div class="num">(718) 800-7671</div><span class="chiplet c-local">New York City Zone 06</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(718) 800-7671</span><span class="price">$1,300.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo-c">or $100.00/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sp"></span><span class="ship">&#128337; 7&ndash;10 days</span></div>
+      <div class="num">(917) 917-2776</div><span class="chiplet c-local">New York City Zone 12</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(917) 917-2776</span><span class="price">$2,500.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo-c">or $192.31/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sp"></span><span class="ship">&#128337; 7&ndash;10 days</span></div>
+      <div class="num">(329) 329-8031</div><span class="chiplet c-local">Ellenville</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(329) 329-8031</span><span class="price">$900.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo-c">or $69.23/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sale">&#127991; Sale</span><span class="sp"></span><span class="ship inst-c">&#9889; Instant activation</span></div>
+      <div class="num">(212) 718-8225</div><span class="chiplet c-local">New York City Zone 01</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(212) 718-8225</span><span class="price">$2,500.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo-c">or $192.31/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a><a class="card" href="#">
+      <div class="face"><div class="top"><span class="sp"></span><span class="ship">&#128337; 7&ndash;10 days</span></div>
+      <div class="num">(212) 800-1140</div><span class="chiplet c-local">New York City Zone 01</span></div>
+      <div class="meta"><div class="r1"><span class="lbl">(212) 800-1140</span><span class="price">$2,700.00</span></div>
+      <div class="r2"><span class="loc">&#128205; NY</span><span class="permo-c">or $207.69/mo &times; 12 <span class="zero">0%</span> &#9432;</span></div></div></a></div>
