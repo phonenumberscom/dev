@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Partner With Us | PhoneNumbers.com for Business</title>
+<meta name="description" content="Refer customers, resell premium phone numbers through our API, or list your unused inventory in the largest US and Canada phone number marketplace. Free to join.">
+<link rel="canonical" href="https://phonenumbers.com/en-us/business">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Partner With Us | PhoneNumbers.com for Business">
+<meta property="og:description" content="Refer customers, resell premium phone numbers through our API, or list your unused inventory in our marketplace.">
+<meta property="og:url" content="https://phonenumbers.com/en-us/business">
+<meta property="og:image" content="https://phonenumbers.com/og-card.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://phonenumbers.com/og-card.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<!-- live site's own stylesheet so header/footer are pixel-identical.
+     GOTCHA: _astro hashes rotate on site deploys. If the header renders unstyled:
+     curl -s https://phonenumbers.com/en-us/business | grep -o '_astro/[^"]*\.css' -->
+<link rel="stylesheet" href="https://phonenumbers.com/_astro/activity.DFvQkRkt.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://phonenumbers.com/en-us"},
+{"@type":"ListItem","position":2,"name":"For Business","item":"https://phonenumbers.com/en-us/business"}]}
+</script>
+<style>
+:root{
+  /* Apple-style neutral text hierarchy (owner direction 2026-09-01, per contact-v36):
+     #1D1D1F primary, #6E6E73 secondary, #86868B tertiary/helper only, #D2D2D7 dividers. */
+  --canvas:#e8eaf7; --paper:#eef0f7; --white:#fff;
+  --ink:#1D1D1F; --ink-2:#6E6E73; --ink-3:#86868B; --hair:#D2D2D7;
+  --brand:#5b3fe8; --brand-2:#7c5cf0; --brand-text:#a394f6;
+  --night:#0a0f1e; --night-2:#141929;
+  --w-85:rgba(255,255,255,.85); --w-66:rgba(255,255,255,.66); --w-45:rgba(255,255,255,.45);
+  --hair-d:rgba(255,255,255,.12);
+  /* layout vars the site header/footer CSS depends on */
+  --site-max-width:1560px; --content-max-width:1360px;
+  --theme-primary:#5b3fe8; --theme-primary-hover:#7c5cf0; --theme-page-canvas:#e8eaf7;
+  --page:#f7f8fa; --ink60:rgba(10,15,30,.6); --ink30:rgba(10,15,30,.28); --ink10:rgba(10,15,30,.06);
+}
+*{box-sizing:border-box}
+body{overflow-x:clip}
+body{margin:0;background:var(--canvas);color:var(--ink);
+  font-family:"Plus Jakarta Sans",-apple-system,system-ui,sans-serif;font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased}
+.b2b a{color:inherit;text-decoration:none}
+.b2b a:focus-visible,.b2b button:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+@media(max-width:640px){.wrap{padding:0 24px}}
+.micro{font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+h2{font-size:clamp(2rem,4.2vw,3.1rem);font-weight:800;letter-spacing:-.028em;line-height:1.08;margin:0 0 22px;text-wrap:balance;color:var(--ink)}
+.sect{padding:130px 0}
+@media(max-width:640px){.sect{padding:84px 0}}
+.lead{font-size:1.18rem;color:var(--ink-2);max-width:56ch;margin:0;line-height:1.6}
+.intro{max-width:820px;margin:0 auto;text-align:center}
+.intro .micro{color:var(--brand);display:block;margin:0 0 18px}
+.intro .lead{margin:0 auto}
+
+/* scroll reveal: gentle fade only, no movement */
+.rv{opacity:0;transition:opacity .9s ease}
+.rv.in{opacity:1}
+.rv2{transition-delay:.1s}.rv3{transition-delay:.2s}.rv4{transition-delay:.3s}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-size:16.5px;font-weight:700;border-radius:14px;
+  padding:16px 30px;transition:transform .14s,box-shadow .14s,background .14s,border-color .14s;cursor:pointer}
+.btn-p{background:linear-gradient(180deg,var(--brand-2),var(--brand));color:#fff;box-shadow:0 12px 30px -12px rgba(91,63,232,.75)}
+.btn-p:hover{transform:translateY(-1px);box-shadow:0 16px 36px -12px rgba(91,63,232,.85)}
+.btn-g{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.26);backdrop-filter:none}
+.btn-g:hover{border-color:rgba(255,255,255,.55)}
+.arrow{width:18px;height:18px;flex:0 0 auto}
+
+/* ---------- 1. hero: cinematic dark, live-network map ---------- */
+.hero{position:relative;overflow:hidden;color:var(--w-85);background:var(--night)}
+.hero-img{position:absolute;inset:0;background:url("business-hero-glass-v1.jpg") right center/cover no-repeat}
+.hero-img::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(60% 70% at 88% 30%,rgba(124,92,240,.2),transparent 62%),
+             linear-gradient(90deg,rgba(10,15,30,.94) 0%,rgba(10,15,30,.72) 42%,rgba(10,15,30,.18) 78%,rgba(10,15,30,.08) 100%);}
+.hero-img::before{content:"";position:absolute;inset:auto 0 0 0;height:220px;z-index:1;
+  background:linear-gradient(180deg,transparent,rgba(10,15,30,.85))}
+.hero .wrap{position:relative;z-index:2}
+.crumbs{color:var(--w-45);font-size:13px;padding:28px 0 0;display:flex;gap:9px}
+.crumbs a:hover{color:#fff}
+.hero-in{padding:118px 0 0;max-width:1000px}
+@media(max-width:640px){.hero-in{padding-top:72px}}
+.hero .micro{color:var(--brand-text);display:block;margin:0 0 22px}
+h1{font-size:clamp(2.7rem,6.4vw,4.8rem);font-weight:800;letter-spacing:-.034em;line-height:1.01;margin:0 0 26px;color:#fff}
+h1 .grad{background:linear-gradient(96deg,#b9aaff 0%,#7c5cf0 55%,#a394f6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{color:var(--w-66);font-size:1.22rem;max-width:50ch}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-top:42px}
+/* proof stats: whitespace-separated, count-up */
+.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;border-top:1px solid var(--hair-d);
+  margin-top:120px;padding:44px 0 64px}
+@media(max-width:820px){.proof{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.proof{margin-top:76px;gap:26px}}
+.pf-n{font-size:clamp(1.9rem,3.2vw,2.7rem);font-weight:800;color:#fff;letter-spacing:-.025em;margin:0 0 6px;line-height:1.05}
+.pf-l{color:var(--w-45);font-size:14px;margin:0;font-weight:500}
+
+/* ---------- 2. three paths: editorial alternating rows ---------- */
+.paths{background:
+  radial-gradient(56% 50% at 90% 0%,rgba(124,92,240,.14),transparent 58%),var(--canvas)}
+.prow{display:grid;grid-template-columns:1fr 1fr;gap:clamp(44px,7vw,96px);align-items:center;margin-top:clamp(80px,9vw,120px)}
+@media(max-width:880px){.prow{grid-template-columns:1fr;gap:36px}
+  .prow .prow-img{order:0}.prow .prow-txt{order:1}}
+.prow-img{margin:0;position:relative}
+.prow-img img{width:100%;display:block;border-radius:28px;
+  box-shadow:0 3px 10px rgba(29,29,31,.06),0 34px 80px -36px rgba(29,29,31,.38)}
+.prow.flip .prow-img{order:2}
+@media(max-width:880px){.prow.flip .prow-img{order:0}}
+.prow-txt .eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin:0 0 16px}
+.prow-txt h3{font-size:clamp(1.7rem,3.1vw,2.4rem);font-weight:800;letter-spacing:-.024em;line-height:1.12;margin:0 0 14px;color:var(--ink)}
+.prow-txt p.desc{color:var(--ink-2);font-size:1.08rem;margin:0 0 24px;max-width:46ch}
+.prow-txt ul{list-style:none;margin:0 0 28px;padding:0}
+.prow-txt li{position:relative;padding:7px 0 7px 30px;font-size:15.5px;color:var(--ink);font-weight:500}
+.prow-txt li::before{content:"";position:absolute;left:0;top:14px;width:15px;height:15px;border-radius:50%;background:var(--brand);
+  -webkit-mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') center/contain no-repeat;
+          mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') center/contain no-repeat}
+.path-cta{display:inline-flex;align-items:center;gap:8px;font-size:15.5px;font-weight:700;color:var(--brand);transition:gap .16s}
+.path-cta:hover{gap:13px}
+/* white-label storefront mock (Resellers) */
+.mock{border-radius:28px;padding:34px 30px 30px;color:var(--w-85);
+  background:radial-gradient(85% 65% at 85% -8%,rgba(124,92,240,.4),transparent 62%),
+  linear-gradient(170deg,var(--night),var(--night-2));
+  box-shadow:0 34px 80px -34px rgba(91,63,232,.55)}
+.mock-brand{display:flex;align-items:center;justify-content:space-between;margin:0 0 22px}
+.mock-brand strong{font-size:15px;font-weight:800;letter-spacing:-.01em;color:#fff}
+.mock-brand span{font-size:11px;color:var(--w-45);font-weight:600}
+.mock-search{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:13px 16px;margin:0 0 14px}
+.mock-search svg{width:15px;height:15px;color:var(--w-45);flex:0 0 15px}
+.mock-search em{font-style:normal;font-size:14px;font-weight:700;color:#fff;letter-spacing:.02em}
+.mock-search em i{font-style:normal;color:var(--w-45);font-weight:400}
+.mock-row{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px 16px;margin:0 0 10px}
+.mock-row .num{font-size:15px;font-weight:700;color:#fff;letter-spacing:.01em;margin:0}
+.mock-row .sub{font-size:11.5px;color:var(--w-45);margin:2px 0 0}
+.mock-add{font-size:12px;font-weight:800;color:#fff;background:linear-gradient(180deg,var(--brand-2),var(--brand));
+  border-radius:999px;padding:7px 14px;white-space:nowrap}
+.mock-foot{font-size:11px;color:var(--w-45);margin:16px 0 0;text-align:center}
+
+/* ---------- 3. big statement ---------- */
+.statement{padding:44px 0 130px;text-align:center}
+@media(max-width:640px){.statement{padding:10px 0 84px}}
+.statement .big{font-size:clamp(3.4rem,10vw,7.6rem);font-weight:800;letter-spacing:-.045em;line-height:1;margin:0;
+  background:linear-gradient(100deg,#4330b8 0%,#7c5cf0 50%,#a394f6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.statement .sub{font-size:clamp(1.2rem,2.4vw,1.7rem);font-weight:700;letter-spacing:-.02em;color:var(--ink);margin:18px 0 0}
+.statement .note{font-size:1.05rem;color:var(--ink-2);margin:14px auto 0;max-width:52ch}
+
+/* ---------- 4. steps ---------- */
+.steps{background:var(--canvas)}
+.step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:44px;margin-top:80px}
+@media(max-width:900px){.step-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.step-grid{grid-template-columns:1fr;gap:38px}}
+.step-k{font-size:clamp(2.8rem,4.4vw,3.8rem);font-weight:800;letter-spacing:-.03em;line-height:1;margin:0 0 18px;
+  background:linear-gradient(180deg,rgba(91,63,232,.4),rgba(91,63,232,.08));-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-size:1.2rem;font-weight:800;letter-spacing:-.01em;margin:0 0 8px;color:var(--ink)}
+.step p{font-size:15px;color:var(--ink-2);margin:0}
+
+/* ---------- 5. api: dark, network image ---------- */
+.api{position:relative;overflow:hidden;color:var(--w-85);background:var(--night)}
+.api-img{position:absolute;inset:0;background:url("business-network-v1.jpg") center/cover no-repeat;opacity:.85}
+.api-img::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(10,15,30,.9) 0%,rgba(10,15,30,.6) 46%,rgba(10,15,30,.35) 100%)}
+.api .wrap{position:relative;z-index:1}
+.api h2{color:#fff}
+.api .lead{color:var(--w-66)}
+.api .micro{color:var(--brand-text);display:block;margin:0 0 18px}
+.api-grid{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center}
+@media(max-width:880px){.api-grid{grid-template-columns:1fr;gap:52px}}
+.api-feats{display:grid;grid-template-columns:1fr 1fr;gap:30px 34px;margin-top:46px}
+@media(max-width:460px){.api-feats{grid-template-columns:1fr}}
+.af h3{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 6px}
+.af p{font-size:14px;color:var(--w-66);margin:0}
+/* code card */
+.code{background:rgba(13,18,36,.72);border:1px solid rgba(255,255,255,.14);border-radius:22px;overflow:hidden;
+  box-shadow:0 44px 110px -40px rgba(0,0,0,.85),0 0 0 1px rgba(124,92,240,.08),0 24px 80px -30px rgba(91,63,232,.4)}
+.code-bar{display:flex;align-items:center;gap:7px;padding:15px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
+.code-bar span{width:11px;height:11px;border-radius:50%}
+.code-bar span:nth-child(1){background:#ff5f57}.code-bar span:nth-child(2){background:#febc2e}.code-bar span:nth-child(3){background:#28c840}
+.code-bar em{font-style:normal;font-size:12px;color:var(--w-45);margin-left:10px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.code pre{margin:0;padding:26px 28px 30px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:13.5px;line-height:1.8;color:var(--w-85);overflow-x:auto}
+.c-k{color:#a394f6}.c-s{color:#8be9b8}.c-c{color:rgba(255,255,255,.35)}
+
+/* ---------- 6. commission + payouts: dashboard mock + terms ---------- */
+.pay{background:var(--canvas)}
+.pay-wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(44px,6vw,84px);align-items:center;margin-top:76px}
+@media(max-width:880px){.pay-wrap{grid-template-columns:1fr;gap:44px}}
+/* partner dashboard mock (same family as the reseller storefront mock) */
+.dash{border-radius:28px;padding:34px 30px 30px;color:var(--w-85);
+  background:radial-gradient(85% 65% at 12% -8%,rgba(124,92,240,.38),transparent 62%),
+  linear-gradient(170deg,var(--night),var(--night-2));
+  box-shadow:0 34px 80px -34px rgba(91,63,232,.5)}
+.dash-head{display:flex;align-items:center;justify-content:space-between;margin:0 0 22px}
+.dash-head strong{font-size:15px;font-weight:800;letter-spacing:-.01em;color:#fff}
+.dash-head span{font-size:11px;color:var(--w-45);font-weight:600}
+.dash-row{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px 16px;margin:0 0 10px}
+.dash-row .num{font-size:15px;font-weight:700;color:#fff;letter-spacing:.01em;margin:0}
+.dash-row .sub{font-size:11.5px;color:var(--w-45);margin:2px 0 0}
+.dash-row .amt{font-size:15px;font-weight:800;color:#8be9b8;white-space:nowrap}
+.dash-sum{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:rgba(124,92,240,.16);border:1px solid rgba(163,148,246,.35);border-radius:14px;padding:16px;margin:14px 0 0}
+.dash-sum strong{font-size:13.5px;font-weight:800;color:#fff}
+.dash-sum em{font-style:normal;font-size:17px;font-weight:800;color:var(--brand-text);letter-spacing:.08em}
+.dash-foot{font-size:11px;color:var(--w-45);margin:16px 0 0;text-align:center}
+/* term checklists */
+.terms .micro{color:var(--brand);display:block;margin:0 0 14px}
+.terms-group{margin:0 0 36px}
+.terms-group:last-child{margin-bottom:0}
+.terms ul{list-style:none;margin:0 0 14px;padding:0}
+.terms li{position:relative;padding:7px 0 7px 30px;font-size:15.5px;color:var(--ink);font-weight:500}
+.terms li::before{content:"";position:absolute;left:0;top:14px;width:15px;height:15px;border-radius:50%;background:var(--brand);
+  -webkit-mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') center/contain no-repeat;
+          mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') center/contain no-repeat}
+.pay-note{font-size:13px;color:var(--ink-3);margin:0}
+
+/* ---------- 7. who can partner: chip rows ---------- */
+.who{background:var(--canvas)}
+.who-rows{margin-top:76px;display:grid;gap:52px}
+.who-row{display:grid;grid-template-columns:270px 1fr;gap:44px;align-items:start}
+@media(max-width:880px){.who-row{grid-template-columns:1fr;gap:20px}}
+.who-row h3{font-size:1.35rem;font-weight:800;letter-spacing:-.015em;margin:0 0 4px;color:var(--ink)}
+.who-row .fit{font-size:14px;color:var(--brand);font-weight:700;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding-top:4px}
+.chip{background:var(--white);border-radius:999px;padding:11px 20px;font-size:14.5px;font-weight:600;color:var(--ink);
+  box-shadow:0 1px 3px rgba(29,29,31,.06),0 10px 24px -14px rgba(29,29,31,.22)}
+.chip.ask{background:rgba(91,63,232,.1);color:var(--brand);font-weight:700}
+.chip.ask:hover{background:rgba(91,63,232,.16)}
+
+/* ---------- 7b. partner voices ---------- */
+.voices{background:var(--canvas)}
+.voice-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:26px;margin-top:76px}
+@media(max-width:880px){.voice-grid{grid-template-columns:1fr}}
+.voice-side{display:grid;gap:26px;grid-auto-rows:1fr}
+.voice{background:var(--white);border-radius:26px;padding:42px 40px;
+  box-shadow:0 2px 6px rgba(29,29,31,.04),0 24px 60px -34px rgba(29,29,31,.2);
+  display:flex;flex-direction:column}
+.voice-tag{align-self:flex-start;font-size:10.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--brand);background:rgba(91,63,232,.09);border-radius:999px;padding:6px 13px;margin:0 0 22px}
+.voice.lead-q .voice-tag{color:var(--brand-text);background:rgba(163,148,246,.16)}
+.voice.lead-q{background:
+  radial-gradient(80% 60% at 88% -8%,rgba(124,92,240,.34),transparent 62%),
+  linear-gradient(170deg,var(--night),var(--night-2));
+  box-shadow:0 34px 80px -34px rgba(91,63,232,.5)}
+.voice .qmark{font-size:76px;font-weight:800;line-height:.6;margin:6px 0 24px;color:var(--brand);opacity:.35}
+.voice.lead-q .qmark{color:var(--brand-text);opacity:.8}
+.voice blockquote{margin:0 0 26px;font-size:1.16rem;font-weight:600;letter-spacing:-.012em;line-height:1.52;color:var(--ink)}
+.voice.lead-q blockquote{color:#fff;font-size:clamp(1.25rem,2vw,1.5rem)}
+.voice .who-line{margin-top:auto;font-size:13.5px;color:var(--ink-3);font-weight:600}
+.voice.lead-q .who-line{color:var(--w-45)}
+
+/* ---------- 8. market stats ---------- */
+.market{background:
+  radial-gradient(52% 46% at 6% 100%,rgba(91,63,232,.11),transparent 58%),var(--canvas)}
+.mkt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 40px;margin-top:80px}
+@media(max-width:900px){.mkt-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.mkt-grid{grid-template-columns:1fr}}
+.mkt-n{font-size:clamp(2.1rem,3.6vw,3rem);font-weight:800;letter-spacing:-.028em;margin:0 0 10px;line-height:1.05;
+  background:linear-gradient(100deg,#4330b8,#7c5cf0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mkt-t{font-weight:700;font-size:16px;margin:0 0 6px;color:var(--ink)}
+.mkt-d{font-size:14.5px;color:var(--ink-2);margin:0}
+.srcnote{font-size:13px;color:var(--ink-3);margin:64px 0 0;max-width:72ch}
+
+/* ---------- 9. closing ---------- */
+.close{position:relative;overflow:hidden;text-align:center;color:#fff;
+  background:radial-gradient(70% 90% at 50% -10%,rgba(163,148,246,.45),transparent 62%),
+             linear-gradient(168deg,var(--brand) 0%,#3f2ec0 100%)}
+.close::before{content:"";position:absolute;left:50%;top:-340px;width:900px;height:600px;transform:translateX(-50%);
+  background:radial-gradient(closest-side,rgba(255,255,255,.14),transparent);pointer-events:none}
+.close .wrap{position:relative;z-index:1}
+.close h2{color:#fff;max-width:22ch;margin:0 auto 20px}
+.close p.sub{color:rgba(255,255,255,.85);max-width:52ch;margin:0 auto 44px;font-size:1.15rem}
+.b2b a.cbtn{color:var(--brand)}
+.cbtn{display:inline-flex;align-items:center;gap:10px;font-size:17px;font-weight:700;color:var(--brand);
+  background:#fff;border-radius:16px;padding:18px 36px;box-shadow:0 14px 34px -12px rgba(0,0,0,.5);
+  transition:transform .14s,box-shadow .14s}
+.cbtn:hover{transform:translateY(-1px);box-shadow:0 18px 40px -12px rgba(0,0,0,.55)}
+.close-alt{margin-top:26px;font-size:15px;color:rgba(255,255,255,.75)}
+.close-alt a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.sign{margin-top:72px;padding-top:30px;border-top:1px solid rgba(255,255,255,.2)}
+.sign strong{display:block;font-size:17px;font-weight:800;letter-spacing:-.01em}
+.sign span{font-size:13.5px;color:rgba(255,255,255,.7)}
+
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<header class="site-header print:hidden" data-astro-cid-3ef6ksr2> <nav class="site-nav" data-astro-cid-3ef6ksr2> <div class="sn-left" data-astro-cid-3ef6ksr2> <button type="button" id="sn-mobile-menu-button" class="sn-mobile-burger" aria-label="Open menu" aria-controls="sn-mobile-menu" aria-expanded="false" data-astro-cid-3ef6ksr2> <svg class="sn-mobile-burger-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-3ef6ksr2> <line x1="3" y1="6" x2="21" y2="6" data-astro-cid-3ef6ksr2></line> <line x1="3" y1="12" x2="21" y2="12" data-astro-cid-3ef6ksr2></line> <line x1="3" y1="18" x2="21" y2="18" data-astro-cid-3ef6ksr2></line> </svg> <svg class="sn-mobile-burger-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-3ef6ksr2> <line x1="18" y1="6" x2="6" y2="18" data-astro-cid-3ef6ksr2></line> <line x1="6" y1="6" x2="18" y2="18" data-astro-cid-3ef6ksr2></line> </svg> </button> <a href="https://phonenumbers.com/en-us" class="sn-logo" data-astro-cid-3ef6ksr2> <img class="sn-logo-img" src="https://phonenumbers.com/brand/phonenumbers-logo-primary.svg" alt="PhoneNumbers.com" width="337" height="32" data-astro-cid-3ef6ksr2> </a> </div>  <div class="sn-center" data-astro-cid-3ef6ksr2> <div class="sn-links" data-astro-cid-3ef6ksr2> <a href="https://phonenumbers.com/en-us" class data-astro-cid-3ef6ksr2>Home</a> <div class="sn-drop " data-astro-cid-3ef6ksr2> <button type="button" class="sn-drop-trigger" data-astro-cid-3ef6ksr2>
+Numbers
+<svg class="sn-drop-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-astro-cid-3ef6ksr2> <polyline points="6 9 12 15 18 9" data-astro-cid-3ef6ksr2></polyline> </svg> </button> <div class="sn-drop-menu" data-astro-cid-3ef6ksr2> <a href="https://phonenumbers.com/en-us/search" data-astro-cid-3ef6ksr2>Local Numbers</a> <a href="https://phonenumbers.com/en-us/search?tf=true" data-astro-cid-3ef6ksr2>Toll-Free Numbers</a> <div class="sn-drop-divider" data-astro-cid-3ef6ksr2></div> <a href="https://phonenumbers.com/en-us/area-codes/all-area-codes" data-astro-cid-3ef6ksr2>Area Codes</a> <a href="https://phonenumbers.com/en-us/country-codes/all-countries" data-astro-cid-3ef6ksr2>Country Codes</a> </div> </div>  <div class="sn-drop sn-active" data-astro-cid-3ef6ksr2> <button type="button" class="sn-drop-trigger" data-astro-cid-3ef6ksr2>
+Resources
+<svg class="sn-drop-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-astro-cid-3ef6ksr2> <polyline points="6 9 12 15 18 9" data-astro-cid-3ef6ksr2></polyline> </svg> </button> <div class="sn-drop-menu" data-astro-cid-3ef6ksr2>  <a href="https://phonenumbers.com/insights/" data-astro-cid-3ef6ksr2>Insights</a> <a href="https://phonenumbers.com/en-us/about/contact" data-astro-cid-3ef6ksr2>Contact</a> </div> </div> </div>  </div> <div class="sn-right" data-astro-cid-3ef6ksr2> <a href="https://phonenumbers.com/en-us/profile" class="sn-icon-btn" aria-label="Profile" title="Profile" data-astro-cid-3ef6ksr2> <i class="fas fa-user" data-astro-cid-3ef6ksr2></i> </a> <a id="header-order-btn" href="https://phonenumbers.com/en-us/checkout" class="sn-icon-btn order-btn " aria-label="Checkout" title="Checkout" data-astro-cid-3ef6ksr2> <i class="fas fa-shopping-cart" data-astro-cid-3ef6ksr2></i> <span class="order-line-badge" id="order-line-count-badge" data-astro-cid-3ef6ksr2>0</span> </a> <div class="sn-drop " data-astro-cid-3ef6ksr2> <button type="button" id="pn-country-menu-trigger" class="sn-drop-trigger sn-country-trigger " aria-label="Country selector" title="Country selector" data-astro-cid-3ef6ksr2> <span class="sn-country-flag" aria-hidden="true" data-astro-cid-3ef6ksr2>🇺🇸</span> <span class="sn-country-label" data-astro-cid-3ef6ksr2>US</span> <svg class="sn-drop-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-astro-cid-3ef6ksr2> <polyline points="6 9 12 15 18 9" data-astro-cid-3ef6ksr2></polyline> </svg> </button> <div class="sn-drop-menu" data-astro-cid-3ef6ksr2> <a href="https://phonenumbers.com/en-ca/about/contact" data-astro-cid-3ef6ksr2>🍁 Canada</a> </div> </div> </div>  </nav> <div id="sn-mobile-menu-backdrop" class="sn-mobile-backdrop" aria-hidden="true" data-astro-cid-3ef6ksr2> <div id="sn-mobile-menu" class="sn-mobile-menu" role="dialog" aria-modal="true" aria-label="Main menu" tabindex="-1" data-default-open-section="resources" data-astro-cid-3ef6ksr2> <a href="https://phonenumbers.com/en-us" class="sn-mobile-link " data-astro-cid-3ef6ksr2>
+Home
+</a> <div class="sn-mobile-section" data-mobile-section="numbers" data-astro-cid-3ef6ksr2> <button type="button" class="sn-mobile-section-trigger " data-mobile-section-trigger="numbers" data-astro-cid-3ef6ksr2> <span data-astro-cid-3ef6ksr2>Numbers</span> <svg class="sn-mobile-section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-3ef6ksr2> <polyline points="6 9 12 15 18 9" data-astro-cid-3ef6ksr2></polyline> </svg> </button> <div class="sn-mobile-section-panel" data-astro-cid-3ef6ksr2> <a href="https://phonenumbers.com/en-us/search" class="sn-mobile-link" data-astro-cid-3ef6ksr2>Local Numbers</a> <a href="https://phonenumbers.com/en-us/search?tf=true" class="sn-mobile-link" data-astro-cid-3ef6ksr2>Toll-Free Numbers</a> <a href="https://phonenumbers.com/en-us/area-codes/all-area-codes" class="sn-mobile-link" data-astro-cid-3ef6ksr2>Area Codes</a> <a href="https://phonenumbers.com/en-us/country-codes/all-countries" class="sn-mobile-link" data-astro-cid-3ef6ksr2>Country Codes</a> </div> </div>  <div class="sn-mobile-section" data-mobile-section="resources" data-astro-cid-3ef6ksr2> <button type="button" class="sn-mobile-section-trigger sn-mobile-section-trigger-active" data-mobile-section-trigger="resources" data-astro-cid-3ef6ksr2> <span data-astro-cid-3ef6ksr2>Resources</span> <svg class="sn-mobile-section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-3ef6ksr2> <polyline points="6 9 12 15 18 9" data-astro-cid-3ef6ksr2></polyline> </svg> </button> <div class="sn-mobile-section-panel" data-astro-cid-3ef6ksr2>  <a href="https://phonenumbers.com/insights/" class="sn-mobile-link" data-astro-cid-3ef6ksr2>Insights</a> <a href="https://phonenumbers.com/en-us/about/contact" class="sn-mobile-link" data-astro-cid-3ef6ksr2>Contact</a> </div> </div> </div> </div> </header>
+<main class="b2b">
+
+<section class="hero">
+ <div class="hero-img" aria-hidden="true"></div>
+ <div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="https://phonenumbers.com/en-us">Home</a><span aria-hidden="true">&rsaquo;</span><span aria-current="page">For business</span></nav>
+  <div class="hero-in">
+    <span class="micro">The PhoneNumbers.com Partner Program</span>
+    <h1>Your next revenue stream<br><span class="grad">is calling.</span></h1>
+    <p class="lead">Plug 50 million premium phone numbers into your business. Share a link, build on our API, or list inventory you already hold. Free to join, commission on every completed sale.</p>
+    <div class="hero-cta">
+      <a class="btn btn-p" href="https://phonenumbers.com/en-us/about/contact">Start earning
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-g" href="https://phonenumbers.com/en-us/about/contact">Talk to our team</a>
+    </div>
+  </div>
+  <!-- PROOF BAR. Same figures as the About page. Figures marked [VERIFY] are owner-supplied and unconfirmed. -->
+  <div class="proof">
+    <div class="pf rv"><p class="pf-n">50M+</p><p class="pf-l">Numbers ready to sell</p></div>
+    <div class="pf rv rv2"><p class="pf-n">30+ years</p><p class="pf-l">In telecommunications</p></div>
+    <div class="pf rv rv3"><p class="pf-n">US &amp; Canada</p><p class="pf-l">Marketplace coverage</p></div>
+    <div class="pf rv rv4"><p class="pf-n">$0</p><p class="pf-l">To join, no volume commitment</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sect paths">
+ <div class="wrap">
+  <div class="intro rv">
+    <span class="micro">Three ways in</span>
+    <h2>Pick your play. Start earning.</h2>
+    <p class="lead">A link you can share today. An API you can build a business on. A marketplace for numbers you already hold. Start light, go deeper whenever you want.</p>
+  </div>
+  <!-- Van artwork uses fictional brands and 555 / letter-word numbers only. -->
+  <div class="prow rv">
+    <figure class="prow-img">
+      <img src="business-vans-v1.jpg" alt="Two work vans side by side, one with the memorable number 1-800-555-ROOF and one with a plain ten-digit number" width="1600" height="900" loading="lazy">
+    </figure>
+    <div class="prow-txt">
+      <p class="eyebrow">01 &middot; Affiliates</p>
+      <h3>Your audience already knows which van gets the call</h3>
+      <p class="desc">Drop your referral link in front of your audience. They pick a number they love, we close the sale, you get paid.</p>
+      <ul>
+        <li>Your link, live in minutes</li>
+        <li>We handle checkout, activation and support</li>
+        <li>Commission on every completed first sale</li>
+      </ul>
+      <a class="path-cta" href="https://phonenumbers.com/en-us/about/contact">Start sharing
+        <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+  <div class="prow flip rv">
+    <figure class="prow-img" aria-hidden="true">
+      <div class="mock">
+        <div class="mock-brand"><strong>YourBrand&trade; Numbers</strong><span>Checkout &middot; Step 2 of 3</span></div>
+        <div class="mock-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+          <em>PLUMBER <i>&middot; toll-free</i></em>
+        </div>
+        <div class="mock-row"><div><p class="num">1-800-PLUMBER</p><p class="sub">Premium &middot; available now</p></div><span class="mock-add">Add</span></div>
+        <div class="mock-row"><div><p class="num">1-833-PLUMBER</p><p class="sub">Premium &middot; available now</p></div><span class="mock-add">Add</span></div>
+        <div class="mock-row"><div><p class="num">(212) 555-PIPE</p><p class="sub">Local &middot; available now</p></div><span class="mock-add">Add</span></div>
+        <p class="mock-foot">Your storefront. Your prices. 50M+ numbers behind it.</p>
+      </div>
+    </figure>
+    <div class="prow-txt">
+      <p class="eyebrow">02 &middot; Resellers</p>
+      <h3>Your checkout, stocked with 50 million numbers</h3>
+      <p class="desc">Put vanity, toll-free and local numbers inside your own product through our API. Your brand, your prices, our carrier network behind it.</p>
+      <ul>
+        <li>Search and sell without leaving your product</li>
+        <li>White label from end to end</li>
+        <li>Bundle numbers into what you already sell</li>
+      </ul>
+      <a class="path-cta" href="https://phonenumbers.com/en-us/about/contact">Build with us
+        <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+  <div class="prow rv">
+    <figure class="prow-img">
+      <img src="business-dial-v1.jpg" alt="A driver dialing 561-ROOFERS after seeing it on the van ahead" width="1600" height="1067" loading="lazy">
+    </figure>
+    <div class="prow-txt">
+      <p class="eyebrow">03 &middot; Sellers</p>
+      <h3>The numbers you are sitting on already have buyers</h3>
+      <p class="desc">Holding blocks of unused numbers? We price them, market them, find the buyers and handle porting. You collect your share of every sale.</p>
+      <ul>
+        <li>We spot the in-demand numbers in your ranges</li>
+        <li>Valuation and pricing handled by our team</li>
+        <li>No technical lift on your side</li>
+      </ul>
+      <a class="path-cta" href="https://phonenumbers.com/en-us/about/contact">List your inventory
+        <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+ </div>
+</section>
+
+<section class="statement">
+ <div class="wrap rv">
+   <p class="big">50,000,000+</p>
+   <p class="sub">reasons to partner with us.</p>
+   <p class="note">Vanity, toll-free and local numbers across the US and Canada. Brand new, never before issued, ready to sell the day you join.</p>
+ </div>
+</section>
+
+<section class="sect steps" style="padding-top:0">
+ <div class="wrap">
+  <div class="intro rv">
+    <span class="micro">How it works</span>
+    <h2>Live in days, not quarters</h2>
+    <p class="lead">Free to join, no volume commitment, and a real team on your side. Enterprise integrations get a dedicated contact from day one.</p>
+  </div>
+  <div class="step-grid">
+    <div class="step rv"><p class="step-k">1</p><h3>Apply</h3><p>Five minutes. Tell us what you do and which path fits. No cost, no commitment.</p></div>
+    <div class="step rv rv2"><p class="step-k">2</p><h3>Pick your depth</h3><p>A shareable link, a marketplace listing, or a full API build under your brand.</p></div>
+    <div class="step rv rv3"><p class="step-k">3</p><h3>Go live</h3><p>Affiliates launch in minutes. Resellers build against our API with our engineers alongside.</p></div>
+    <div class="step rv rv4"><p class="step-k">4</p><h3>Get paid</h3><p>Commission on every completed sale lands in your partner account on a predictable schedule.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sect api">
+ <div class="api-img" aria-hidden="true"></div>
+ <div class="wrap">
+  <div class="api-grid">
+    <div class="rv">
+      <span class="micro">For developers</span>
+      <h2>50 million numbers. One integration.</h2>
+      <p class="lead">Search, reserve, purchase and port from your own stack. If your product has a checkout, it can sell phone numbers.</p>
+      <div class="api-feats">
+        <div class="af"><h3>RESTful &amp; OpenAPI</h3><p>A documented, predictable API that behaves the way you expect.</p></div>
+        <div class="af"><h3>Full inventory access</h3><p>Vanity, toll-free and local numbers across the US and Canada.</p></div>
+        <div class="af"><h3>Search to settlement</h3><p>Query, reserve, purchase and port without leaving your integration.</p></div>
+        <div class="af"><h3>Built with you</h3><p>Custom integration support from the team that runs the marketplace.</p></div>
+      </div>
+    </div>
+    <div class="code rv rv2" aria-hidden="true">
+      <div class="code-bar"><span></span><span></span><span></span><em>GET /v1/numbers/search</em></div>
+      <pre>{
+  <span class="c-k">"query"</span>: <span class="c-s">"PLUMBER"</span>,
+  <span class="c-k">"type"</span>: <span class="c-s">"toll_free"</span>,
+  <span class="c-k">"results"</span>: [
+    {
+      <span class="c-k">"number"</span>: <span class="c-s">"+1 (800) 555-0142"</span>,  <span class="c-c">// display only</span>
+      <span class="c-k">"pattern"</span>: <span class="c-s">"1-800-PLUMBER"</span>,
+      <span class="c-k">"status"</span>: <span class="c-s">"available"</span>,
+      <span class="c-k">"tier"</span>: <span class="c-s">"premium"</span>
+    }
+  ]
+}</pre>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- COMMISSION & PAYOUT TERMS. All specifics below are [VERIFY]: structure, hold period and
+     payment rails must be confirmed by the owner before this page ships. Copy is written so
+     numbers can be dropped in without redesign. -->
+<section class="sect pay">
+ <div class="wrap">
+  <div class="intro rv">
+    <span class="micro">Commission &amp; payouts</span>
+    <h2>You sell. You get paid. No fine-print games.</h2>
+  </div>
+  <!-- Dashboard figures are DEMO ONLY [VERIFY]: sale amounts illustrate the approved
+       "hundreds to thousands" claim; commission value deliberately shown masked because
+       the structure varies by integration level. Local numbers masked per activity-feed
+       rule (area code + bullets + last 4); vanity words never masked. -->
+  <div class="pay-wrap">
+    <div class="dash rv" aria-hidden="true">
+      <div class="dash-head"><strong>Partner dashboard</strong><span>This month</span></div>
+      <div class="dash-row"><div><p class="num">1-844-PAINTER</p><p class="sub">Sold &middot; toll-free premium</p></div><span class="amt">$1,450</span></div>
+      <div class="dash-row"><div><p class="num">(212) &bull;&bull;&bull;-4821</p><p class="sub">Sold &middot; local pattern</p></div><span class="amt">$480</span></div>
+      <div class="dash-row"><div><p class="num">(305) &bull;&bull;&bull;-7000</p><p class="sub">Sold &middot; easy dial</p></div><span class="amt">$350</span></div>
+      <div class="dash-sum"><strong>Your commission</strong><em>$&bull;&bull;&bull;</em></div>
+      <p class="dash-foot">Every referral, sale and payout in one place.</p>
+    </div>
+    <div class="terms rv rv2">
+      <div class="terms-group">
+        <span class="micro">Commission</span>
+        <ul>
+          <li>Every completed initial purchase qualifies</li>
+          <li>Structure scales with your integration level</li>
+          <li>Premium sales run hundreds to thousands of dollars</li>
+        </ul>
+        <p class="pay-note">Initial sale only. Ongoing service fees and sales to existing PhoneNumbers.com customers do not qualify.</p>
+      </div>
+      <div class="terms-group">
+        <span class="micro">Payouts</span>
+        <ul>
+          <li>Paid by ACH once the hold period clears</li>
+          <li>US-based bank account and a completed W-9 required</li>
+          <li>Every referral, sale and payout tracked in your dashboard</li>
+        </ul>
+        <p class="pay-note">Hold period and payout schedule are confirmed during onboarding.</p>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<section class="sect who" style="padding-top:0">
+ <div class="wrap">
+  <div class="intro rv">
+    <span class="micro">Who partners with us</span>
+    <h2>You are closer to this market than you think</h2>
+    <p class="lead">Telecom, marketing, technology, e-commerce: if your customers need to be reachable, you fit. Custom programs available for anything that does not fit a box.</p>
+  </div>
+  <div class="who-rows">
+    <div class="who-row rv">
+      <div><h3>Affiliates</h3><p class="fit">Anyone with an audience or customer base</p></div>
+      <div class="chips">
+        <span class="chip">Marketing and creative agencies</span>
+        <span class="chip">Wireless and tech store agents</span>
+        <span class="chip">Real estate agents and brokers</span>
+        <span class="chip">Business development consultants</span>
+        <span class="chip">Franchise administrators</span>
+        <span class="chip">Creators and influencers</span>
+      </div>
+    </div>
+    <div class="who-row rv rv2">
+      <div><h3>Resellers</h3><p class="fit">Products and services with a checkout</p></div>
+      <div class="chips">
+        <span class="chip">Domain registrars and web hosts</span>
+        <span class="chip">Managed service providers</span>
+        <span class="chip">Legal and business-services firms</span>
+        <span class="chip">Wireless stores and master agents</span>
+        <span class="chip">VoIP and telecom service providers</span>
+      </div>
+    </div>
+    <div class="who-row rv rv3">
+      <div><h3>Sellers</h3><p class="fit">Carriers holding unused inventory</p></div>
+      <div class="chips">
+        <span class="chip">US-based wireline carriers</span>
+        <span class="chip">FCC 499 filers</span>
+        <span class="chip">Holders of FCC numbering authorization</span>
+        <span class="chip">Carriers with large unused number blocks</span>
+        <span class="chip">Organizations retiring legacy ranges</span>
+        <a class="chip ask" href="https://phonenumbers.com/en-us/about/contact">Something else? Ask us</a>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- PARTNER VOICES. ALL QUOTES ARE PLACEHOLDERS [VERIFY]: replace with real, permissioned
+     partner quotes before ship (standing rule: no named customers or brands without written
+     permission, so attributions stay role-only until real quotes land). -->
+<section class="sect voices" style="padding-top:0">
+ <div class="wrap">
+  <div class="intro rv">
+    <span class="micro">Partner voices</span>
+    <h2>The people already earning on numbers</h2>
+  </div>
+  <div class="voice-grid">
+    <div class="voice lead-q rv">
+      <span class="voice-tag">Seller program</span>
+      <p class="qmark" aria-hidden="true">&ldquo;</p>
+      <blockquote>We were sitting on blocks of numbers nobody used. Now they are a revenue line we report on every quarter, and the setup cost us nothing.</blockquote>
+      <p class="who-line">Carrier partner, listing surplus inventory</p>
+    </div>
+    <div class="voice-side">
+      <div class="voice rv rv2">
+        <span class="voice-tag">Affiliate program</span>
+        <p class="qmark" aria-hidden="true">&ldquo;</p>
+        <blockquote>Our clients ask for memorable numbers on every campaign. Now we source them in minutes and keep a margin for the agency.</blockquote>
+        <p class="who-line">Marketing agency partner</p>
+      </div>
+      <div class="voice rv rv3">
+        <span class="voice-tag">Reseller program</span>
+        <p class="qmark" aria-hidden="true">&ldquo;</p>
+        <blockquote>Numbers turned out to be the easiest add-on we have ever sold. Customers already wanted them, we just put them in the checkout.</blockquote>
+        <p class="who-line">Reseller partner, hosting provider</p>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- DATA REQUEST for owner (idea from numberbarn.com/b2b): they publish marketplace velocity
+     stats (numbers sold per month, avg $ per number, active numbers supported). If PN can
+     supply real equivalents, add a "marketplace in motion" stat row here; do NOT invent them. -->
+<section class="sect market">
+ <div class="wrap">
+  <div class="intro rv">
+    <span class="micro">The opportunity</span>
+    <h2>A market hiding in plain sight</h2>
+    <p class="lead">Every new business needs a number on day one, and the memorable ones are structurally scarce. Scarcity plus demand is a market. Your customers are already in it.</p>
+  </div>
+  <div class="mkt-grid">
+    <div class="mkt rv"><p class="mkt-n">4.7M+</p><p class="mkt-t">New US businesses a year</p><p class="mkt-d">Every one of them needs a phone number on day one.</p></div>
+    <div class="mkt rv rv2"><p class="mkt-n">$450B+</p><p class="mkt-t">US telecom services market</p><p class="mkt-d">Numbers sit at the front door of all of it.</p></div>
+    <div class="mkt rv rv3"><p class="mkt-n">1 in 7,850</p><p class="mkt-t">Odds of a number ending in 0000</p><p class="mkt-d">The memorable ones are scarce by design, which is what makes them valuable.</p></div>
+    <div class="mkt rv rv4"><p class="mkt-n">Thousands</p><p class="mkt-t">Of dollars for top sales</p><p class="mkt-d">Premium numbers routinely bring hundreds, and the strongest vanity numbers run into the thousands.</p></div>
+  </div>
+  <p class="srcnote rv">Business formation from US Census Bureau business application statistics; telecom market size from published industry estimates. The 0000 figure follows from one such number per 10,000-number exchange block, as counted on the About page.</p>
+ </div>
+</section>
+
+<section class="sect close">
+ <div class="wrap">
+  <div class="rv">
+  <h2>Stop leaving numbers on the table</h2>
+  <p class="sub">Free to join. Three ways in. Commission on every completed sale. Pick your path and start earning on a market you are already standing next to.</p>
+  <a class="cbtn" href="https://phonenumbers.com/en-us/about/contact">Apply to partner
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <p class="close-alt">Prefer to talk it through first? <a href="https://phonenumbers.com/en-us/about/contact">Schedule a call with our solutions team</a>.<br>Holding one great personal number instead of a portfolio? <a href="https://phonenumbers.com/en-us/about/contact">Sell your number</a>.</p>
+  <div class="sign"><strong>PhoneNumbers.com</strong><span>The Authority on Phone Numbers</span></div>
+  </div>
+ </div>
+</section>
+
+</main>
+<footer class="site-footer print:hidden" data-astro-cid-sz7xmlte> <div class="sf-inner" data-astro-cid-sz7xmlte> <div class="sf-grid" data-astro-cid-sz7xmlte> <div class="sf-brand-col" data-astro-cid-sz7xmlte> <a href="https://phonenumbers.com/en-us" class="sf-brand" data-astro-cid-sz7xmlte> <img class="sf-brand-logo" src="https://phonenumbers.com/brand/phonenumbers-logo-primary.svg" alt="PhoneNumbers.com" width="337" height="32" data-astro-cid-sz7xmlte> </a> <p class="sf-desc" data-astro-cid-sz7xmlte>Premium vanity, local and toll-free phone numbers for businesses across the US and Canada. Search millions of available numbers and find the one that fits your brand.</p> <div class="sf-regions" data-astro-cid-sz7xmlte> <a href="https://phonenumbers.com/en-us" data-astro-cid-sz7xmlte>🇺🇸 US</a><a href="https://phonenumbers.com/en-ca" data-astro-cid-sz7xmlte>🍁 Canada</a> </div> </div> <div class="sf-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Browse Numbers</h4> <a href="https://phonenumbers.com/en-us/search" data-astro-cid-sz7xmlte>All Numbers</a> <a href="https://phonenumbers.com/en-us/search" data-astro-cid-sz7xmlte>Local Numbers</a> <a href="https://phonenumbers.com/en-us/area-codes/all-area-codes" data-astro-cid-sz7xmlte>Area Codes</a> <a href="https://phonenumbers.com/en-us/search" data-astro-cid-sz7xmlte>Vanity Numbers</a> <a href="https://phonenumbers.com/en-us/search?tf=true" data-astro-cid-sz7xmlte>Toll-Free 1-800</a> <a href="https://phonenumbers.com/en-us/search" data-astro-cid-sz7xmlte>Pattern Numbers</a> </div> <div class="sf-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>International</h4> <a href="https://phonenumbers.com/en-us/country-codes/united-states-country" data-astro-cid-sz7xmlte>United States</a><a href="https://phonenumbers.com/en-us/country-codes/canada-country" data-astro-cid-sz7xmlte>Canada</a> </div> <div class="sf-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Tools &amp; Resources</h4> <a href="https://phonenumbers.com/en-us/search" data-astro-cid-sz7xmlte>Number Spell Tool</a> <a href="https://phonenumbers.com/en-us/search" data-astro-cid-sz7xmlte>Number Valuation</a> <a href="https://phonenumbers.com/en-us/about/contact" data-astro-cid-sz7xmlte>Get a Quote</a>  <a href="https://phonenumbers.com/insights/" data-astro-cid-sz7xmlte>Insights</a> <a href="https://phonenumbers.com/en-us/about/contact" data-astro-cid-sz7xmlte>Sell Your Number</a> </div> <div class="sf-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Company</h4> <a href="https://phonenumbers.com/en-us/about/contact" data-astro-cid-sz7xmlte>Contact Us</a> <a href="https://phonenumbers.com/en-us/legal/privacy" data-astro-cid-sz7xmlte>Privacy Policy</a> <a href="https://phonenumbers.com/en-us/legal/terms" data-astro-cid-sz7xmlte>Terms of Service</a> </div> </div> <div class="sf-bottom" data-astro-cid-sz7xmlte> <span class="sf-copy" data-astro-cid-sz7xmlte>© 2026 PhoneNumbers.com. EPhone Numbers LLC. The Authority on Phone Numbers.</span> </div> </div> </footer>
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.rv');
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
