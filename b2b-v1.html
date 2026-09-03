@@ -73,47 +73,21 @@ h2{font-size:clamp(2rem,4.2vw,3.1rem);font-weight:800;letter-spacing:-.028em;lin
 .btn-g:hover{border-color:rgba(255,255,255,.55)}
 .arrow{width:18px;height:18px;flex:0 0 auto}
 
-/* ---------- 1. hero: dark, earnings notifications ---------- */
-.hero{position:relative;overflow:hidden;color:var(--w-85);
-  background:radial-gradient(64% 58% at 86% -6%,rgba(124,92,240,.3),transparent 60%),
-             radial-gradient(44% 52% at 72% 100%,rgba(91,63,232,.16),transparent 62%),
-             linear-gradient(170deg,var(--night) 0%,var(--night-2) 100%)}
-.hero-img{position:absolute;inset:0;background:url("business-hero-glass-v1.jpg") right center/cover no-repeat;opacity:.14}
+/* ---------- 1. hero: cinematic dark, live-network map ---------- */
+.hero{position:relative;overflow:hidden;color:var(--w-85);background:var(--night)}
+.hero-img{position:absolute;inset:0;background:url("business-hero-glass-v1.jpg") right center/cover no-repeat}
 .hero-img::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(10,15,30,.9) 0%,rgba(10,15,30,.4) 55%,rgba(10,15,30,.15) 100%)}
+  background:radial-gradient(60% 70% at 88% 30%,rgba(124,92,240,.2),transparent 62%),
+             linear-gradient(90deg,rgba(10,15,30,.94) 0%,rgba(10,15,30,.72) 42%,rgba(10,15,30,.18) 78%,rgba(10,15,30,.08) 100%);}
 .hero-img::before{content:"";position:absolute;inset:auto 0 0 0;height:220px;z-index:1;
   background:linear-gradient(180deg,transparent,rgba(10,15,30,.85))}
 .hero .wrap{position:relative;z-index:2}
 .crumbs{color:var(--w-45);font-size:13px;padding:28px 0 0;display:flex;gap:9px}
 .crumbs a:hover{color:#fff}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(44px,6vw,90px);align-items:center;padding:96px 0 0}
-@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:56px;padding-top:72px}}
-.hero-in{max-width:660px}
+.hero-in{padding:118px 0 0;max-width:1000px}
+@media(max-width:640px){.hero-in{padding-top:72px}}
 .hero .micro{color:var(--brand-text);display:block;margin:0 0 22px}
-h1{font-size:clamp(2.5rem,5.2vw,4rem);font-weight:800;letter-spacing:-.034em;line-height:1.03;margin:0 0 26px;color:#fff}
-/* earnings notification stack */
-.pings{display:grid;gap:16px;max-width:430px;justify-self:end;width:100%}
-@media(max-width:980px){.pings{justify-self:start}}
-.ncard{display:flex;align-items:center;gap:14px;background:rgba(18,23,43,.78);
-  border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:17px 19px;
-  box-shadow:0 24px 60px -24px rgba(0,0,0,.7),0 0 0 1px rgba(124,92,240,.06)}
-.ncard{--tx:0px;transform:translate(var(--tx),0)}
-.ncard:nth-child(1){--tx:-14px}
-.ncard:nth-child(3){--tx:14px}
-@media(max-width:980px){.ncard:nth-child(1),.ncard:nth-child(3){--tx:0px}}
-.ncard .ico{flex:0 0 40px;width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(180deg,rgba(124,92,240,.5),rgba(91,63,232,.28))}
-.ncard .ico svg{width:19px;height:19px;color:#fff}
-.ncard .nt{min-width:0;flex:1}
-.ncard .nt strong{display:block;font-size:14.5px;font-weight:700;color:#fff;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ncard .nt span{display:block;font-size:12px;color:var(--w-45);margin-top:2px}
-.ncard .namt{font-size:15px;font-weight:800;color:#8be9b8;white-space:nowrap}
-@media(prefers-reduced-motion:no-preference){
-  .ncard{animation:bob 9s ease-in-out infinite}
-  .ncard:nth-child(2){animation-delay:-3s}
-  .ncard:nth-child(3){animation-delay:-6s}
-}
-@keyframes bob{0%,100%{transform:translate(var(--tx),0)}50%{transform:translate(var(--tx),-5px)}}
+h1{font-size:clamp(2.7rem,6.4vw,4.8rem);font-weight:800;letter-spacing:-.034em;line-height:1.01;margin:0 0 26px;color:#fff}
 h1 .grad{background:linear-gradient(96deg,#b9aaff 0%,#7c5cf0 55%,#a394f6 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .lead{color:var(--w-66);font-size:1.22rem;max-width:50ch}
@@ -333,37 +307,15 @@ Home
  <div class="hero-img" aria-hidden="true"></div>
  <div class="wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="https://phonenumbers.com/en-us">Home</a><span aria-hidden="true">&rsaquo;</span><span aria-current="page">For business</span></nav>
-  <div class="hero-grid">
-   <div class="hero-in">
+  <div class="hero-in">
     <span class="micro">The PhoneNumbers.com Partner Program</span>
-    <h1>Your next revenue<br>stream <span class="grad">is calling.</span></h1>
+    <h1>Your next revenue stream<br><span class="grad">is calling.</span></h1>
     <p class="lead">Plug 50 million premium phone numbers into your business. Share a link, build on our API, or list inventory you already hold. Free to join, commission on every completed sale.</p>
     <div class="hero-cta">
       <a class="btn btn-p" href="https://phonenumbers.com/en-us/about/contact">Start earning
         <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-g" href="https://phonenumbers.com/en-us/about/contact">Talk to our team</a>
     </div>
-   </div>
-   <!-- Earnings pings are DEMO ONLY [VERIFY]: sale amounts illustrate the approved
-        "hundreds to thousands" claim; no commission amounts shown (structure varies
-        by integration level). Masked local number per activity-feed rule. -->
-   <div class="pings" aria-hidden="true">
-    <div class="ncard">
-      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-      <span class="nt"><strong>1-844-PAINTER sold</strong><span>Referred by you &middot; commission queued</span></span>
-      <span class="namt">$1,450</span>
-    </div>
-    <div class="ncard">
-      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-      <span class="nt"><strong>(305) &bull;&bull;&bull;-7000 sold</strong><span>Sold through your storefront</span></span>
-      <span class="namt">$350</span>
-    </div>
-    <div class="ncard">
-      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/></svg></span>
-      <span class="nt"><strong>Payout sent</strong><span>ACH transfer on its way to your bank</span></span>
-      <span class="namt">&#10003;</span>
-    </div>
-   </div>
   </div>
   <!-- PROOF BAR. Same figures as the About page. Figures marked [VERIFY] are owner-supplied and unconfirmed. -->
   <div class="proof">
