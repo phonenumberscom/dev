@@ -73,21 +73,31 @@ h2{font-size:clamp(2rem,4.2vw,3.1rem);font-weight:800;letter-spacing:-.028em;lin
 .btn-g:hover{border-color:rgba(255,255,255,.55)}
 .arrow{width:18px;height:18px;flex:0 0 auto}
 
-/* ---------- 1. hero: cinematic dark, live-network map ---------- */
-.hero{position:relative;overflow:hidden;color:var(--w-85);background:var(--night)}
-.hero-img{position:absolute;inset:0;background:url("business-hero-glass-v1.jpg") right center/cover no-repeat}
+/* ---------- 1. hero: dark, framed vans photo ---------- */
+.hero{position:relative;overflow:hidden;color:var(--w-85);
+  background:radial-gradient(64% 58% at 86% -6%,rgba(124,92,240,.3),transparent 60%),
+             radial-gradient(44% 52% at 74% 100%,rgba(91,63,232,.15),transparent 62%),
+             linear-gradient(170deg,var(--night) 0%,var(--night-2) 100%)}
+.hero-img{position:absolute;inset:0;background:url("business-hero-glass-v1.jpg") right center/cover no-repeat;opacity:.12}
 .hero-img::after{content:"";position:absolute;inset:0;
-  background:radial-gradient(60% 70% at 88% 30%,rgba(124,92,240,.2),transparent 62%),
-             linear-gradient(90deg,rgba(10,15,30,.94) 0%,rgba(10,15,30,.72) 42%,rgba(10,15,30,.18) 78%,rgba(10,15,30,.08) 100%);}
+  background:linear-gradient(90deg,rgba(10,15,30,.9) 0%,rgba(10,15,30,.4) 55%,rgba(10,15,30,.15) 100%)}
 .hero-img::before{content:"";position:absolute;inset:auto 0 0 0;height:220px;z-index:1;
   background:linear-gradient(180deg,transparent,rgba(10,15,30,.85))}
 .hero .wrap{position:relative;z-index:2}
 .crumbs{color:var(--w-45);font-size:13px;padding:28px 0 0;display:flex;gap:9px}
 .crumbs a:hover{color:#fff}
-.hero-in{padding:118px 0 0;max-width:1000px}
-@media(max-width:640px){.hero-in{padding-top:72px}}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(44px,6vw,84px);align-items:center;padding:92px 0 0}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:52px;padding-top:72px}}
+.hero-in{max-width:660px}
 .hero .micro{color:var(--brand-text);display:block;margin:0 0 22px}
-h1{font-size:clamp(2.7rem,6.4vw,4.8rem);font-weight:800;letter-spacing:-.034em;line-height:1.01;margin:0 0 26px;color:#fff}
+h1{font-size:clamp(2.5rem,5.2vw,4rem);font-weight:800;letter-spacing:-.034em;line-height:1.03;margin:0 0 26px;color:#fff}
+/* framed hero photo */
+.hero-photo{margin:0;position:relative;border-radius:26px;overflow:hidden;
+  box-shadow:0 44px 100px -36px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.12),0 24px 80px -30px rgba(91,63,232,.35)}
+.hero-photo img{width:100%;display:block}
+.hero-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:36px 22px 16px;
+  font-size:12.5px;font-weight:600;color:var(--w-66);text-align:center;
+  background:linear-gradient(180deg,transparent,rgba(10,15,30,.85))}
 h1 .grad{background:linear-gradient(96deg,#b9aaff 0%,#7c5cf0 55%,#a394f6 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .lead{color:var(--w-66);font-size:1.22rem;max-width:50ch}
@@ -307,15 +317,21 @@ Home
  <div class="hero-img" aria-hidden="true"></div>
  <div class="wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="https://phonenumbers.com/en-us">Home</a><span aria-hidden="true">&rsaquo;</span><span aria-current="page">For business</span></nav>
-  <div class="hero-in">
+  <div class="hero-grid">
+   <div class="hero-in">
     <span class="micro">The PhoneNumbers.com Partner Program</span>
-    <h1>Your next revenue stream<br><span class="grad">is calling.</span></h1>
+    <h1>Your next revenue<br>stream <span class="grad">is calling.</span></h1>
     <p class="lead">Plug 50 million premium phone numbers into your business. Share a link, build on our API, or list inventory you already hold. Free to join, commission on every completed sale.</p>
     <div class="hero-cta">
       <a class="btn btn-p" href="https://phonenumbers.com/en-us/about/contact">Start earning
         <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-g" href="https://phonenumbers.com/en-us/about/contact">Talk to our team</a>
     </div>
+   </div>
+   <figure class="hero-photo">
+     <img src="business-vans-v1.jpg" alt="Two work vans side by side, one with the memorable number 1-800-555-ROOF and one with a plain ten-digit number" width="1600" height="900">
+     <figcaption>One of these numbers gets remembered. That is the business you are in now.</figcaption>
+   </figure>
   </div>
   <!-- PROOF BAR. Same figures as the About page. Figures marked [VERIFY] are owner-supplied and unconfirmed. -->
   <div class="proof">
@@ -337,7 +353,7 @@ Home
   <!-- Van artwork uses fictional brands and 555 / letter-word numbers only. -->
   <div class="prow rv">
     <figure class="prow-img">
-      <img src="business-vans-v1.jpg" alt="Two work vans side by side, one with the memorable number 1-800-555-ROOF and one with a plain ten-digit number" width="1600" height="900" loading="lazy">
+      <img src="business-dial-v1.jpg" alt="A driver dialing 561-ROOFERS after seeing it on the van ahead" width="1600" height="1067" loading="lazy">
     </figure>
     <div class="prow-txt">
       <p class="eyebrow">01 &middot; Affiliates</p>
@@ -381,7 +397,7 @@ Home
   </div>
   <div class="prow rv">
     <figure class="prow-img">
-      <img src="business-dial-v1.jpg" alt="A driver dialing 561-ROOFERS after seeing it on the van ahead" width="1600" height="1067" loading="lazy">
+      <img src="business-nyc-v1.jpg" alt="The Manhattan skyline at sunset, home of the 212 area code" width="1200" height="1258" loading="lazy">
     </figure>
     <div class="prow-txt">
       <p class="eyebrow">03 &middot; Sellers</p>
